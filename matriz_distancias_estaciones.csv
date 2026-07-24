@@ -1,0 +1,133 @@
+estacion_origen,estacion_destino,distancia_km,tiempo_conduccion_min
+1 Autobus geltokia - Estación de autobuses,2 Leizaola plaza - Plaza de Leizaola,3.48,12.8
+1 Autobus geltokia - Estación de autobuses,3 Ballester apezpikua - Obispo Ballester,2.98,9.4
+1 Autobus geltokia - Estación de autobuses,4 Antso Jakituna - Sancho el Sabio,2.86,10.8
+1 Autobus geltokia - Estación de autobuses,5 Mendizorrotza - Mendizorroza,3.04,13.9
+1 Autobus geltokia - Estación de autobuses,6 Unibertsitatea - Universidad,3.69,13.9
+1 Autobus geltokia - Estación de autobuses,7 Salburuko gizarte-etxea - C.C. Salburua,4.26,14.5
+1 Autobus geltokia - Estación de autobuses,8 Tren geltokia - Estación de Tren,3.61,13.0
+1 Autobus geltokia - Estación de autobuses,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,2.02,8.4
+1 Autobus geltokia - Estación de autobuses,10 AUO - HUA,0.87,5.5
+1 Autobus geltokia - Estación de autobuses,11 San Martin (Udala) - Ayuntamiento San Martín,2.56,9.8
+1 Autobus geltokia - Estación de autobuses,12 Zabalganeko gizarte-etxea - CC Zabalgana,3.64,10.9
+2 Leizaola plaza - Plaza de Leizaola,1 Autobus geltokia - Estación de autobuses,3.19,12.9
+2 Leizaola plaza - Plaza de Leizaola,3 Ballester apezpikua - Obispo Ballester,3.4,11.8
+2 Leizaola plaza - Plaza de Leizaola,4 Antso Jakituna - Sancho el Sabio,0.78,3.9
+2 Leizaola plaza - Plaza de Leizaola,5 Mendizorrotza - Mendizorroza,1.81,10.0
+2 Leizaola plaza - Plaza de Leizaola,6 Unibertsitatea - Universidad,1.61,6.9
+2 Leizaola plaza - Plaza de Leizaola,7 Salburuko gizarte-etxea - C.C. Salburua,4.83,15.3
+2 Leizaola plaza - Plaza de Leizaola,8 Tren geltokia - Estación de Tren,1.54,6.0
+2 Leizaola plaza - Plaza de Leizaola,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,4.3,18.6
+2 Leizaola plaza - Plaza de Leizaola,10 AUO - HUA,3.15,15.6
+2 Leizaola plaza - Plaza de Leizaola,11 San Martin (Udala) - Ayuntamiento San Martín,1.83,7.9
+2 Leizaola plaza - Plaza de Leizaola,12 Zabalganeko gizarte-etxea - CC Zabalgana,3.22,12.4
+3 Ballester apezpikua - Obispo Ballester,1 Autobus geltokia - Estación de autobuses,2.37,8.0
+3 Ballester apezpikua - Obispo Ballester,2 Leizaola plaza - Plaza de Leizaola,2.19,8.6
+3 Ballester apezpikua - Obispo Ballester,4 Antso Jakituna - Sancho el Sabio,2.58,9.2
+3 Ballester apezpikua - Obispo Ballester,5 Mendizorrotza - Mendizorroza,4.01,16.3
+3 Ballester apezpikua - Obispo Ballester,6 Unibertsitatea - Universidad,3.05,12.0
+3 Ballester apezpikua - Obispo Ballester,7 Salburuko gizarte-etxea - C.C. Salburua,2.13,7.2
+3 Ballester apezpikua - Obispo Ballester,8 Tren geltokia - Estación de Tren,2.31,7.9
+3 Ballester apezpikua - Obispo Ballester,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,4.14,16.0
+3 Ballester apezpikua - Obispo Ballester,10 AUO - HUA,2.98,13.1
+3 Ballester apezpikua - Obispo Ballester,11 San Martin (Udala) - Ayuntamiento San Martín,3.57,13.5
+3 Ballester apezpikua - Obispo Ballester,12 Zabalganeko gizarte-etxea - CC Zabalgana,5.75,18.5
+4 Antso Jakituna - Sancho el Sabio,1 Autobus geltokia - Estación de autobuses,4.18,17.5
+4 Antso Jakituna - Sancho el Sabio,2 Leizaola plaza - Plaza de Leizaola,2.54,12.3
+4 Antso Jakituna - Sancho el Sabio,3 Ballester apezpikua - Obispo Ballester,3.5,13.7
+4 Antso Jakituna - Sancho el Sabio,5 Mendizorrotza - Mendizorroza,1.4,8.6
+4 Antso Jakituna - Sancho el Sabio,6 Unibertsitatea - Universidad,1.71,8.9
+4 Antso Jakituna - Sancho el Sabio,7 Salburuko gizarte-etxea - C.C. Salburua,4.25,17.0
+4 Antso Jakituna - Sancho el Sabio,8 Tren geltokia - Estación de Tren,1.64,7.9
+4 Antso Jakituna - Sancho el Sabio,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,6.95,22.5
+4 Antso Jakituna - Sancho el Sabio,10 AUO - HUA,5.78,19.6
+4 Antso Jakituna - Sancho el Sabio,11 San Martin (Udala) - Ayuntamiento San Martín,2.82,12.6
+4 Antso Jakituna - Sancho el Sabio,12 Zabalganeko gizarte-etxea - CC Zabalgana,3.87,12.7
+5 Mendizorrotza - Mendizorroza,1 Autobus geltokia - Estación de autobuses,3.85,15.8
+5 Mendizorrotza - Mendizorroza,2 Leizaola plaza - Plaza de Leizaola,3.18,13.7
+5 Mendizorrotza - Mendizorroza,3 Ballester apezpikua - Obispo Ballester,4.14,15.0
+5 Mendizorrotza - Mendizorroza,4 Antso Jakituna - Sancho el Sabio,1.52,7.1
+5 Mendizorrotza - Mendizorroza,6 Unibertsitatea - Universidad,2.35,10.2
+5 Mendizorrotza - Mendizorroza,7 Salburuko gizarte-etxea - C.C. Salburua,5.57,18.6
+5 Mendizorrotza - Mendizorroza,8 Tren geltokia - Estación de Tren,2.28,9.3
+5 Mendizorrotza - Mendizorroza,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,5.24,19.2
+5 Mendizorrotza - Mendizorroza,10 AUO - HUA,4.07,16.3
+5 Mendizorrotza - Mendizorroza,11 San Martin (Udala) - Ayuntamiento San Martín,1.85,8.6
+5 Mendizorrotza - Mendizorroza,12 Zabalganeko gizarte-etxea - CC Zabalgana,2.16,9.4
+6 Unibertsitatea - Universidad,1 Autobus geltokia - Estación de autobuses,3.93,16.9
+6 Unibertsitatea - Universidad,2 Leizaola plaza - Plaza de Leizaola,2.29,11.7
+6 Unibertsitatea - Universidad,3 Ballester apezpikua - Obispo Ballester,3.25,13.0
+6 Unibertsitatea - Universidad,4 Antso Jakituna - Sancho el Sabio,1.13,7.0
+6 Unibertsitatea - Universidad,5 Mendizorrotza - Mendizorroza,2.14,13.6
+6 Unibertsitatea - Universidad,7 Salburuko gizarte-etxea - C.C. Salburua,4.69,16.6
+6 Unibertsitatea - Universidad,8 Tren geltokia - Estación de Tren,1.39,7.3
+6 Unibertsitatea - Universidad,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,5.04,22.6
+6 Unibertsitatea - Universidad,10 AUO - HUA,3.89,19.7
+6 Unibertsitatea - Universidad,11 San Martin (Udala) - Ayuntamiento San Martín,2.57,11.9
+6 Unibertsitatea - Universidad,12 Zabalganeko gizarte-etxea - CC Zabalgana,3.96,16.4
+7 Salburuko gizarte-etxea - C.C. Salburua,1 Autobus geltokia - Estación de autobuses,2.98,10.4
+7 Salburuko gizarte-etxea - C.C. Salburua,2 Leizaola plaza - Plaza de Leizaola,3.63,13.6
+7 Salburuko gizarte-etxea - C.C. Salburua,3 Ballester apezpikua - Obispo Ballester,1.52,6.1
+7 Salburuko gizarte-etxea - C.C. Salburua,4 Antso Jakituna - Sancho el Sabio,3.83,12.8
+7 Salburuko gizarte-etxea - C.C. Salburua,5 Mendizorrotza - Mendizorroza,5.25,19.9
+7 Salburuko gizarte-etxea - C.C. Salburua,6 Unibertsitatea - Universidad,3.7,13.5
+7 Salburuko gizarte-etxea - C.C. Salburua,8 Tren geltokia - Estación de Tren,2.97,9.3
+7 Salburuko gizarte-etxea - C.C. Salburua,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,5.0,18.8
+7 Salburuko gizarte-etxea - C.C. Salburua,10 AUO - HUA,3.85,15.8
+7 Salburuko gizarte-etxea - C.C. Salburua,11 San Martin (Udala) - Ayuntamiento San Martín,5.26,17.7
+7 Salburuko gizarte-etxea - C.C. Salburua,12 Zabalganeko gizarte-etxea - CC Zabalgana,7.3,20.7
+8 Tren geltokia - Estación de Tren,1 Autobus geltokia - Estación de autobuses,3.66,13.3
+8 Tren geltokia - Estación de Tren,2 Leizaola plaza - Plaza de Leizaola,1.25,6.7
+8 Tren geltokia - Estación de Tren,3 Ballester apezpikua - Obispo Ballester,2.21,8.1
+8 Tren geltokia - Estación de Tren,4 Antso Jakituna - Sancho el Sabio,0.86,3.4
+8 Tren geltokia - Estación de Tren,5 Mendizorrotza - Mendizorroza,2.28,10.5
+8 Tren geltokia - Estación de Tren,6 Unibertsitatea - Universidad,1.06,5.7
+8 Tren geltokia - Estación de Tren,7 Salburuko gizarte-etxea - C.C. Salburua,3.64,11.6
+8 Tren geltokia - Estación de Tren,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,4.77,19.1
+8 Tren geltokia - Estación de Tren,10 AUO - HUA,3.61,16.1
+8 Tren geltokia - Estación de Tren,11 San Martin (Udala) - Ayuntamiento San Martín,2.29,8.4
+8 Tren geltokia - Estación de Tren,12 Zabalganeko gizarte-etxea - CC Zabalgana,4.66,12.9
+9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,1 Autobus geltokia - Estación de autobuses,3.82,12.0
+9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,2 Leizaola plaza - Plaza de Leizaola,5.97,20.2
+9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,3 Ballester apezpikua - Obispo Ballester,5.07,17.1
+9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,4 Antso Jakituna - Sancho el Sabio,4.45,16.9
+9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,5 Mendizorrotza - Mendizorroza,4.96,17.8
+9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,6 Unibertsitatea - Universidad,5.28,20.0
+9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,7 Salburuko gizarte-etxea - C.C. Salburua,6.35,22.3
+9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,8 Tren geltokia - Estación de Tren,5.2,19.1
+9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,10 AUO - HUA,2.29,10.4
+9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,11 San Martin (Udala) - Ayuntamiento San Martín,3.66,15.3
+9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,12 Zabalganeko gizarte-etxea - CC Zabalgana,4.26,13.4
+10 AUO - HUA,1 Autobus geltokia - Estación de autobuses,1.99,7.2
+10 AUO - HUA,2 Leizaola plaza - Plaza de Leizaola,3.95,15.1
+10 AUO - HUA,3 Ballester apezpikua - Obispo Ballester,3.44,11.7
+10 AUO - HUA,4 Antso Jakituna - Sancho el Sabio,3.1,11.9
+10 AUO - HUA,5 Mendizorrotza - Mendizorroza,3.61,12.8
+10 AUO - HUA,6 Unibertsitatea - Universidad,3.93,15.0
+10 AUO - HUA,7 Salburuko gizarte-etxea - C.C. Salburua,4.73,16.8
+10 AUO - HUA,8 Tren geltokia - Estación de Tren,3.85,14.1
+10 AUO - HUA,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,1.92,7.8
+10 AUO - HUA,11 San Martin (Udala) - Ayuntamiento San Martín,2.31,10.3
+10 AUO - HUA,12 Zabalganeko gizarte-etxea - CC Zabalgana,2.91,8.4
+11 San Martin (Udala) - Ayuntamiento San Martín,1 Autobus geltokia - Estación de autobuses,3.17,12.6
+11 San Martin (Udala) - Ayuntamiento San Martín,2 Leizaola plaza - Plaza de Leizaola,3.15,13.4
+11 San Martin (Udala) - Ayuntamiento San Martín,3 Ballester apezpikua - Obispo Ballester,3.25,12.4
+11 San Martin (Udala) - Ayuntamiento San Martín,4 Antso Jakituna - Sancho el Sabio,1.49,6.8
+11 San Martin (Udala) - Ayuntamiento San Martín,5 Mendizorrotza - Mendizorroza,1.87,10.2
+11 San Martin (Udala) - Ayuntamiento San Martín,6 Unibertsitatea - Universidad,2.32,9.9
+11 San Martin (Udala) - Ayuntamiento San Martín,7 Salburuko gizarte-etxea - C.C. Salburua,4.53,17.6
+11 San Martin (Udala) - Ayuntamiento San Martín,8 Tren geltokia - Estación de Tren,2.25,9.0
+11 San Martin (Udala) - Ayuntamiento San Martín,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,3.9,16.1
+11 San Martin (Udala) - Ayuntamiento San Martín,10 AUO - HUA,2.73,13.2
+11 San Martin (Udala) - Ayuntamiento San Martín,12 Zabalganeko gizarte-etxea - CC Zabalgana,3.0,10.4
+12 Zabalganeko gizarte-etxea - CC Zabalgana,1 Autobus geltokia - Estación de autobuses,3.97,12.2
+12 Zabalganeko gizarte-etxea - CC Zabalgana,2 Leizaola plaza - Plaza de Leizaola,5.16,17.5
+12 Zabalganeko gizarte-etxea - CC Zabalgana,3 Ballester apezpikua - Obispo Ballester,5.43,16.7
+12 Zabalganeko gizarte-etxea - CC Zabalgana,4 Antso Jakituna - Sancho el Sabio,3.5,11.0
+12 Zabalganeko gizarte-etxea - CC Zabalgana,5 Mendizorrotza - Mendizorroza,2.52,8.9
+12 Zabalganeko gizarte-etxea - CC Zabalgana,6 Unibertsitatea - Universidad,4.33,14.1
+12 Zabalganeko gizarte-etxea - CC Zabalgana,7 Salburuko gizarte-etxea - C.C. Salburua,7.54,20.1
+12 Zabalganeko gizarte-etxea - CC Zabalgana,8 Tren geltokia - Estación de Tren,4.26,13.1
+12 Zabalganeko gizarte-etxea - CC Zabalgana,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,3.9,12.9
+12 Zabalganeko gizarte-etxea - CC Zabalgana,10 AUO - HUA,2.73,10.0
+12 Zabalganeko gizarte-etxea - CC Zabalgana,11 San Martin (Udala) - Ayuntamiento San Martín,2.67,9.7
