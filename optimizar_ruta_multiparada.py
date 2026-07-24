@@ -4,6 +4,7 @@ import numpy as np
 import joblib
 
 from obtener_meteo import obtener_meteo_actual
+from obtener_eventos import es_festivo, es_fiestas_la_blanca, es_vacaciones_universidad
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
@@ -24,11 +25,17 @@ def obtener_necesidades_estaciones(modelo, df_features):
     df_estado['llueve'] = meteo_actual['llueve']
     df_estado['viento_kmh'] = meteo_actual['viento_kmh']
     
+    dt_actual = df_estado['timestamp'].iloc[0]
+    df_estado['es_festivo'] = es_festivo(dt_actual)
+    df_estado['es_la_blanca'] = es_fiestas_la_blanca(dt_actual)
+    df_estado['es_vacaciones_upv'] = es_vacaciones_universidad(dt_actual)
+    
     feature_cols = [
         'id_estacion', 'hora', 'dia_semana', 'es_finde', 'capacidad',
         'bicis_disponibles', 'anclajes_disponibles', 'pct_ocupacion',
         'tendencia_15m', 'tendencia_30m',
-        'temperatura', 'llueve', 'viento_kmh'
+        'temperatura', 'llueve', 'viento_kmh',
+        'es_festivo', 'es_la_blanca', 'es_vacaciones_upv'
     ]
     
     X = df_estado[feature_cols].copy()
@@ -168,13 +175,9 @@ def calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgo
     return ruta_pasos, round(tiempo_total, 1), round(distancia_total, 2)
 
 def main():
-    print("Cargando datos y modelo predictivo LightGBM con meteorología...")
+    print("Cargando datos y modelo predictivo LightGBM...")
     modelo, df_distancias, df_features = cargar_datos()
-    
-    print("Calculando necesidades predictivas...")
     necesidades = obtener_necesidades_estaciones(modelo, df_features)
-    
-    print("Optimizando circuito multiparada...")
     pasos_ruta, tiempo_total, distancia_total = calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgoneta=10)
     
     if pasos_ruta:

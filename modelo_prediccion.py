@@ -10,12 +10,13 @@ def main():
     df = pd.read_csv('features_historico.csv')
     df['id_estacion'] = df['id_estacion'].astype('category')
     
-    # Lista de variables explicativas incluyendo las meteorológicas
+    # Lista de variables explicativas incluyendo clima y eventos de Vitoria-Gasteiz
     feature_cols = [
         'id_estacion', 'hora', 'dia_semana', 'es_finde', 'capacidad',
         'bicis_disponibles', 'anclajes_disponibles', 'pct_ocupacion',
         'tendencia_15m', 'tendencia_30m',
-        'temperatura', 'llueve', 'viento_kmh'
+        'temperatura', 'llueve', 'viento_kmh',
+        'es_festivo', 'es_la_blanca', 'es_vacaciones_upv'
     ]
     
     target_col = 'target_bicis_30m'
@@ -28,7 +29,7 @@ def main():
     X_train, X_test = X.iloc[:corte_idx], X.iloc[corte_idx:]
     y_train, y_test = y.iloc[:corte_idx], y.iloc[corte_idx:]
     
-    print(f"Entrenando modelo LightGBM enriquecido con datos meteorológicos de Open-Meteo ({len(X_train)} muestras)...")
+    print(f"Entrenando modelo LightGBM con festivos y eventos ({len(X_train)} muestras)...")
     
     modelo = LGBMRegressor(
         n_estimators=300,
@@ -44,7 +45,7 @@ def main():
     mae = mean_absolute_error(y_test, predicciones)
     rmse = root_mean_squared_error(y_test, predicciones)
     
-    print(f"\n--- EVALUACIÓN DEL MODELO LIGHTGBM ENRIQUECIDO ---")
+    print(f"\n--- EVALUACIÓN DEL MODELO LIGHTGBM CON EVENTOS Y CLIMA ---")
     print(f"Error Medio Absoluto (MAE): {mae:.2f} bicicletas")
     print(f"Error Cuadrático Medio (RMSE): {rmse:.2f} bicicletas")
     

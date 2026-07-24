@@ -4,6 +4,7 @@ import numpy as np
 import joblib
 
 from obtener_meteo import obtener_meteo_actual
+from obtener_eventos import es_festivo, es_fiestas_la_blanca, es_vacaciones_universidad
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
@@ -21,17 +22,22 @@ def obtener_ultimo_estado():
     return df_ultimo
 
 def generar_predicciones_y_alertas(df_estado, modelo):
-    # Obtenemos la meteorología actual en Vitoria-Gasteiz desde Open-Meteo
     meteo_actual = obtener_meteo_actual()
     df_estado['temperatura'] = meteo_actual['temperatura']
     df_estado['llueve'] = meteo_actual['llueve']
     df_estado['viento_kmh'] = meteo_actual['viento_kmh']
     
+    dt_actual = df_estado['timestamp'].iloc[0]
+    df_estado['es_festivo'] = es_festivo(dt_actual)
+    df_estado['es_la_blanca'] = es_fiestas_la_blanca(dt_actual)
+    df_estado['es_vacaciones_upv'] = es_vacaciones_universidad(dt_actual)
+    
     feature_cols = [
         'id_estacion', 'hora', 'dia_semana', 'es_finde', 'capacidad',
         'bicis_disponibles', 'anclajes_disponibles', 'pct_ocupacion',
         'tendencia_15m', 'tendencia_30m',
-        'temperatura', 'llueve', 'viento_kmh'
+        'temperatura', 'llueve', 'viento_kmh',
+        'es_festivo', 'es_la_blanca', 'es_vacaciones_upv'
     ]
     
     X = df_estado[feature_cols].copy()
@@ -99,10 +105,10 @@ def calcular_recomendaciones_redistribucion(df_estado, df_distancias):
     return df_recom
 
 def main():
-    print("Cargando modelo LightGBM enriquecido con meteorología Open-Meteo...")
+    print("Cargando modelo LightGBM enriquecido con festivos y eventos...")
     modelo, df_distancias = cargar_modelo_y_matriz()
     
-    print("Obteniendo estado actual e integrando clima en vivo...")
+    print("Obteniendo estado actual e integrando calendario en vivo...")
     df_estado = obtener_ultimo_estado()
     df_estado = generar_predicciones_y_alertas(df_estado, modelo)
     

@@ -2,6 +2,7 @@ import os
 import glob
 import pandas as pd
 from obtener_meteo import obtener_meteo_historica
+from obtener_eventos import enriquecer_eventos_calendario
 
 def main():
     datos_dir = 'datos'
@@ -41,6 +42,10 @@ def main():
     df['tendencia_15m'] = df['bicis_disponibles'] - df['bicis_hace_15m']
     df['tendencia_30m'] = df['bicis_disponibles'] - df['bicis_hace_30m']
     
+    # Integración de festivos y eventos de Vitoria-Gasteiz
+    print("Integrando festivos y eventos locales de Vitoria-Gasteiz...")
+    df = enriquecer_eventos_calendario(df)
+    
     # Integración de variables meteorológicas (Open-Meteo)
     print("Integrando datos meteorológicos de Open-Meteo...")
     if not os.path.exists('meteo_historica.csv'):
@@ -71,7 +76,7 @@ def main():
     df_clean = df.dropna().reset_index(drop=True)
     df_clean['id_estacion'] = df_clean['id_estacion'].astype('category')
     
-    print(f"Dataset de features con meteorología generado: {len(df_clean)} filas procesadas.")
+    print(f"Dataset de features con eventos y clima generado: {len(df_clean)} filas procesadas.")
     df_clean.to_csv('features_historico.csv', index=False)
     print("Guardado en features_historico.csv")
 
