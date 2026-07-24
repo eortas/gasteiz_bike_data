@@ -74,21 +74,21 @@ Las variables meteorológicas y temporales se posicionan como los principales fa
 
 ## 🛠️ Módulos del Proyecto
 
-### 1. 🗜️ Data Engineering y Parquet Híbrido ([convertir_a_parquet.py](file:///c:/Users/ortas/OneDrive/Documentos/gasteiz_bike_data-1/convertir_a_parquet.py))
+### 1. 🗜️ Data Engineering y Parquet Híbrido ([convertir_a_parquet.py](convertir_a_parquet.py))
 - **Particionamiento Mensual**: Almacenamiento en `datos/historico_YYYY-MM.csv` para mantener los diffs de Git por debajo de 1 KB.
 - **Compresión Parquet**: Conversión automatizada a `datos/historico_YYYY-MM.parquet` consiguiendo una **reducción de peso del 97.9%** (de 10.6 MB en CSV a solo 0.23 MB en Parquet).
 
-### 2. 🤖 Modelo Predictivo LightGBM ([modelo_prediccion.py](file:///c:/Users/ortas/OneDrive/Documentos/gasteiz_bike_data-1/modelo_prediccion.py))
+### 2. 🤖 Modelo Predictivo LightGBM ([modelo_prediccion.py](modelo_prediccion.py))
 - Inferencia a **30 minutos vista**.
 - Soporte categórico nativo para `id_estacion`.
-- Integración de variables meteorológicas (Open-Meteo) y de calendario local ([obtener_eventos.py](file:///c:/Users/ortas/OneDrive/Documentos/gasteiz_bike_data-1/obtener_eventos.py): Fiestas de La Blanca, San Prudencio, Día del Blusa y receso académico UPV/EHU).
+- Integración de variables meteorológicas (Open-Meteo) y de calendario local ([obtener_eventos.py](obtener_eventos.py): Fiestas de La Blanca, San Prudencio, Día del Blusa y receso académico UPV/EHU).
 
-### 3. 🚐 Planificador de Rutas Multiparada Furgoneta ([optimizar_ruta_multiparada.py](file:///c:/Users/ortas/OneDrive/Documentos/gasteiz_bike_data-1/optimizar_ruta_multiparada.py))
+### 3. 🚐 Planificador de Rutas Multiparada Furgoneta ([optimizar_ruta_multiparada.py](optimizar_ruta_multiparada.py))
 - **Priorización de Alertas**: Atiende obligatoriamente las estaciones en **🔴 CRÍTICA** (0-1 bicis) antes de abordar cualquier estación en **🟡 PRECAUCIÓN**.
 - **Doble Restricción de Seguridad**: Garantiza que la estación origen mantiene al menos 3 bicicletas predichas y que el destino no supera su capacidad.
-- **Matriz OSRM**: Basada en la red viaria real de OpenStreetMap calibrada a la velocidad media urbana efectiva de Vitoria-Gasteiz ([matriz_distancias_estaciones.csv](file:///c:/Users/ortas/OneDrive/Documentos/gasteiz_bike_data-1/matriz_distancias_estaciones.csv)).
+- **Matriz OSRM**: Basada en la red viaria real de OpenStreetMap calibrada a la velocidad media urbana efectiva de Vitoria-Gasteiz ([matriz_distancias_estaciones.csv](matriz_distancias_estaciones.csv)).
 
-### 4. 🖥️ Dashboard Interactivo ([dashboard.py](file:///c:/Users/ortas/OneDrive/Documentos/gasteiz_bike_data-1/dashboard.py))
+### 4. 🖥️ Dashboard Interactivo ([dashboard.py](dashboard.py))
 - Panel de control gráfico construido en **Streamlit**.
 - Desplegado en **Render** con pipeline automatizado de **Keep-Alive (cron-job.org)** para servicio 24/7/365 sin tiempos de reposo.
 
@@ -121,7 +121,7 @@ Abre tu navegador en `http://localhost:8501`.
 
 ## 🔄 Pipeline MLOps Automático (CI/CD)
 
-El archivo [.github/workflows/retrain_ml.yml](file:///c:/Users/ortas/OneDrive/Documentos/gasteiz_bike_data-1/.github/workflows/retrain_ml.yml) ejecuta un reentrenamiento nocturno cada día a las 03:00 AM UTC:
+El archivo [.github/workflows/retrain_ml.yml](.github/workflows/retrain_ml.yml) ejecuta un reentrenamiento nocturno cada día a las 03:00 AM UTC:
 1. Extrae los nuevos datos del scraper.
 2. Actualiza la compresión Parquet.
 3. Reentrena el modelo LightGBM y evalúa sus métricas.
