@@ -7,8 +7,10 @@ def main():
     archivos_parquet = glob.glob(os.path.join(datos_dir, '*.parquet'))
     
     if archivos_parquet:
-        print(f"Cargando dataset optimizado desde {len(archivos_parquet)} particiones Parquet...")
-        dfs = [pd.read_parquet(f) for f in archivos_parquet]
+        # Ordenamos los archivos cronológicamente para cargar todos los parquets disponibles
+        archivos_parquet_ordenados = sorted(archivos_parquet)
+        print(f"Cargando dataset completo desde {len(archivos_parquet_ordenados)} particiones Parquet...")
+        dfs = [pd.read_parquet(f) for f in archivos_parquet_ordenados]
         df = pd.concat(dfs, ignore_index=True)
     elif os.path.exists('historico.parquet'):
         print("Cargando dataset optimizado desde historico.parquet...")
@@ -17,7 +19,7 @@ def main():
         print("Cargando dataset desde archivos CSV...")
         columnas = ['timestamp', 'id_estacion', 'nombre_estacion', 'bicis_disponibles', 'anclajes_disponibles']
         archivos_csv = glob.glob(os.path.join(datos_dir, '*.csv')) or ['historico.csv']
-        dfs = [pd.read_csv(f, header=None, names=columnas) for f in archivos_csv]
+        dfs = [pd.read_csv(f, header=None, names=columnas) for f in sorted(archivos_csv)]
         df = pd.concat(dfs, ignore_index=True)
         df['timestamp'] = pd.to_datetime(df['timestamp'], format='ISO8601')
     
@@ -51,7 +53,7 @@ def main():
     # Convertimos id_estacion a tipo categoría para soporte nativo en LightGBM
     df_clean['id_estacion'] = df_clean['id_estacion'].astype('category')
     
-    print(f"Dataset de features generado con éxito: {len(df_clean)} filas procesadas.")
+    print(f"Dataset de features generado con éxito: {len(df_clean)} filas procesadas de todos los parquets.")
     df_clean.to_csv('features_historico.csv', index=False)
     print("Guardado en features_historico.csv")
 
