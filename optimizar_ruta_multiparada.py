@@ -3,7 +3,8 @@ import pandas as pd
 import numpy as np
 import joblib
 
-# Reconfiguramos la salida de la consola a UTF-8 para Windows
+from obtener_meteo import obtener_meteo_actual
+
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
@@ -18,15 +19,21 @@ def obtener_necesidades_estaciones(modelo, df_features):
     ultimo_ts = df_features['timestamp'].max()
     df_estado = df_features[df_features['timestamp'] == ultimo_ts].copy()
     
+    meteo_actual = obtener_meteo_actual()
+    df_estado['temperatura'] = meteo_actual['temperatura']
+    df_estado['llueve'] = meteo_actual['llueve']
+    df_estado['viento_kmh'] = meteo_actual['viento_kmh']
+    
     feature_cols = [
         'id_estacion', 'hora', 'dia_semana', 'es_finde', 'capacidad',
         'bicis_disponibles', 'anclajes_disponibles', 'pct_ocupacion',
-        'tendencia_15m', 'tendencia_30m'
+        'tendencia_15m', 'tendencia_30m',
+        'temperatura', 'llueve', 'viento_kmh'
     ]
+    
     X = df_estado[feature_cols].copy()
     X['id_estacion'] = X['id_estacion'].astype('category')
     
-    # Predicción del número de bicicletas a 30 minutos vista
     df_estado['prediccion_30m'] = np.clip(modelo.predict(X), 0, df_estado['capacidad'])
     
     necesidades = {}
@@ -36,7 +43,6 @@ def obtener_necesidades_estaciones(modelo, df_features):
         cap = row['capacidad']
         
         if pred <= 2.5:
-            # Asignamos nivel de urgencia: 100 para CRÍTICA (<=1.0 bici), 10 para PRECAUCIÓN (<=2.5 bicis)
             urgencia = 100 if pred <= 1.0 else 10
             meta = min(5, cap - 2)
             necesidad = int(np.ceil(meta - pred))
@@ -77,7 +83,6 @@ def calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgo
     if not origenes or not destinos:
         return [], 0.0, 0.0
         
-    # La furgoneta empieza en la estación con mayor excedente
     estacion_actual = max(origenes, key=origenes.get)
     bicis_en_furgoneta = 0
     
@@ -85,7 +90,6 @@ def calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgo
     tiempo_total = 0.0
     distancia_total = 0.0
     
-    # Cargar en la primera estación
     cargar = min(origenes[estacion_actual], capacidad_furgoneta - bicis_en_furgoneta)
     bicis_en_furgoneta += cargar
     origenes[estacion_actual] -= cargar
@@ -105,15 +109,11 @@ def calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgo
     
     while iter_count < max_iteraciones:
         iter_count += 1
-        
-        # Si la furgoneta tiene bicis a bordo, atiende primero las estaciones CRÍTICAS (Urgencia 100)
         destinos_pendientes = [d for d, info in destinos.items() if info['cantidad'] > 0]
         
         if bicis_en_furgoneta > 0 and destinos_pendientes:
             max_urgencia = max(destinos[d]['urgencia'] for d in destinos_pendientes)
             candidatos_urgentes = [d for d in destinos_pendientes if destinos[d]['urgencia'] == max_urgencia]
-            
-            # Entre las estaciones con máxima urgencia, elegimos la más cercana
             siguiente = min(candidatos_urgentes, key=lambda d: obtener_tiempo(df_distancias, estacion_actual, d))
             
             t_tramo = obtener_tiempo(df_distancias, estacion_actual, siguiente)
@@ -137,7 +137,6 @@ def calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgo
             estacion_actual = siguiente
             paso_num += 1
             
-        # Si la furgoneta está vacía o necesita cargar más bicis para cubrir las urgencias
         elif bicis_en_furgoneta < capacidad_furgoneta and any(cant > 0 for cant in origenes.values()):
             candidatos_origen = [o for o, cant in origenes.items() if cant > 0]
             siguiente = min(candidatos_origen, key=lambda o: obtener_tiempo(df_distancias, estacion_actual, o))
@@ -169,30 +168,19 @@ def calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgo
     return ruta_pasos, round(tiempo_total, 1), round(distancia_total, 2)
 
 def main():
-    print("Cargando datos y modelo predictivo LightGBM...")
+    print("Cargando datos y modelo predictivo LightGBM con meteorología...")
     modelo, df_distancias, df_features = cargar_datos()
     
-    print("Calculando necesidades predictivas con priorización de alertas...")
+    print("Calculando necesidades predictivas...")
     necesidades = obtener_necesidades_estaciones(modelo, df_features)
     
-    print("Optimizando circuito multiparada de la furgoneta de reparto...")
+    print("Optimizando circuito multiparada...")
     pasos_ruta, tiempo_total, distancia_total = calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgoneta=10)
-    
-    print("\n==================================================================================")
-    print("CIRCUITO MULTIPARADA OPTIMO (PRIORIDAD: CRITICA -> PRECAUCION)")
-    print("==================================================================================")
     
     if pasos_ruta:
         df_pasos = pd.DataFrame(pasos_ruta)
         df_pasos.columns = ['Paso', 'Estación Parada', 'Acción Recomendada', 'Bicis en Furgoneta', 'Tiempo Tramo (min)', 'Distancia (km)']
         print(df_pasos.to_string(index=False))
-        
-        print("\n----------------------------------------------------------------------------------")
-        print(f"TIEMPO TOTAL EN CARRETERA: {tiempo_total} minutos")
-        print(f"DISTANCIA TOTAL RECORRIDA: {distancia_total} km")
-        print("----------------------------------------------------------------------------------")
-    else:
-        print("No se requiere circuito de redistribución en este momento.")
 
 if __name__ == '__main__':
     main()

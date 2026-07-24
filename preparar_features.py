@@ -1,16 +1,15 @@
 import os
 import glob
 import pandas as pd
+from obtener_meteo import obtener_meteo_historica
 
 def main():
     datos_dir = 'datos'
     archivos_parquet = glob.glob(os.path.join(datos_dir, '*.parquet'))
     
     if archivos_parquet:
-        # Ordenamos los archivos cronológicamente para cargar todos los parquets disponibles
-        archivos_parquet_ordenados = sorted(archivos_parquet)
-        print(f"Cargando dataset completo desde {len(archivos_parquet_ordenados)} particiones Parquet...")
-        dfs = [pd.read_parquet(f) for f in archivos_parquet_ordenados]
+        print(f"Cargando dataset optimizado desde {len(archivos_parquet)} particiones Parquet...")
+        dfs = [pd.read_parquet(f) for f in sorted(archivos_parquet)]
         df = pd.concat(dfs, ignore_index=True)
     elif os.path.exists('historico.parquet'):
         print("Cargando dataset optimizado desde historico.parquet...")
@@ -23,10 +22,8 @@ def main():
         df = pd.concat(dfs, ignore_index=True)
         df['timestamp'] = pd.to_datetime(df['timestamp'], format='ISO8601')
     
-    # Ordenamos de forma cronológica por estación y fecha
+    df['timestamp'] = pd.to_datetime(df['timestamp'], format='ISO8601')
     df = df.sort_values(by=['id_estacion', 'timestamp']).reset_index(drop=True)
-    
-    # Calculamos la capacidad total de cada estación
     df['capacidad'] = df['bicis_disponibles'] + df['anclajes_disponibles']
     
     # Extraemos características temporales
@@ -34,26 +31,47 @@ def main():
     df['dia_semana'] = df['timestamp'].dt.dayofweek
     df['es_finde'] = df['dia_semana'].apply(lambda d: 1 if d >= 5 else 0)
     
-    # Calculamos el porcentaje de ocupación actual
+    # Porcentaje de ocupación actual
     df['pct_ocupacion'] = df['bicis_disponibles'] / df['capacidad']
     
-    # Calculamos las tendencias de cambio en 15 min (3 lecturas) y 30 min (6 lecturas)
+    # Tendencias de cambio a 15 y 30 minutos
     df['bicis_hace_15m'] = df.groupby('id_estacion')['bicis_disponibles'].shift(3)
     df['bicis_hace_30m'] = df.groupby('id_estacion')['bicis_disponibles'].shift(6)
     
     df['tendencia_15m'] = df['bicis_disponibles'] - df['bicis_hace_15m']
     df['tendencia_30m'] = df['bicis_disponibles'] - df['bicis_hace_30m']
     
-    # Definimos el objetivo (target): cuántas bicis habrá en 30 minutos (6 lecturas a futuro)
+    # Integración de variables meteorológicas (Open-Meteo)
+    print("Integrando datos meteorológicos de Open-Meteo...")
+    if not os.path.exists('meteo_historica.csv'):
+        df_meteo = obtener_meteo_historica()
+        if not df_meteo.empty:
+            df_meteo.to_csv('meteo_historica.csv', index=False)
+    else:
+        df_meteo = pd.read_csv('meteo_historica.csv')
+        
+    if not df_meteo.empty:
+        df_meteo['timestamp_hora'] = pd.to_datetime(df_meteo['timestamp_hora']).dt.tz_localize(None)
+        df['timestamp_hora'] = df['timestamp'].dt.tz_localize(None).dt.floor('h')
+        
+        df = pd.merge(df, df_meteo, on='timestamp_hora', how='left')
+        df['temperatura'] = df['temperatura'].fillna(18.0)
+        df['precipitacion'] = df['precipitacion'].fillna(0.0)
+        df['llueve'] = df['llueve'].fillna(0).astype(int)
+        df['viento_kmh'] = df['viento_kmh'].fillna(10.0)
+    else:
+        df['temperatura'] = 18.0
+        df['precipitacion'] = 0.0
+        df['llueve'] = 0
+        df['viento_kmh'] = 10.0
+        
+    # Target: bicis a 30 minutos
     df['target_bicis_30m'] = df.groupby('id_estacion')['bicis_disponibles'].shift(-6)
     
-    # Eliminamos las filas con valores nulos generadas por los desplazamientos temporales
     df_clean = df.dropna().reset_index(drop=True)
-    
-    # Convertimos id_estacion a tipo categoría para soporte nativo en LightGBM
     df_clean['id_estacion'] = df_clean['id_estacion'].astype('category')
     
-    print(f"Dataset de features generado con éxito: {len(df_clean)} filas procesadas de todos los parquets.")
+    print(f"Dataset de features con meteorología generado: {len(df_clean)} filas procesadas.")
     df_clean.to_csv('features_historico.csv', index=False)
     print("Guardado en features_historico.csv")
 
