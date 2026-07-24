@@ -1,15 +1,24 @@
 import os
+import glob
 import pandas as pd
 
 def main():
-    # Preferimos leer desde historico.parquet por su velocidad y bajo uso de memoria
-    if os.path.exists('historico.parquet'):
+    datos_dir = 'datos'
+    archivos_parquet = glob.glob(os.path.join(datos_dir, '*.parquet'))
+    
+    if archivos_parquet:
+        print(f"Cargando dataset optimizado desde {len(archivos_parquet)} particiones Parquet...")
+        dfs = [pd.read_parquet(f) for f in archivos_parquet]
+        df = pd.concat(dfs, ignore_index=True)
+    elif os.path.exists('historico.parquet'):
         print("Cargando dataset optimizado desde historico.parquet...")
         df = pd.read_parquet('historico.parquet')
     else:
-        print("Cargando dataset desde historico.csv...")
+        print("Cargando dataset desde archivos CSV...")
         columnas = ['timestamp', 'id_estacion', 'nombre_estacion', 'bicis_disponibles', 'anclajes_disponibles']
-        df = pd.read_csv('historico.csv', header=None, names=columnas)
+        archivos_csv = glob.glob(os.path.join(datos_dir, '*.csv')) or ['historico.csv']
+        dfs = [pd.read_csv(f, header=None, names=columnas) for f in archivos_csv]
+        df = pd.concat(dfs, ignore_index=True)
         df['timestamp'] = pd.to_datetime(df['timestamp'], format='ISO8601')
     
     # Ordenamos de forma cronológica por estación y fecha

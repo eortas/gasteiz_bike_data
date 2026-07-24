@@ -10100,6 +10100,18 @@ timestamp,id_estacion,nombre_estacion,bicis_disponibles,anclajes_disponibles,cap
 2026-07-24 16:10:14.551000+00:00,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12,24,16,4,0,0.5,14.0,14.0,-2.0,-2.0,11.0
 2026-07-24 16:15:17.615000+00:00,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12,24,16,4,0,0.5,14.0,14.0,-2.0,-2.0,11.0
 2026-07-24 16:20:14.514000+00:00,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12,24,16,4,0,0.5,12.0,14.0,0.0,-2.0,11.0
+2026-07-24 16:25:11.468000+00:00,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,13,11,24,16,4,0,0.5416666666666666,12.0,14.0,1.0,-1.0,13.0
+2026-07-24 16:30:23.742000+00:00,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,13,11,24,16,4,0,0.5416666666666666,12.0,14.0,1.0,-1.0,17.0
+2026-07-24 16:35:10.704000+00:00,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13,24,16,4,0,0.4583333333333333,12.0,12.0,-1.0,-1.0,17.0
+2026-07-24 16:40:14.887000+00:00,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13,24,16,4,0,0.4583333333333333,13.0,12.0,-2.0,-1.0,17.0
+2026-07-24 16:45:14.816000+00:00,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13,24,16,4,0,0.4583333333333333,13.0,12.0,-2.0,-1.0,16.0
+2026-07-24 16:50:14.989000+00:00,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13,24,16,4,0,0.4583333333333333,11.0,12.0,0.0,-1.0,16.0
+2026-07-24 16:55:10.386000+00:00,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,13,11,24,16,4,0,0.5416666666666666,11.0,13.0,2.0,0.0,16.0
+2026-07-24 17:00:32.999000+00:00,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,17,7,24,17,4,0,0.7083333333333334,11.0,13.0,6.0,4.0,17.0
+2026-07-24 17:05:11.237000+00:00,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,17,7,24,17,4,0,0.7083333333333334,11.0,11.0,6.0,6.0,17.0
+2026-07-24 17:10:15.230000+00:00,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,17,7,24,17,4,0,0.7083333333333334,13.0,11.0,4.0,6.0,17.0
+2026-07-24 17:15:14.545000+00:00,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,16,8,24,17,4,0,0.6666666666666666,17.0,11.0,-1.0,5.0,17.0
+2026-07-24 17:20:15.124000+00:00,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,16,8,24,17,4,0,0.6666666666666666,17.0,11.0,-1.0,5.0,17.0
 2026-06-19 09:40:26.750000+00:00,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,9,15,24,9,4,0,0.375,9.0,9.0,0.0,0.0,12.0
 2026-06-19 09:45:28.588000+00:00,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14,24,9,4,0,0.4166666666666667,9.0,9.0,1.0,1.0,12.0
 2026-06-19 09:50:27.806000+00:00,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,12,12,24,9,4,0,0.5,9.0,9.0,3.0,3.0,12.0
@@ -20201,6 +20213,18 @@ timestamp,id_estacion,nombre_estacion,bicis_disponibles,anclajes_disponibles,cap
 2026-07-24 16:10:14.551000+00:00,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17,24,16,4,0,0.2916666666666667,7.0,7.0,0.0,0.0,8.0
 2026-07-24 16:15:17.615000+00:00,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17,24,16,4,0,0.2916666666666667,7.0,7.0,0.0,0.0,8.0
 2026-07-24 16:20:14.514000+00:00,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17,24,16,4,0,0.2916666666666667,7.0,7.0,0.0,0.0,8.0
+2026-07-24 16:25:11.468000+00:00,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17,24,16,4,0,0.2916666666666667,7.0,7.0,0.0,0.0,8.0
+2026-07-24 16:30:23.742000+00:00,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17,24,16,4,0,0.2916666666666667,7.0,7.0,0.0,0.0,8.0
+2026-07-24 16:35:10.704000+00:00,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16,24,16,4,0,0.3333333333333333,7.0,7.0,1.0,1.0,8.0
+2026-07-24 16:40:14.887000+00:00,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16,24,16,4,0,0.3333333333333333,7.0,7.0,1.0,1.0,8.0
+2026-07-24 16:45:14.816000+00:00,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16,24,16,4,0,0.3333333333333333,7.0,7.0,1.0,1.0,8.0
+2026-07-24 16:50:14.989000+00:00,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16,24,16,4,0,0.3333333333333333,8.0,7.0,0.0,1.0,9.0
+2026-07-24 16:55:10.386000+00:00,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16,24,16,4,0,0.3333333333333333,8.0,7.0,0.0,1.0,7.0
+2026-07-24 17:00:32.999000+00:00,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16,24,17,4,0,0.3333333333333333,8.0,7.0,0.0,1.0,7.0
+2026-07-24 17:05:11.237000+00:00,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16,24,17,4,0,0.3333333333333333,8.0,8.0,0.0,0.0,8.0
+2026-07-24 17:10:15.230000+00:00,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16,24,17,4,0,0.3333333333333333,8.0,8.0,0.0,0.0,8.0
+2026-07-24 17:15:14.545000+00:00,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16,24,17,4,0,0.3333333333333333,8.0,8.0,0.0,0.0,8.0
+2026-07-24 17:20:15.124000+00:00,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,9,15,24,17,4,0,0.375,8.0,8.0,1.0,1.0,7.0
 2026-06-19 09:40:26.750000+00:00,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,18,23,9,4,0,0.21739130434782608,4.0,4.0,1.0,1.0,4.0
 2026-06-19 09:45:28.588000+00:00,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,18,23,9,4,0,0.21739130434782608,4.0,4.0,1.0,1.0,4.0
 2026-06-19 09:50:27.806000+00:00,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,18,23,9,4,0,0.21739130434782608,5.0,4.0,0.0,1.0,4.0
@@ -30302,6 +30326,18 @@ timestamp,id_estacion,nombre_estacion,bicis_disponibles,anclajes_disponibles,cap
 2026-07-24 16:10:14.551000+00:00,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18,24,16,4,0,0.25,6.0,6.0,0.0,0.0,5.0
 2026-07-24 16:15:17.615000+00:00,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18,24,16,4,0,0.25,6.0,6.0,0.0,0.0,7.0
 2026-07-24 16:20:14.514000+00:00,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18,24,16,4,0,0.25,6.0,6.0,0.0,0.0,7.0
+2026-07-24 16:25:11.468000+00:00,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18,24,16,4,0,0.25,6.0,6.0,0.0,0.0,9.0
+2026-07-24 16:30:23.742000+00:00,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19,24,16,4,0,0.20833333333333334,6.0,6.0,-1.0,-1.0,8.0
+2026-07-24 16:35:10.704000+00:00,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19,24,16,4,0,0.20833333333333334,6.0,6.0,-1.0,-1.0,8.0
+2026-07-24 16:40:14.887000+00:00,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19,24,16,4,0,0.20833333333333334,6.0,6.0,-1.0,-1.0,8.0
+2026-07-24 16:45:14.816000+00:00,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17,24,16,4,0,0.2916666666666667,5.0,6.0,2.0,1.0,8.0
+2026-07-24 16:50:14.989000+00:00,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17,24,16,4,0,0.2916666666666667,5.0,6.0,2.0,1.0,9.0
+2026-07-24 16:55:10.386000+00:00,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,9,15,24,16,4,0,0.375,5.0,6.0,4.0,3.0,9.0
+2026-07-24 17:00:32.999000+00:00,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16,24,17,4,0,0.3333333333333333,7.0,5.0,1.0,3.0,9.0
+2026-07-24 17:05:11.237000+00:00,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16,24,17,4,0,0.3333333333333333,7.0,5.0,1.0,3.0,15.0
+2026-07-24 17:10:15.230000+00:00,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16,24,17,4,0,0.3333333333333333,9.0,5.0,-1.0,3.0,17.0
+2026-07-24 17:15:14.545000+00:00,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16,24,17,4,0,0.3333333333333333,8.0,7.0,0.0,1.0,17.0
+2026-07-24 17:20:15.124000+00:00,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,9,15,24,17,4,0,0.375,8.0,7.0,1.0,2.0,17.0
 2026-06-19 09:40:26.750000+00:00,st_d4sl14ffimdc73fprpdg,3 Ballester apezpikua - Obispo Ballester,8,16,24,9,4,0,0.3333333333333333,8.0,8.0,0.0,0.0,8.0
 2026-06-19 09:45:28.588000+00:00,st_d4sl14ffimdc73fprpdg,3 Ballester apezpikua - Obispo Ballester,8,16,24,9,4,0,0.3333333333333333,8.0,8.0,0.0,0.0,8.0
 2026-06-19 09:50:27.806000+00:00,st_d4sl14ffimdc73fprpdg,3 Ballester apezpikua - Obispo Ballester,8,16,24,9,4,0,0.3333333333333333,8.0,8.0,0.0,0.0,8.0
@@ -40403,6 +40439,18 @@ timestamp,id_estacion,nombre_estacion,bicis_disponibles,anclajes_disponibles,cap
 2026-07-24 16:10:14.551000+00:00,st_d4sl14ffimdc73fprpdg,3 Ballester apezpikua - Obispo Ballester,10,14,24,16,4,0,0.4166666666666667,10.0,10.0,0.0,0.0,10.0
 2026-07-24 16:15:17.615000+00:00,st_d4sl14ffimdc73fprpdg,3 Ballester apezpikua - Obispo Ballester,10,14,24,16,4,0,0.4166666666666667,10.0,10.0,0.0,0.0,10.0
 2026-07-24 16:20:14.514000+00:00,st_d4sl14ffimdc73fprpdg,3 Ballester apezpikua - Obispo Ballester,10,14,24,16,4,0,0.4166666666666667,10.0,10.0,0.0,0.0,10.0
+2026-07-24 16:25:11.468000+00:00,st_d4sl14ffimdc73fprpdg,3 Ballester apezpikua - Obispo Ballester,10,14,24,16,4,0,0.4166666666666667,10.0,10.0,0.0,0.0,10.0
+2026-07-24 16:30:23.742000+00:00,st_d4sl14ffimdc73fprpdg,3 Ballester apezpikua - Obispo Ballester,10,14,24,16,4,0,0.4166666666666667,10.0,10.0,0.0,0.0,10.0
+2026-07-24 16:35:10.704000+00:00,st_d4sl14ffimdc73fprpdg,3 Ballester apezpikua - Obispo Ballester,10,14,24,16,4,0,0.4166666666666667,10.0,10.0,0.0,0.0,10.0
+2026-07-24 16:40:14.887000+00:00,st_d4sl14ffimdc73fprpdg,3 Ballester apezpikua - Obispo Ballester,10,14,24,16,4,0,0.4166666666666667,10.0,10.0,0.0,0.0,10.0
+2026-07-24 16:45:14.816000+00:00,st_d4sl14ffimdc73fprpdg,3 Ballester apezpikua - Obispo Ballester,10,14,24,16,4,0,0.4166666666666667,10.0,10.0,0.0,0.0,10.0
+2026-07-24 16:50:14.989000+00:00,st_d4sl14ffimdc73fprpdg,3 Ballester apezpikua - Obispo Ballester,10,14,24,16,4,0,0.4166666666666667,10.0,10.0,0.0,0.0,10.0
+2026-07-24 16:55:10.386000+00:00,st_d4sl14ffimdc73fprpdg,3 Ballester apezpikua - Obispo Ballester,10,14,24,16,4,0,0.4166666666666667,10.0,10.0,0.0,0.0,10.0
+2026-07-24 17:00:32.999000+00:00,st_d4sl14ffimdc73fprpdg,3 Ballester apezpikua - Obispo Ballester,10,14,24,17,4,0,0.4166666666666667,10.0,10.0,0.0,0.0,10.0
+2026-07-24 17:05:11.237000+00:00,st_d4sl14ffimdc73fprpdg,3 Ballester apezpikua - Obispo Ballester,10,14,24,17,4,0,0.4166666666666667,10.0,10.0,0.0,0.0,10.0
+2026-07-24 17:10:15.230000+00:00,st_d4sl14ffimdc73fprpdg,3 Ballester apezpikua - Obispo Ballester,10,14,24,17,4,0,0.4166666666666667,10.0,10.0,0.0,0.0,10.0
+2026-07-24 17:15:14.545000+00:00,st_d4sl14ffimdc73fprpdg,3 Ballester apezpikua - Obispo Ballester,10,14,24,17,4,0,0.4166666666666667,10.0,10.0,0.0,0.0,11.0
+2026-07-24 17:20:15.124000+00:00,st_d4sl14ffimdc73fprpdg,3 Ballester apezpikua - Obispo Ballester,10,14,24,17,4,0,0.4166666666666667,10.0,10.0,0.0,0.0,11.0
 2026-06-19 09:40:26.750000+00:00,st_d4sl14gvnoqc739efe8g,5 Mendizorrotza - Mendizorroza,2,8,10,9,4,0,0.2,2.0,2.0,0.0,0.0,1.0
 2026-06-19 09:45:28.588000+00:00,st_d4sl14gvnoqc739efe8g,5 Mendizorrotza - Mendizorroza,2,8,10,9,4,0,0.2,2.0,2.0,0.0,0.0,1.0
 2026-06-19 09:50:27.806000+00:00,st_d4sl14gvnoqc739efe8g,5 Mendizorrotza - Mendizorroza,3,7,10,9,4,0,0.3,2.0,2.0,1.0,1.0,1.0
@@ -50504,6 +50552,18 @@ timestamp,id_estacion,nombre_estacion,bicis_disponibles,anclajes_disponibles,cap
 2026-07-24 16:10:14.551000+00:00,st_d4sl14gvnoqc739efe8g,5 Mendizorrotza - Mendizorroza,7,3,10,16,4,0,0.7,7.0,7.0,0.0,0.0,8.0
 2026-07-24 16:15:17.615000+00:00,st_d4sl14gvnoqc739efe8g,5 Mendizorrotza - Mendizorroza,9,1,10,16,4,0,0.9,7.0,7.0,2.0,2.0,8.0
 2026-07-24 16:20:14.514000+00:00,st_d4sl14gvnoqc739efe8g,5 Mendizorrotza - Mendizorroza,10,0,10,16,4,0,1.0,7.0,7.0,3.0,3.0,8.0
+2026-07-24 16:25:11.468000+00:00,st_d4sl14gvnoqc739efe8g,5 Mendizorrotza - Mendizorroza,10,0,10,16,4,0,1.0,7.0,7.0,3.0,3.0,8.0
+2026-07-24 16:30:23.742000+00:00,st_d4sl14gvnoqc739efe8g,5 Mendizorrotza - Mendizorroza,10,0,10,16,4,0,1.0,9.0,7.0,1.0,3.0,8.0
+2026-07-24 16:35:10.704000+00:00,st_d4sl14gvnoqc739efe8g,5 Mendizorrotza - Mendizorroza,8,2,10,16,4,0,0.8,10.0,7.0,-2.0,1.0,8.0
+2026-07-24 16:40:14.887000+00:00,st_d4sl14gvnoqc739efe8g,5 Mendizorrotza - Mendizorroza,8,2,10,16,4,0,0.8,10.0,7.0,-2.0,1.0,8.0
+2026-07-24 16:45:14.816000+00:00,st_d4sl14gvnoqc739efe8g,5 Mendizorrotza - Mendizorroza,8,2,10,16,4,0,0.8,10.0,9.0,-2.0,-1.0,8.0
+2026-07-24 16:50:14.989000+00:00,st_d4sl14gvnoqc739efe8g,5 Mendizorrotza - Mendizorroza,8,2,10,16,4,0,0.8,8.0,10.0,0.0,-2.0,8.0
+2026-07-24 16:55:10.386000+00:00,st_d4sl14gvnoqc739efe8g,5 Mendizorrotza - Mendizorroza,8,2,10,16,4,0,0.8,8.0,10.0,0.0,-2.0,8.0
+2026-07-24 17:00:32.999000+00:00,st_d4sl14gvnoqc739efe8g,5 Mendizorrotza - Mendizorroza,8,2,10,17,4,0,0.8,8.0,10.0,0.0,-2.0,8.0
+2026-07-24 17:05:11.237000+00:00,st_d4sl14gvnoqc739efe8g,5 Mendizorrotza - Mendizorroza,8,2,10,17,4,0,0.8,8.0,8.0,0.0,0.0,8.0
+2026-07-24 17:10:15.230000+00:00,st_d4sl14gvnoqc739efe8g,5 Mendizorrotza - Mendizorroza,8,2,10,17,4,0,0.8,8.0,8.0,0.0,0.0,8.0
+2026-07-24 17:15:14.545000+00:00,st_d4sl14gvnoqc739efe8g,5 Mendizorrotza - Mendizorroza,8,2,10,17,4,0,0.8,8.0,8.0,0.0,0.0,8.0
+2026-07-24 17:20:15.124000+00:00,st_d4sl14gvnoqc739efe8g,5 Mendizorrotza - Mendizorroza,8,2,10,17,4,0,0.8,8.0,8.0,0.0,0.0,6.0
 2026-06-19 09:40:26.750000+00:00,st_d4sl14gvnoqc739efea0,7 Salburuko gizarte-etxea - C.C. Salburua,2,8,10,9,4,0,0.2,2.0,2.0,0.0,0.0,2.0
 2026-06-19 09:45:28.588000+00:00,st_d4sl14gvnoqc739efea0,7 Salburuko gizarte-etxea - C.C. Salburua,2,8,10,9,4,0,0.2,2.0,2.0,0.0,0.0,2.0
 2026-06-19 09:50:27.806000+00:00,st_d4sl14gvnoqc739efea0,7 Salburuko gizarte-etxea - C.C. Salburua,2,8,10,9,4,0,0.2,2.0,2.0,0.0,0.0,2.0
@@ -60605,6 +60665,18 @@ timestamp,id_estacion,nombre_estacion,bicis_disponibles,anclajes_disponibles,cap
 2026-07-24 16:10:14.551000+00:00,st_d4sl14gvnoqc739efea0,7 Salburuko gizarte-etxea - C.C. Salburua,1,9,10,16,4,0,0.1,1.0,1.0,0.0,0.0,1.0
 2026-07-24 16:15:17.615000+00:00,st_d4sl14gvnoqc739efea0,7 Salburuko gizarte-etxea - C.C. Salburua,1,9,10,16,4,0,0.1,1.0,1.0,0.0,0.0,1.0
 2026-07-24 16:20:14.514000+00:00,st_d4sl14gvnoqc739efea0,7 Salburuko gizarte-etxea - C.C. Salburua,1,9,10,16,4,0,0.1,1.0,1.0,0.0,0.0,1.0
+2026-07-24 16:25:11.468000+00:00,st_d4sl14gvnoqc739efea0,7 Salburuko gizarte-etxea - C.C. Salburua,1,9,10,16,4,0,0.1,1.0,1.0,0.0,0.0,1.0
+2026-07-24 16:30:23.742000+00:00,st_d4sl14gvnoqc739efea0,7 Salburuko gizarte-etxea - C.C. Salburua,1,9,10,16,4,0,0.1,1.0,1.0,0.0,0.0,1.0
+2026-07-24 16:35:10.704000+00:00,st_d4sl14gvnoqc739efea0,7 Salburuko gizarte-etxea - C.C. Salburua,1,9,10,16,4,0,0.1,1.0,1.0,0.0,0.0,1.0
+2026-07-24 16:40:14.887000+00:00,st_d4sl14gvnoqc739efea0,7 Salburuko gizarte-etxea - C.C. Salburua,1,9,10,16,4,0,0.1,1.0,1.0,0.0,0.0,1.0
+2026-07-24 16:45:14.816000+00:00,st_d4sl14gvnoqc739efea0,7 Salburuko gizarte-etxea - C.C. Salburua,1,9,10,16,4,0,0.1,1.0,1.0,0.0,0.0,1.0
+2026-07-24 16:50:14.989000+00:00,st_d4sl14gvnoqc739efea0,7 Salburuko gizarte-etxea - C.C. Salburua,1,9,10,16,4,0,0.1,1.0,1.0,0.0,0.0,1.0
+2026-07-24 16:55:10.386000+00:00,st_d4sl14gvnoqc739efea0,7 Salburuko gizarte-etxea - C.C. Salburua,1,9,10,16,4,0,0.1,1.0,1.0,0.0,0.0,1.0
+2026-07-24 17:00:32.999000+00:00,st_d4sl14gvnoqc739efea0,7 Salburuko gizarte-etxea - C.C. Salburua,1,9,10,17,4,0,0.1,1.0,1.0,0.0,0.0,0.0
+2026-07-24 17:05:11.237000+00:00,st_d4sl14gvnoqc739efea0,7 Salburuko gizarte-etxea - C.C. Salburua,1,9,10,17,4,0,0.1,1.0,1.0,0.0,0.0,0.0
+2026-07-24 17:10:15.230000+00:00,st_d4sl14gvnoqc739efea0,7 Salburuko gizarte-etxea - C.C. Salburua,1,9,10,17,4,0,0.1,1.0,1.0,0.0,0.0,0.0
+2026-07-24 17:15:14.545000+00:00,st_d4sl14gvnoqc739efea0,7 Salburuko gizarte-etxea - C.C. Salburua,1,9,10,17,4,0,0.1,1.0,1.0,0.0,0.0,0.0
+2026-07-24 17:20:15.124000+00:00,st_d4sl14gvnoqc739efea0,7 Salburuko gizarte-etxea - C.C. Salburua,1,9,10,17,4,0,0.1,1.0,1.0,0.0,0.0,0.0
 2026-06-19 09:40:26.750000+00:00,st_d4sl14gvnoqc739efebg,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,0,10,10,9,4,0,0.0,0.0,3.0,0.0,-3.0,0.0
 2026-06-19 09:45:28.588000+00:00,st_d4sl14gvnoqc739efebg,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,0,10,10,9,4,0,0.0,0.0,3.0,0.0,-3.0,0.0
 2026-06-19 09:50:27.806000+00:00,st_d4sl14gvnoqc739efebg,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,0,10,10,9,4,0,0.0,0.0,3.0,0.0,-3.0,1.0
@@ -70706,6 +70778,18 @@ timestamp,id_estacion,nombre_estacion,bicis_disponibles,anclajes_disponibles,cap
 2026-07-24 16:10:14.551000+00:00,st_d4sl14gvnoqc739efebg,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,3,7,10,16,4,0,0.3,3.0,3.0,0.0,0.0,2.0
 2026-07-24 16:15:17.615000+00:00,st_d4sl14gvnoqc739efebg,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,3,7,10,16,4,0,0.3,3.0,3.0,0.0,0.0,2.0
 2026-07-24 16:20:14.514000+00:00,st_d4sl14gvnoqc739efebg,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,2,8,10,16,4,0,0.2,3.0,3.0,-1.0,-1.0,2.0
+2026-07-24 16:25:11.468000+00:00,st_d4sl14gvnoqc739efebg,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,2,8,10,16,4,0,0.2,3.0,3.0,-1.0,-1.0,2.0
+2026-07-24 16:30:23.742000+00:00,st_d4sl14gvnoqc739efebg,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,2,8,10,16,4,0,0.2,3.0,3.0,-1.0,-1.0,2.0
+2026-07-24 16:35:10.704000+00:00,st_d4sl14gvnoqc739efebg,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,2,8,10,16,4,0,0.2,2.0,3.0,0.0,-1.0,2.0
+2026-07-24 16:40:14.887000+00:00,st_d4sl14gvnoqc739efebg,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,2,8,10,16,4,0,0.2,2.0,3.0,0.0,-1.0,2.0
+2026-07-24 16:45:14.816000+00:00,st_d4sl14gvnoqc739efebg,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,2,8,10,16,4,0,0.2,2.0,3.0,0.0,-1.0,2.0
+2026-07-24 16:50:14.989000+00:00,st_d4sl14gvnoqc739efebg,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 16:55:10.386000+00:00,st_d4sl14gvnoqc739efebg,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 17:00:32.999000+00:00,st_d4sl14gvnoqc739efebg,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,2,8,10,17,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 17:05:11.237000+00:00,st_d4sl14gvnoqc739efebg,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,2,8,10,17,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 17:10:15.230000+00:00,st_d4sl14gvnoqc739efebg,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,2,8,10,17,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 17:15:14.545000+00:00,st_d4sl14gvnoqc739efebg,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,2,8,10,17,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 17:20:15.124000+00:00,st_d4sl14gvnoqc739efebg,9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,2,8,10,17,4,0,0.2,2.0,2.0,0.0,0.0,2.0
 2026-06-19 09:40:26.750000+00:00,st_d4sl14gvnoqc739efed0,10 AUO - HUA,0,10,10,9,4,0,0.0,0.0,1.0,0.0,-1.0,0.0
 2026-06-19 09:45:28.588000+00:00,st_d4sl14gvnoqc739efed0,10 AUO - HUA,0,10,10,9,4,0,0.0,0.0,1.0,0.0,-1.0,0.0
 2026-06-19 09:50:27.806000+00:00,st_d4sl14gvnoqc739efed0,10 AUO - HUA,0,10,10,9,4,0,0.0,0.0,1.0,0.0,-1.0,0.0
@@ -80807,6 +80891,18 @@ timestamp,id_estacion,nombre_estacion,bicis_disponibles,anclajes_disponibles,cap
 2026-07-24 16:10:14.551000+00:00,st_d4sl14gvnoqc739efed0,10 AUO - HUA,3,7,10,16,4,0,0.3,1.0,1.0,2.0,2.0,4.0
 2026-07-24 16:15:17.615000+00:00,st_d4sl14gvnoqc739efed0,10 AUO - HUA,3,7,10,16,4,0,0.3,1.0,1.0,2.0,2.0,4.0
 2026-07-24 16:20:14.514000+00:00,st_d4sl14gvnoqc739efed0,10 AUO - HUA,3,7,10,16,4,0,0.3,3.0,1.0,0.0,2.0,4.0
+2026-07-24 16:25:11.468000+00:00,st_d4sl14gvnoqc739efed0,10 AUO - HUA,3,7,10,16,4,0,0.3,3.0,1.0,0.0,2.0,4.0
+2026-07-24 16:30:23.742000+00:00,st_d4sl14gvnoqc739efed0,10 AUO - HUA,3,7,10,16,4,0,0.3,3.0,1.0,0.0,2.0,4.0
+2026-07-24 16:35:10.704000+00:00,st_d4sl14gvnoqc739efed0,10 AUO - HUA,4,6,10,16,4,0,0.4,3.0,3.0,1.0,1.0,4.0
+2026-07-24 16:40:14.887000+00:00,st_d4sl14gvnoqc739efed0,10 AUO - HUA,4,6,10,16,4,0,0.4,3.0,3.0,1.0,1.0,4.0
+2026-07-24 16:45:14.816000+00:00,st_d4sl14gvnoqc739efed0,10 AUO - HUA,4,6,10,16,4,0,0.4,3.0,3.0,1.0,1.0,3.0
+2026-07-24 16:50:14.989000+00:00,st_d4sl14gvnoqc739efed0,10 AUO - HUA,4,6,10,16,4,0,0.4,4.0,3.0,0.0,1.0,3.0
+2026-07-24 16:55:10.386000+00:00,st_d4sl14gvnoqc739efed0,10 AUO - HUA,4,6,10,16,4,0,0.4,4.0,3.0,0.0,1.0,2.0
+2026-07-24 17:00:32.999000+00:00,st_d4sl14gvnoqc739efed0,10 AUO - HUA,4,6,10,17,4,0,0.4,4.0,3.0,0.0,1.0,2.0
+2026-07-24 17:05:11.237000+00:00,st_d4sl14gvnoqc739efed0,10 AUO - HUA,4,6,10,17,4,0,0.4,4.0,4.0,0.0,0.0,1.0
+2026-07-24 17:10:15.230000+00:00,st_d4sl14gvnoqc739efed0,10 AUO - HUA,4,6,10,17,4,0,0.4,4.0,4.0,0.0,0.0,1.0
+2026-07-24 17:15:14.545000+00:00,st_d4sl14gvnoqc739efed0,10 AUO - HUA,3,7,10,17,4,0,0.3,4.0,4.0,-1.0,-1.0,1.0
+2026-07-24 17:20:15.124000+00:00,st_d4sl14gvnoqc739efed0,10 AUO - HUA,3,7,10,17,4,0,0.3,4.0,4.0,-1.0,-1.0,1.0
 2026-06-19 09:40:26.750000+00:00,st_d4sl14h4gpvs73agnodg,6 Unibertsitatea - Universidad,2,8,10,9,4,0,0.2,2.0,2.0,0.0,0.0,2.0
 2026-06-19 09:45:28.588000+00:00,st_d4sl14h4gpvs73agnodg,6 Unibertsitatea - Universidad,2,8,10,9,4,0,0.2,2.0,2.0,0.0,0.0,2.0
 2026-06-19 09:50:27.806000+00:00,st_d4sl14h4gpvs73agnodg,6 Unibertsitatea - Universidad,2,8,10,9,4,0,0.2,2.0,2.0,0.0,0.0,2.0
@@ -90908,6 +91004,18 @@ timestamp,id_estacion,nombre_estacion,bicis_disponibles,anclajes_disponibles,cap
 2026-07-24 16:10:14.551000+00:00,st_d4sl14h4gpvs73agnodg,6 Unibertsitatea - Universidad,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
 2026-07-24 16:15:17.615000+00:00,st_d4sl14h4gpvs73agnodg,6 Unibertsitatea - Universidad,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
 2026-07-24 16:20:14.514000+00:00,st_d4sl14h4gpvs73agnodg,6 Unibertsitatea - Universidad,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 16:25:11.468000+00:00,st_d4sl14h4gpvs73agnodg,6 Unibertsitatea - Universidad,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 16:30:23.742000+00:00,st_d4sl14h4gpvs73agnodg,6 Unibertsitatea - Universidad,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 16:35:10.704000+00:00,st_d4sl14h4gpvs73agnodg,6 Unibertsitatea - Universidad,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 16:40:14.887000+00:00,st_d4sl14h4gpvs73agnodg,6 Unibertsitatea - Universidad,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,1.0
+2026-07-24 16:45:14.816000+00:00,st_d4sl14h4gpvs73agnodg,6 Unibertsitatea - Universidad,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,1.0
+2026-07-24 16:50:14.989000+00:00,st_d4sl14h4gpvs73agnodg,6 Unibertsitatea - Universidad,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,1.0
+2026-07-24 16:55:10.386000+00:00,st_d4sl14h4gpvs73agnodg,6 Unibertsitatea - Universidad,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,1.0
+2026-07-24 17:00:32.999000+00:00,st_d4sl14h4gpvs73agnodg,6 Unibertsitatea - Universidad,2,8,10,17,4,0,0.2,2.0,2.0,0.0,0.0,1.0
+2026-07-24 17:05:11.237000+00:00,st_d4sl14h4gpvs73agnodg,6 Unibertsitatea - Universidad,2,8,10,17,4,0,0.2,2.0,2.0,0.0,0.0,1.0
+2026-07-24 17:10:15.230000+00:00,st_d4sl14h4gpvs73agnodg,6 Unibertsitatea - Universidad,1,9,10,17,4,0,0.1,2.0,2.0,-1.0,-1.0,1.0
+2026-07-24 17:15:14.545000+00:00,st_d4sl14h4gpvs73agnodg,6 Unibertsitatea - Universidad,1,9,10,17,4,0,0.1,2.0,2.0,-1.0,-1.0,1.0
+2026-07-24 17:20:15.124000+00:00,st_d4sl14h4gpvs73agnodg,6 Unibertsitatea - Universidad,1,9,10,17,4,0,0.1,2.0,2.0,-1.0,-1.0,1.0
 2026-06-19 09:40:26.750000+00:00,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6,10,9,4,0,0.4,4.0,4.0,0.0,0.0,4.0
 2026-06-19 09:45:28.588000+00:00,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6,10,9,4,0,0.4,4.0,4.0,0.0,0.0,4.0
 2026-06-19 09:50:27.806000+00:00,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6,10,9,4,0,0.4,4.0,4.0,0.0,0.0,4.0
@@ -101009,6 +101117,18 @@ timestamp,id_estacion,nombre_estacion,bicis_disponibles,anclajes_disponibles,cap
 2026-07-24 16:10:14.551000+00:00,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8,10,16,4,0,0.2,3.0,3.0,-1.0,-1.0,2.0
 2026-07-24 16:15:17.615000+00:00,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8,10,16,4,0,0.2,3.0,3.0,-1.0,-1.0,2.0
 2026-07-24 16:20:14.514000+00:00,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8,10,16,4,0,0.2,3.0,3.0,-1.0,-1.0,2.0
+2026-07-24 16:25:11.468000+00:00,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8,10,16,4,0,0.2,2.0,3.0,0.0,-1.0,2.0
+2026-07-24 16:30:23.742000+00:00,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8,10,16,4,0,0.2,2.0,3.0,0.0,-1.0,2.0
+2026-07-24 16:35:10.704000+00:00,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8,10,16,4,0,0.2,2.0,3.0,0.0,-1.0,2.0
+2026-07-24 16:40:14.887000+00:00,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 16:45:14.816000+00:00,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 16:50:14.989000+00:00,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,3.0
+2026-07-24 16:55:10.386000+00:00,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,3.0
+2026-07-24 17:00:32.999000+00:00,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8,10,17,4,0,0.2,2.0,2.0,0.0,0.0,3.0
+2026-07-24 17:05:11.237000+00:00,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8,10,17,4,0,0.2,2.0,2.0,0.0,0.0,3.0
+2026-07-24 17:10:15.230000+00:00,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8,10,17,4,0,0.2,2.0,2.0,0.0,0.0,3.0
+2026-07-24 17:15:14.545000+00:00,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8,10,17,4,0,0.2,2.0,2.0,0.0,0.0,3.0
+2026-07-24 17:20:15.124000+00:00,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7,10,17,4,0,0.3,2.0,2.0,1.0,1.0,3.0
 2026-06-19 09:40:26.750000+00:00,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7,10,9,4,0,0.3,3.0,3.0,0.0,0.0,3.0
 2026-06-19 09:45:28.588000+00:00,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7,10,9,4,0,0.3,3.0,3.0,0.0,0.0,3.0
 2026-06-19 09:50:27.806000+00:00,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7,10,9,4,0,0.3,3.0,3.0,0.0,0.0,3.0
@@ -111110,6 +111230,18 @@ timestamp,id_estacion,nombre_estacion,bicis_disponibles,anclajes_disponibles,cap
 2026-07-24 16:10:14.551000+00:00,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10,10,16,4,0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-07-24 16:15:17.615000+00:00,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10,10,16,4,0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-07-24 16:20:14.514000+00:00,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10,10,16,4,0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-07-24 16:25:11.468000+00:00,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10,10,16,4,0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-07-24 16:30:23.742000+00:00,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10,10,16,4,0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-07-24 16:35:10.704000+00:00,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10,10,16,4,0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-07-24 16:40:14.887000+00:00,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10,10,16,4,0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-07-24 16:45:14.816000+00:00,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10,10,16,4,0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-07-24 16:50:14.989000+00:00,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10,10,16,4,0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-07-24 16:55:10.386000+00:00,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10,10,16,4,0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-07-24 17:00:32.999000+00:00,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10,10,17,4,0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-07-24 17:05:11.237000+00:00,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10,10,17,4,0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-07-24 17:10:15.230000+00:00,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10,10,17,4,0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-07-24 17:15:14.545000+00:00,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10,10,17,4,0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-07-24 17:20:15.124000+00:00,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10,10,17,4,0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-06-19 09:40:26.750000+00:00,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7,10,9,4,0,0.3,4.0,4.0,-1.0,-1.0,4.0
 2026-06-19 09:45:28.588000+00:00,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7,10,9,4,0,0.3,3.0,4.0,0.0,-1.0,4.0
 2026-06-19 09:50:27.806000+00:00,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7,10,9,4,0,0.3,3.0,4.0,0.0,-1.0,4.0
@@ -121211,3 +121343,15 @@ timestamp,id_estacion,nombre_estacion,bicis_disponibles,anclajes_disponibles,cap
 2026-07-24 16:10:14.551000+00:00,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
 2026-07-24 16:15:17.615000+00:00,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
 2026-07-24 16:20:14.514000+00:00,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 16:25:11.468000+00:00,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 16:30:23.742000+00:00,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 16:35:10.704000+00:00,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 16:40:14.887000+00:00,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 16:45:14.816000+00:00,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 16:50:14.989000+00:00,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 16:55:10.386000+00:00,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8,10,16,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 17:00:32.999000+00:00,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8,10,17,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 17:05:11.237000+00:00,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8,10,17,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 17:10:15.230000+00:00,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8,10,17,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 17:15:14.545000+00:00,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8,10,17,4,0,0.2,2.0,2.0,0.0,0.0,2.0
+2026-07-24 17:20:15.124000+00:00,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8,10,17,4,0,0.2,2.0,2.0,0.0,0.0,2.0
