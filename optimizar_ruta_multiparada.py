@@ -15,7 +15,6 @@ def cargar_datos():
     return modelo, df_distancias, df_features
 
 def obtener_necesidades_estaciones(modelo, df_features):
-    # Obtenemos la última lectura registrada de cada estación
     ultimo_ts = df_features['timestamp'].max()
     df_estado = df_features[df_features['timestamp'] == ultimo_ts].copy()
     
@@ -27,7 +26,7 @@ def obtener_necesidades_estaciones(modelo, df_features):
     X = df_estado[feature_cols].copy()
     X['id_estacion'] = X['id_estacion'].astype('category')
     
-    # Predicción a 30 minutos
+    # Predicción del número de bicicletas a 30 minutos vista
     df_estado['prediccion_30m'] = np.clip(modelo.predict(X), 0, df_estado['capacidad'])
     
     necesidades = {}
@@ -37,14 +36,16 @@ def obtener_necesidades_estaciones(modelo, df_features):
         cap = row['capacidad']
         
         if pred <= 2.5:
+            # Asignamos nivel de urgencia: 100 para CRÍTICA (<=1.0 bici), 10 para PRECAUCIÓN (<=2.5 bicis)
+            urgencia = 100 if pred <= 1.0 else 10
             meta = min(5, cap - 2)
             necesidad = int(np.ceil(meta - pred))
             if necesidad > 0:
-                necesidades[nombre] = {'tipo': 'DESTINO', 'cantidad': necesidad}
+                necesidades[nombre] = {'tipo': 'DESTINO', 'cantidad': necesidad, 'urgencia': urgencia}
         elif pred > 4.0:
             cedible = int(np.floor(pred - 3.0))
             if cedible > 0:
-                necesidades[nombre] = {'tipo': 'ORIGEN', 'cantidad': cedible}
+                necesidades[nombre] = {'tipo': 'ORIGEN', 'cantidad': cedible, 'urgencia': 0}
                 
     return necesidades
 
@@ -71,12 +72,12 @@ def calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgo
         return [], 0.0, 0.0
         
     origenes = {k: v['cantidad'] for k, v in necesidades.items() if v['tipo'] == 'ORIGEN'}
-    destinos = {k: v['cantidad'] for k, v in necesidades.items() if v['tipo'] == 'DESTINO'}
+    destinos = {k: {'cantidad': v['cantidad'], 'urgencia': v['urgencia']} for k, v in necesidades.items() if v['tipo'] == 'DESTINO'}
     
     if not origenes or not destinos:
         return [], 0.0, 0.0
         
-    # La furgoneta empieza en el origen con mayor excedente
+    # La furgoneta empieza en la estación con mayor excedente
     estacion_actual = max(origenes, key=origenes.get)
     bicis_en_furgoneta = 0
     
@@ -105,17 +106,22 @@ def calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgo
     while iter_count < max_iteraciones:
         iter_count += 1
         
-        # Si la furgoneta tiene bicis a bordo, busca el DESTINO más cercano que necesite bicis
-        if bicis_en_furgoneta > 0 and any(cant > 0 for cant in destinos.values()):
-            candidatos = [d for d, cant in destinos.items() if cant > 0]
-            siguiente = min(candidatos, key=lambda d: obtener_tiempo(df_distancias, estacion_actual, d))
+        # Si la furgoneta tiene bicis a bordo, atiende primero las estaciones CRÍTICAS (Urgencia 100)
+        destinos_pendientes = [d for d, info in destinos.items() if info['cantidad'] > 0]
+        
+        if bicis_en_furgoneta > 0 and destinos_pendientes:
+            max_urgencia = max(destinos[d]['urgencia'] for d in destinos_pendientes)
+            candidatos_urgentes = [d for d in destinos_pendientes if destinos[d]['urgencia'] == max_urgencia]
+            
+            # Entre las estaciones con máxima urgencia, elegimos la más cercana
+            siguiente = min(candidatos_urgentes, key=lambda d: obtener_tiempo(df_distancias, estacion_actual, d))
             
             t_tramo = obtener_tiempo(df_distancias, estacion_actual, siguiente)
             d_tramo = obtener_distancia(df_distancias, estacion_actual, siguiente)
             
-            descargar = min(bicis_en_furgoneta, destinos[siguiente])
+            descargar = min(bicis_en_furgoneta, destinos[siguiente]['cantidad'])
             bicis_en_furgoneta -= descargar
-            destinos[siguiente] -= descargar
+            destinos[siguiente]['cantidad'] -= descargar
             
             tiempo_total += t_tramo
             distancia_total += d_tramo
@@ -131,10 +137,10 @@ def calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgo
             estacion_actual = siguiente
             paso_num += 1
             
-        # Si la furgoneta está vacía o tiene espacio, busca el ORIGEN más cercano con bicis excedentes
+        # Si la furgoneta está vacía o necesita cargar más bicis para cubrir las urgencias
         elif bicis_en_furgoneta < capacidad_furgoneta and any(cant > 0 for cant in origenes.values()):
-            candidatos = [o for o, cant in origenes.items() if cant > 0]
-            siguiente = min(candidatos, key=lambda o: obtener_tiempo(df_distancias, estacion_actual, o))
+            candidatos_origen = [o for o, cant in origenes.items() if cant > 0]
+            siguiente = min(candidatos_origen, key=lambda o: obtener_tiempo(df_distancias, estacion_actual, o))
             
             t_tramo = obtener_tiempo(df_distancias, estacion_actual, siguiente)
             d_tramo = obtener_distancia(df_distancias, estacion_actual, siguiente)
@@ -166,14 +172,14 @@ def main():
     print("Cargando datos y modelo predictivo LightGBM...")
     modelo, df_distancias, df_features = cargar_datos()
     
-    print("Calculando necesidades predictivas de las estaciones...")
+    print("Calculando necesidades predictivas con priorización de alertas...")
     necesidades = obtener_necesidades_estaciones(modelo, df_features)
     
     print("Optimizando circuito multiparada de la furgoneta de reparto...")
     pasos_ruta, tiempo_total, distancia_total = calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgoneta=10)
     
     print("\n==================================================================================")
-    print("CIRCUITO MULTIPARADA OPTIMO DE REDISTRIBUCION (FURGONETA 10 BICIS)")
+    print("CIRCUITO MULTIPARADA OPTIMO (PRIORIDAD: CRITICA -> PRECAUCION)")
     print("==================================================================================")
     
     if pasos_ruta:
