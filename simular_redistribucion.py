@@ -173,8 +173,8 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
                         necesidad = min(4, cap - b_sim)
                         if necesidad > 0:
                             destinos[est] = necesidad
-                    elif pred >= cap - 2.0 or b_sim >= cap - 2:
-                        sobrante = min(b_sim - 2, 4)
+                    elif pred >= cap - 2.0 or b_sim >= 6:
+                        sobrante = min(b_sim - 5, 4)
                         if sobrante > 0:
                             origenes[est] = sobrante
                             

@@ -126,15 +126,21 @@ def main():
     st.divider()
     
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
-        "🚐 Circuito Multiparada Furgoneta",
         "🚨 Alertas Predictivas a 30 min",
+        "🚲 Redistribución bicicletas ML",
         "⚠️ Análisis de Tiempo Inactivo por Estación",
         "📈 Simulación & Evaluación de Impacto",
         "🤖 Modelo ML & Importancia Variables"
     ])
     
     with tab1:
-        st.subheader("1. Circuito Óptimo Multiparada para Furgoneta de Reparto")
+        st.subheader("Estado Predictivo a 30 Minutos con Contexto de Calendario y Clima")
+        df_mostrar_estado = df_estado[['nombre_estacion', 'bicis_disponibles', 'capacidad', 'prediccion_30m_round', 'nivel_alerta']].copy()
+        df_mostrar_estado.columns = ['Estación', 'Bicis Actuales', 'Capacidad Total', 'Predicción a 30 min', 'Nivel de Alerta']
+        st.dataframe(df_mostrar_estado, use_container_width=True)
+
+    with tab2:
+        st.subheader("Redistribución de Bicicletas con ML (Circuito Óptimo Multiparada)")
         st.caption("Priorización estricta: Las alertas 🔴 CRÍTICAS son atendidas inmediatamente.")
         
         capacidad_van = st.slider("Capacidad máxima de la furgoneta de reparto (bicicletas):", 5, 20, 10)
@@ -153,12 +159,6 @@ def main():
             st.dataframe(df_pasos, use_container_width=True)
         else:
             st.success("Toda la red está equilibrada. No se requiere circuito de reabastecimiento en este momento.")
-
-    with tab2:
-        st.subheader("Estado Predictivo a 30 Minutos con Contexto de Calendario y Clima")
-        df_mostrar_estado = df_estado[['nombre_estacion', 'bicis_disponibles', 'capacidad', 'prediccion_30m_round', 'nivel_alerta']].copy()
-        df_mostrar_estado.columns = ['Estación', 'Bicis Actuales', 'Capacidad Total', 'Predicción a 30 min', 'Nivel de Alerta']
-        st.dataframe(df_mostrar_estado, use_container_width=True)
 
     with tab3:
         st.subheader("Análisis de Tiempo Inactivo por Falta de Bicicletas o Anclajes")
@@ -233,7 +233,7 @@ def main():
             c_op3.metric("Tiempo Activo Operario", f"{resumen_sim['horas_operario_total']} h/mes", f"{resumen_sim['pct_furgoneta_ocupada']}% de la jornada")
             c_op4.metric("Carga Media en Furgoneta", f"{resumen_sim['promedio_bicis_furgoneta']} bicis", "Inventario en tránsito")
             
-            st.caption("💡 **Conclusión Operativa**: Las bicicletas **no se quedan retenidas** en la furgoneta (promedio < 1 bici). El operario permanece activo en ruta el **23,9%** de la jornada, por lo que la operativa se cubre holgadamente con una única furgoneta.")
+            st.caption(f"💡 **Conclusión Operativa**: Las bicicletas **no se quedan retenidas** en la furgoneta (promedio < 1 bici). El operario permanece activo en ruta el **{resumen_sim['pct_furgoneta_ocupada']}%** de la jornada, por lo que la operativa se cubre holgadamente con una única furgoneta.")
             
             st.divider()
             

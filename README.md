@@ -85,8 +85,9 @@ Las variables meteorológicas y temporales se posicionan como los principales fa
 
 ### 3. 🚐 Planificador de Rutas Multiparada Furgoneta ([optimizar_ruta_multiparada.py](optimizar_ruta_multiparada.py))
 - **Priorización de Alertas**: Atiende obligatoriamente las estaciones en **🔴 CRÍTICA** (0-1 bicis) antes de abordar cualquier estación en **🟡 PRECAUCIÓN**.
-- **Doble Restricción de Seguridad**: Garantiza que la estación origen mantiene al menos 3 bicicletas predichas y que el destino no supera su capacidad.
+- **Doble Restricción de Seguridad**: Garantiza que la estación origen mantiene una reserva superior o igual a 5 bicicletas predichas y que el destino no supera su capacidad.
 - **Matriz OSRM**: Basada en la red viaria real de OpenStreetMap calibrada a la velocidad media urbana efectiva de Vitoria-Gasteiz ([matriz_distancias_estaciones.csv](matriz_distancias_estaciones.csv)).
+- **Resultados de Simulación Mensual**: Reduce la indisponibilidad de la red del **13.0% al 4.2%** (mejora neta del **67.5%** en reducción de fallos), redistribuyendo **295 bicicletas/mes** con una ocupación de furgoneta de solo el **37.0%** de la jornada.
 
 ### 4. 🖥️ Dashboard Interactivo ([dashboard.py](dashboard.py))
 - Panel de control gráfico construido en **Streamlit**.

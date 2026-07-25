@@ -55,8 +55,8 @@ def obtener_necesidades_estaciones(modelo, df_features):
             necesidad = int(np.ceil(meta - pred))
             if necesidad > 0:
                 necesidades[nombre] = {'tipo': 'DESTINO', 'cantidad': necesidad, 'urgencia': urgencia}
-        elif pred > 4.0:
-            cedible = int(np.floor(pred - 3.0))
+        elif pred >= 5.0:
+            cedible = int(np.floor(pred - 5.0))
             if cedible > 0:
                 necesidades[nombre] = {'tipo': 'ORIGEN', 'cantidad': cedible, 'urgencia': 0}
                 

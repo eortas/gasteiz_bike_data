@@ -66,7 +66,7 @@ def generar_predicciones_y_alertas(df_estado, modelo):
 def calcular_recomendaciones_redistribucion(df_estado, df_distancias):
     recomendaciones = []
     destinos_necesitados = df_estado[df_estado['prediccion_30m'] <= 2.5].copy()
-    origenes_disponibles = df_estado[df_estado['prediccion_30m'] > 4.0].copy()
+    origenes_disponibles = df_estado[df_estado['prediccion_30m'] >= 5.0].copy()
     
     for _, destino in destinos_necesitados.iterrows():
         nombre_dest = destino['nombre_estacion']
@@ -84,7 +84,7 @@ def calcular_recomendaciones_redistribucion(df_estado, df_distancias):
                 tiempo_min = match.iloc[0]['tiempo_conduccion_min']
                 dist_km = match.iloc[0]['distancia_km']
                 
-                max_ceder_origen = int(np.floor(pred_orig - 3.0))
+                max_ceder_origen = int(np.floor(pred_orig - 5.0))
                 max_recibir_destino = int(np.floor(cap_dest - pred_dest - 2.0))
                 bicis_a_mover = min(max_ceder_origen, max_recibir_destino)
                 
