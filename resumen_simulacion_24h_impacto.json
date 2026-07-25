@@ -1,0 +1,16 @@
+{
+    "evaluar_24h": true,
+    "horas_totales_servicio_red": 296.9,
+    "horas_indisponible_real": 570.3,
+    "horas_indisponible_sim": 241.5,
+    "pct_real": 16.01,
+    "pct_sim": 6.78,
+    "mejora_pct": 57.7,
+    "bicis_redistribuidas_total": 344,
+    "horas_conduccion": 46.3,
+    "horas_manipulacion": 27.4,
+    "horas_operario_total": 86.5,
+    "pct_furgoneta_ocupada": 41.2,
+    "promedio_bicis_furgoneta": 0.94,
+    "tiempo_ejecucion_seg": 6.49
+}

@@ -5,6 +5,8 @@ import pandas as pd
 import numpy as np
 import joblib
 
+from config import FEATURE_COLS
+
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
@@ -28,19 +30,17 @@ def obtener_tiempo_conduccion(df_distancias, orig, dest):
         return match.iloc[0]['tiempo_conduccion_min']
     return 10.0
 
-def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_furgoneta=10):
+def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_furgoneta=10, evaluar_24h=False):
+    """
+    Ejecuta la simulación de redistribución de bicicletas.
+    - evaluar_24h = False: Contabiliza indisponibilidad solo en horario operativo (06:00 a 23:00).
+    - evaluar_24h = True: Contabiliza indisponibilidad las 24h del día, pero la furgoneta solo opera de 06:00 a 23:00.
+    """
     t_inicio = time.time()
     modelo, df_distancias, df_features = cargar_recursos()
     
-    # Pre-calculamos las predicciones del modelo para todo el dataset
-    feature_cols = [
-        'id_estacion', 'hora', 'dia_semana', 'es_finde', 'capacidad',
-        'bicis_disponibles', 'anclajes_disponibles', 'pct_ocupacion',
-        'tendencia_15m', 'tendencia_30m',
-        'temperatura', 'llueve', 'viento_kmh',
-        'es_festivo', 'es_la_blanca', 'es_vacaciones_upv'
-    ]
-    X_all = df_features[feature_cols].copy()
+    # Pre-calculamos las predicciones del modelo para todo el dataset usando FEATURE_COLS
+    X_all = df_features[FEATURE_COLS].copy()
     X_all['id_estacion'] = X_all['id_estacion'].astype('category')
     df_features['prediccion_30m'] = np.clip(modelo.predict(X_all), 0, df_features['capacidad'])
     
@@ -51,7 +51,7 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     estaciones = df_features['nombre_estacion'].unique()
     capacidades = df_features.groupby('nombre_estacion')['capacidad'].first().to_dict()
     
-    # Agrupamos las filas por marca de tiempo en listas nativas
+    # Agrupamos las filas por marca de tiempo
     grupos_por_timestamp = []
     for ts, sub_df in df_features.groupby('timestamp', sort=False):
         dt = pd.to_datetime(ts)
@@ -71,6 +71,7 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     
     # Acumuladores globales
     minutos_operativos_totales = 0
+    minutos_jornada_furgoneta = 0
     min_indisponible_real = 0
     min_indisponible_simulado = 0
     
@@ -89,7 +90,8 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     prev_dt = None
     
     for dt, hora, filas in grupos_por_timestamp:
-        es_operativo = (hora >= 6 and hora < 23)
+        es_operativo_furgoneta = (hora >= 6 and hora < 23)
+        es_contabilizable = True if evaluar_24h else es_operativo_furgoneta
         
         if prev_dt is None:
             duracion_min = 5.0
@@ -99,7 +101,7 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
                 duracion_min = 5.0
         prev_dt = dt
         
-        # 1. Actualizamos la demanda real del público
+        # 1. Actualizamos la demanda real del público (ocurre las 24h)
         for r in filas:
             est = r['nombre_estacion']
             b_real = r['bicis_disponibles']
@@ -112,7 +114,7 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
             bicis_simuladas[est] = int(np.clip(bicis_simuladas[est] + delta_cliente, 0, cap))
             
         # 2. Contabilizamos la indisponibilidad en la red
-        if es_operativo:
+        if es_contabilizable:
             minutos_operativos_totales += duracion_min * len(estaciones)
             pasos_simulacion += 1
             suma_bicis_en_furgoneta += bicis_en_furgoneta
@@ -132,34 +134,37 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
                     min_indisponible_simulado += duracion_min
                     indisponible_sim_est[est] += duracion_min
                     
-        # 3. Simulación de la furgoneta
-        if minutos_operacion_restantes > 0:
-            minutos_operacion_restantes -= duracion_min
-            minutos_furgoneta_activa += duracion_min
+        if es_operativo_furgoneta:
+            minutos_jornada_furgoneta += duracion_min
             
-            if minutos_operacion_restantes <= 0:
-                if accion_en_curso:
-                    tipo = accion_en_curso['tipo']
-                    est = accion_en_curso['estacion']
-                    cant = accion_en_curso['cantidad']
-                    cap = capacidades[est]
-                    
-                    if tipo == 'CARGAR':
-                        cargadas = min(cant, bicis_simuladas[est], capacidad_furgoneta - bicis_en_furgoneta)
-                        bicis_simuladas[est] -= cargadas
-                        bicis_en_furgoneta += cargadas
-                    elif tipo == 'DESCARGAR':
-                        descargadas = min(cant, bicis_en_furgoneta, cap - bicis_simuladas[est])
-                        bicis_simuladas[est] += descargadas
-                        bicis_en_furgoneta -= descargadas
-                        bicis_redistribuidas_total += descargadas
+        # 3. Simulación de la furgoneta (solo opera de 06:00 a 23:00)
+        if es_operativo_furgoneta:
+            if minutos_operacion_restantes > 0:
+                minutos_operacion_restantes -= duracion_min
+                minutos_furgoneta_activa += duracion_min
+                
+                if minutos_operacion_restantes <= 0:
+                    if accion_en_curso:
+                        tipo = accion_en_curso['tipo']
+                        est = accion_en_curso['estacion']
+                        cant = accion_en_curso['cantidad']
+                        cap = capacidades[est]
                         
-                    estacion_actual_furgoneta = est
-                    
-                accion_en_curso = None
-                minutos_operacion_restantes = 0
-        else:
-            if es_operativo:
+                        if tipo == 'CARGAR':
+                            cargadas = min(cant, bicis_simuladas[est], capacidad_furgoneta - bicis_en_furgoneta)
+                            bicis_simuladas[est] -= cargadas
+                            bicis_en_furgoneta += cargadas
+                        elif tipo == 'DESCARGAR':
+                            descargadas = min(cant, bicis_en_furgoneta, cap - bicis_simuladas[est])
+                            bicis_simuladas[est] += descargadas
+                            bicis_en_furgoneta -= descargadas
+                            bicis_redistribuidas_total += descargadas
+                            
+                        estacion_actual_furgoneta = est
+                        
+                    accion_en_curso = None
+                    minutos_operacion_restantes = 0
+            else:
                 destinos = {}
                 origenes = {}
                 
@@ -224,7 +229,8 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     pct_sim = (min_indisponible_simulado / minutos_operativos_totales) * 100
     mejora_pct = ((min_indisponible_real - min_indisponible_simulado) / max(min_indisponible_real, 1)) * 100
     
-    pct_furgoneta_ocupada = (minutos_furgoneta_activa / (pasos_simulacion * 5.0)) * 100
+    # Porcentaje de ocupación respecto a la jornada laboral de la furgoneta (06:00 a 23:00)
+    pct_furgoneta_ocupada = (minutos_furgoneta_activa / max(minutos_jornada_furgoneta, 1.0)) * 100
 
     filas_est = []
     for est in estaciones:
@@ -248,6 +254,7 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     tiempo_ejecucion_seg = round(time.time() - t_inicio, 2)
 
     resumen = {
+        'evaluar_24h': evaluar_24h,
         'horas_totales_servicio_red': round(horas_totales_servicio_red, 1),
         'horas_indisponible_real': round(horas_indisponible_real, 1),
         'horas_indisponible_sim': round(horas_indisponible_sim, 1),
@@ -267,18 +274,26 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     return resumen
 
 def guardar_resumen_precalculado():
-    print("Precalculando resultados de simulación para carga instantánea...")
-    resumen = ejecutar_simulacion()
+    print("Ejecutando simulación estándar (horario operativo 06:00 - 23:00)...")
+    resumen_diurno = ejecutar_simulacion(evaluar_24h=False)
     
-    # Exportamos el DataFrame por estaciones a CSV
-    df_est = resumen.pop('df_estaciones_comp')
+    # Exportamos los ficheros por defecto para el dashboard (horario operativo)
+    df_est = resumen_diurno.pop('df_estaciones_comp')
     df_est.to_csv('resumen_simulacion_estaciones.csv', index=False)
     
-    # Exportamos las métricas globales a JSON
     with open('resumen_simulacion_impacto.json', 'w', encoding='utf-8') as f:
-        json.dump(resumen, f, indent=4, ensure_ascii=False)
+        json.dump(resumen_diurno, f, indent=4, ensure_ascii=False)
         
-    print("Archivos precalculados guardados con éxito (resumen_simulacion_impacto.json y resumen_simulacion_estaciones.csv).")
+    print("Ejecutando simulación extra (24 horas globales con furgoneta operando de 06:00 a 23:00)...")
+    resumen_24h = ejecutar_simulacion(evaluar_24h=True)
+    
+    df_est_24h = resumen_24h.pop('df_estaciones_comp')
+    df_est_24h.to_csv('resumen_simulacion_24h_estaciones.csv', index=False)
+    
+    with open('resumen_simulacion_24h_impacto.json', 'w', encoding='utf-8') as f:
+        json.dump(resumen_24h, f, indent=4, ensure_ascii=False)
+        
+    print("\n✓ Ambas simulaciones (Diurna 6-23h y 24h Global) completadas y guardadas correctamente.")
 
 def main():
     guardar_resumen_precalculado()

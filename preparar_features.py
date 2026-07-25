@@ -24,6 +24,10 @@ def main():
         df['timestamp'] = pd.to_datetime(df['timestamp'], format='ISO8601')
     
     df['timestamp'] = pd.to_datetime(df['timestamp'], format='ISO8601')
+    # Si los timestamps tienen zona horaria, los convertimos a hora local Europe/Madrid
+    if df['timestamp'].dt.tz is not None:
+        df['timestamp'] = df['timestamp'].dt.tz_convert('Europe/Madrid').dt.tz_localize(None)
+    
     df = df.sort_values(by=['id_estacion', 'timestamp']).reset_index(drop=True)
     df['capacidad'] = df['bicis_disponibles'] + df['anclajes_disponibles']
     
@@ -59,8 +63,13 @@ def main():
         df_meteo = pd.read_csv('meteo_historica.csv')
         
     if not df_meteo.empty:
-        df_meteo['timestamp_hora'] = pd.to_datetime(df_meteo['timestamp_hora']).dt.tz_localize(None)
-        df['timestamp_hora'] = df['timestamp'].dt.tz_localize(None).dt.floor('h')
+        df_meteo['timestamp_hora'] = pd.to_datetime(df_meteo['timestamp_hora'])
+        if df_meteo['timestamp_hora'].dt.tz is not None:
+            df_meteo['timestamp_hora'] = df_meteo['timestamp_hora'].dt.tz_convert('Europe/Madrid').dt.tz_localize(None)
+        else:
+            df_meteo['timestamp_hora'] = df_meteo['timestamp_hora'].dt.tz_localize(None)
+            
+        df['timestamp_hora'] = df['timestamp'].dt.floor('h')
         
         df = pd.merge(df, df_meteo, on='timestamp_hora', how='left')
         df['temperatura'] = df['temperatura'].fillna(18.0)

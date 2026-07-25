@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 import joblib
 
+from config import FEATURE_COLS
 from obtener_meteo import obtener_meteo_actual
 from obtener_eventos import es_festivo, es_fiestas_la_blanca, es_vacaciones_universidad
 from optimizar_ruta_multiparada import (
@@ -77,14 +78,7 @@ def main():
     df_estado['es_la_blanca'] = blanca_hoy
     df_estado['es_vacaciones_upv'] = upv_vacaciones
     
-    feature_cols = [
-        'id_estacion', 'hora', 'dia_semana', 'es_finde', 'capacidad',
-        'bicis_disponibles', 'anclajes_disponibles', 'pct_ocupacion',
-        'tendencia_15m', 'tendencia_30m',
-        'temperatura', 'llueve', 'viento_kmh',
-        'es_festivo', 'es_la_blanca', 'es_vacaciones_upv'
-    ]
-    X = df_estado[feature_cols].copy()
+    X = df_estado[FEATURE_COLS].copy()
     X['id_estacion'] = X['id_estacion'].astype('category')
     
     df_estado['prediccion_30m'] = np.clip(modelo.predict(X), 0, df_estado['capacidad'])
@@ -130,7 +124,7 @@ def main():
         "🚲 Redistribución bicicletas ML",
         "⚠️ Análisis de Tiempo Inactivo por Estación",
         "📈 Simulación & Evaluación de Impacto",
-        "🤖 Modelo ML & Importancia Variables"
+        "📊 Auditoría de Flota (50 Bicis & Ventana 24h)"
     ])
     
     with tab1:
@@ -250,19 +244,48 @@ def main():
             st.warning("No se encontraron los datos precalculados de simulación.")
 
     with tab5:
-        st.subheader("Evaluación e Importancia de las Variables Explicativas (LightGBM)")
-        c_m1, c_m2, c_m3 = st.columns(3)
-        c_m1.metric("MAE (Error Medio Absoluto)", "0.95 bicis")
-        c_m2.metric("RMSE (Error Cuadrático Medio)", "1.59 bicis")
-        c_m3.metric("Recall (Alertas de Red)", "91.5%")
+        st.subheader("📋 Auditoría de Disponibilidad de Flota de Bicicletas (Licitación Municipal: 50 Bicis)")
+        st.caption("Control automático del cumplimiento del umbral mínimo del 85% de flota operativa exigido por el Ayuntamiento de Vitoria-Gasteiz.")
         
-        st.caption("🎯 **Recall / Sensibilidad**: El modelo anticipa correctamente el **91.5%** de las situaciones de alerta o desequilibrio en las estaciones a 30 minutos vista.")
-        st.markdown("#### Importancia de Variables en el Modelo (Bicis, Hora, Temperatura y Viento)")
-        importancia_data = pd.DataFrame({
-            'Variable': ['Bicis Actuales', 'Hora del día', 'Temperatura (°C)', 'Viento (km/h)', 'Estación ID', 'Tendencia 30 min', 'Día de la semana', 'Anclajes libres', 'Pct Ocupación', 'Tendencia 15 min', 'Vacaciones UPV', 'Capacidad', 'Lluvia'],
-            'Importancia': [1500, 1381, 1371, 1296, 841, 652, 642, 457, 279, 255, 154, 154, 18]
-        })
-        st.bar_chart(importancia_data.set_index('Variable'))
+        ruta_csv_4am = 'resumen_flota_operativa_4am_50bicis.csv'
+        ruta_csv_ventana = 'resumen_evaluacion_ventana_todos_dias.csv'
+        
+        if os.path.exists(ruta_csv_4am) and os.path.exists(ruta_csv_ventana):
+            df_4am_audit = pd.read_csv(ruta_csv_4am)
+            df_ventana_audit = pd.read_csv(ruta_csv_ventana)
+            
+            dias_totales = len(df_4am_audit)
+            dias_cumplen_85 = df_4am_audit['cumple_85_pct'].sum()
+            pct_cumplimiento = (dias_cumplen_85 / dias_totales) * 100 if dias_totales > 0 else 0
+            
+            dias_criticos_promedio = df_ventana_audit['Critico Promedio Ventana'].sum()
+            dias_deficit_sostenido = df_ventana_audit['Deficit Sostenido (3 Puntos)'].sum()
+            
+            c_f1, c_f2, c_f3, c_f4 = st.columns(4)
+            c_f1.metric("Flota Licitada Oficial", "50 bicis", help="Número de bicicletas eléctricas del contrato municipal")
+            c_f2.metric("Umbral 85% Exigido", "42.5 bicis", help="Mínimo 43 bicicletas ancladas listas para el servicio a las 04:00 AM")
+            c_f3.metric("% Cumplimiento 4 AM", f"{pct_cumplimiento:.1f}%", f"{dias_cumplen_85}/{dias_totales} días")
+            c_f4.metric("Días Críticos Sostenidos (16h)", f"{dias_deficit_sostenido} días", help="Días con déficit ininterrumpido a las 20h, 4h y 12h")
+            
+            st.markdown("---")
+            st.markdown("#### 🌙 1. Censo Nocturno Diario a las 04:00 AM (Stock de Flota en Reposo)")
+            st.caption("A las 04:00 AM el uso ciudadano es nulo. Todas las bicicletas operativas deben estar ancladas en alguna estación. Las bicis no presentes corresponden a averías en taller o mantenimiento.")
+            
+            # Gráfico de barras/línea del stock a las 04:00 AM
+            df_chart_4am = df_4am_audit.set_index('fecha')[['bicis_operativas_4am']]
+            st.line_chart(df_chart_4am)
+            
+            st.dataframe(df_4am_audit, use_container_width=True, hide_index=True)
+            
+            st.markdown("---")
+            st.markdown("#### 🛡️ 2. Auditoría de Seguridad con Ventana Temporal (20:00 PM → 04:00 AM → 12:00 PM)")
+            st.caption("Filtro anti-falsos positivos: Analiza las 8 horas previas y posteriores para diferenciar picos nocturnos de uso (ej. fiestas de San Juan o la Blanca) frente a fallos reales de taller.")
+            
+            st.dataframe(df_ventana_audit, use_container_width=True, hide_index=True)
+            
+            st.info("💡 **Metodología de Auditoría**: Si la flota vuelve a superar las 43 bicicletas al mediodía siguiente (12:00 PM), se considera una variación de uso puntual. Si permanece por debajo de 43 bicicletas en los 3 momentos (-8h, 4AM, +8h), se ratifica una falta grave de flota operativa.")
+        else:
+            st.warning("No se encontraron los datos precalculados de auditoría de flota. Ejecuta `python analisis_flota_4am.py` y `python analizar_todos_dias_ventana.py` para generarlos.")
 
 if __name__ == '__main__':
     main()

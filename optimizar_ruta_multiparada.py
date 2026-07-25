@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import joblib
 
+from config import FEATURE_COLS
 from obtener_meteo import obtener_meteo_actual
 from obtener_eventos import es_festivo, es_fiestas_la_blanca, es_vacaciones_universidad
 
@@ -30,15 +31,7 @@ def obtener_necesidades_estaciones(modelo, df_features):
     df_estado['es_la_blanca'] = es_fiestas_la_blanca(dt_actual)
     df_estado['es_vacaciones_upv'] = es_vacaciones_universidad(dt_actual)
     
-    feature_cols = [
-        'id_estacion', 'hora', 'dia_semana', 'es_finde', 'capacidad',
-        'bicis_disponibles', 'anclajes_disponibles', 'pct_ocupacion',
-        'tendencia_15m', 'tendencia_30m',
-        'temperatura', 'llueve', 'viento_kmh',
-        'es_festivo', 'es_la_blanca', 'es_vacaciones_upv'
-    ]
-    
-    X = df_estado[feature_cols].copy()
+    X = df_estado[FEATURE_COLS].copy()
     X['id_estacion'] = X['id_estacion'].astype('category')
     
     df_estado['prediccion_30m'] = np.clip(modelo.predict(X), 0, df_estado['capacidad'])

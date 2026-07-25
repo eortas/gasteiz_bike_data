@@ -39,12 +39,17 @@ jobs:
       - name: Calcular Análisis de Inactividad de Estaciones
         run: python analisis_estaciones.py
 
-      - name: Ejecutar Simulación de Impacto ML
+      - name: Ejecutar Simulación de Impacto ML (Diurna y 24h)
         run: python simular_redistribucion.py
+
+      - name: Auditar Disponibilidad de Flota (Censo 4AM y Ventana de Seguridad)
+        run: |
+          python analisis_flota_4am.py
+          python analizar_todos_dias_ventana.py
 
       - name: Guardar y Subir Resultados y Modelo Actualizados
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add modelo_lightgbm.joblib features_historico.csv historico.parquet historico.csv resumen_estaciones_inutilizadas.csv resumen_por_dias.csv resumen_laborable_vs_finde.csv resumen_simulacion_impacto.json resumen_simulacion_estaciones.csv
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(mlops): reentrenamiento diario ML y actualización de métricas estáticas [skip ci]" && git push)
+          git add modelo_lightgbm.joblib features_historico.csv historico.parquet historico.csv metricas_modelo.json resumen_estaciones_inutilizadas.csv resumen_por_dias.csv resumen_laborable_vs_finde.csv resumen_simulacion_impacto.json resumen_simulacion_estaciones.csv resumen_simulacion_24h_impacto.json resumen_simulacion_24h_estaciones.csv resumen_flota_operativa_4am_50bicis.csv resumen_evaluacion_ventana_todos_dias.csv
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(mlops): reentrenamiento diario ML, auditoría de flota y actualización de métricas [skip ci]" && git push)

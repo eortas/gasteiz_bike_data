@@ -28,8 +28,9 @@ def cargar_y_preparar_datos(ruta_csv):
     mediana_intervalo = df['duracion_minutos'].median()
     df['duracion_minutos'] = df['duracion_minutos'].fillna(mediana_intervalo)
     
-    # Filtramos la duración contabilizando únicamente el tiempo operativo (fuera del horario nocturno)
-    df['duracion_operativa_minutos'] = df['duracion_minutos'] * (~df['es_noche'])
+    # Definimos el tiempo operativo durante el día (fuera del horario nocturno de 23:00 a 06:00)
+    df['es_dia'] = ~df['es_noche']
+    df['duracion_operativa_minutos'] = df['duracion_minutos'] * df['es_dia'].astype(int)
     
     # Identificamos los estados problemáticos
     df['sin_bicis'] = df['bicis_disponibles'] == 0
