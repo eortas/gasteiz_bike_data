@@ -9,6 +9,7 @@ from optimizar_ruta_multiparada import (
     obtener_necesidades_estaciones,
     calcular_ruta_multiparada_optima
 )
+from simular_redistribucion import ejecutar_simulacion
 
 st.set_page_config(
     page_title="Mugibike - Redistribución Inteligente ML",
@@ -36,6 +37,14 @@ def cargar_resumenes_inactividad():
     df_inutil = pd.read_csv('resumen_estaciones_inutilizadas.csv')
     df_finde = pd.read_csv('resumen_laborable_vs_finde.csv')
     return df_inutil, df_finde
+
+@st.cache_data
+def calcular_simulacion_impacto(t_base, t_bici, cap_furgoneta):
+    return ejecutar_simulacion(
+        tiempo_base_parada=t_base,
+        tiempo_por_bici=t_bici,
+        capacidad_furgoneta=cap_furgoneta
+    )
 
 def main():
     st.title("🚲 Mugibike: Redistribución Inteligente y Análisis de Red")
@@ -112,10 +121,11 @@ def main():
     
     st.divider()
     
-    tab1, tab2, tab3, tab4 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "🚐 Circuito Multiparada Furgoneta",
         "🚨 Alertas Predictivas a 30 min",
         "⚠️ Análisis de Tiempo Inactivo por Estación",
+        "📈 Simulación & Evaluación de Impacto",
         "🤖 Modelo ML & Importancia Variables"
     ])
     
@@ -152,13 +162,11 @@ def main():
         
         df_inutil, df_finde = cargar_resumenes_inactividad()
         
-        # Convertimos minutos a horas y redondeamos porcentajes
         df_inutil['horas_sin_bicis'] = (df_inutil['minutos_sin_bicis'] / 60.0).round(1)
         df_inutil['horas_sin_anclajes'] = (df_inutil['minutos_sin_anclajes'] / 60.0).round(1)
         df_inutil['horas_inutilizada'] = (df_inutil['minutos_inutilizada'] / 60.0).round(1)
         df_inutil['pct_sin_bicis'] = df_inutil['pct_sin_bicis'].round(2)
         
-        # Tarjetas de resumen rápido
         top_sin_bicis = df_inutil.sort_values(by='pct_sin_bicis', ascending=False).iloc[0]
         promedio_pct_inactiva = df_inutil['pct_inutilizada'].mean()
         total_estaciones_afectadas = len(df_inutil[df_inutil['pct_inutilizada'] > 0])
@@ -170,14 +178,12 @@ def main():
         
         st.divider()
         
-        # Gráfico de las Top 10 estaciones con mayor porcentaje sin bicis
         st.markdown("#### 📊 Top 10 Estaciones con Mayor Porcentaje de Tiempo Vacías (% Sin Bicicletas)")
         top10_sin_bicis = df_inutil.sort_values(by='pct_sin_bicis', ascending=False).head(10)
         st.bar_chart(top10_sin_bicis.set_index('nombre_estacion')['pct_sin_bicis'])
         
         st.divider()
         
-        # Filtro y tabla detallada por tipo de indisponibilidad
         st.markdown("#### 📋 Detalle de Inactividad e Indisponibilidad por Estación")
         filtro_tipo = st.selectbox(
             "Filtrar por Diagnóstico de Indisponibilidad:",
@@ -195,6 +201,50 @@ def main():
         st.dataframe(df_tabla_inactiva, use_container_width=True)
 
     with tab4:
+        st.subheader("📈 Evaluación de Impacto y Mejora de Disponibilidad (Backtest Mensual)")
+        st.markdown("Simulación basada en los **datos históricos de todo el mes**, incorporando **tiempos reales de desplazamiento**, maniobra base del operario en cada parada y **tiempo de manipulación física por bicicleta** (carga/descarga).")
+        
+        col_s1, col_s2, col_s3 = st.columns(3)
+        t_base_sim = col_s1.number_input("Tiempo base por parada (min):", min_value=1.0, max_value=5.0, value=2.0, step=0.5)
+        t_bici_sim = col_s2.number_input("Tiempo de manipulación por bici (min):", min_value=0.5, max_value=3.0, value=1.5, step=0.5)
+        cap_furgoneta_sim = col_s3.number_input("Capacidad de furgoneta (bicis):", min_value=5, max_value=20, value=10, step=1)
+        
+        resumen_sim = calcular_simulacion_impacto(t_base_sim, t_bici_sim, cap_furgoneta_sim)
+        
+        st.divider()
+        
+        # Tarjetas principales de impacto
+        c_sim1, c_sim2, c_sim3, c_sim4 = st.columns(4)
+        c_sim1.metric("Indisponibilidad Histórica Real", f"{resumen_sim['horas_indisponible_real']} h", f"{resumen_sim['pct_real']}% del tiempo", delta_color="inverse")
+        c_sim2.metric("Indisponibilidad Con Sistema ML", f"{resumen_sim['horas_indisponible_sim']} h", f"{resumen_sim['pct_sim']}% del tiempo", delta_color="normal")
+        c_sim3.metric("Mejora Neto Disponibilidad", f"-{resumen_sim['mejora_pct']}%", "Reducción de fallos", delta_color="normal")
+        c_sim4.metric("Bicicletas Redistribuidas", f"{resumen_sim['bicis_redistribuidas_total']} bicis/mes")
+        
+        st.divider()
+        
+        # Desglose del operario y uso de furgoneta
+        st.markdown("#### ⏱️ Análisis del Tiempo de Servicio y Carga del Operario")
+        c_op1, c_op2, c_op3, c_op4 = st.columns(4)
+        c_op1.metric("Tiempo Conducción", f"{resumen_sim['horas_conduccion']} h/mes")
+        c_op2.metric("Tiempo Maniobra & Carga", f"{resumen_sim['horas_manipulacion']} h/mes")
+        c_op3.metric("Tiempo Activo Operario", f"{resumen_sim['horas_operario_total']} h/mes", f"{resumen_sim['pct_furgoneta_ocupada']}% de la jornada")
+        c_op4.metric("Carga Media en Furgoneta", f"{resumen_sim['promedio_bicis_furgoneta']} bicis", "Inventario en tránsito")
+        
+        st.caption("💡 **Conclusión Operativa**: Las bicicletas **no se quedan retenidas** en la furgoneta (promedio < 1 bici). El operario permanece activo en ruta el **23,9%** de la jornada, por lo que la operativa se cubre holgadamente con una única furgoneta.")
+        
+        st.divider()
+        
+        # Gráfico comparativo por estación
+        st.markdown("#### 📊 Comparativa de Indisponibilidad por Estación: Histórico Real vs Simulación ML")
+        df_comp = resumen_sim['df_estaciones_comp']
+        
+        chart_data = df_comp.set_index('Estación')[['% Inactiva (Sin Sistema)', '% Inactiva (Con ML)']]
+        st.bar_chart(chart_data)
+        
+        st.markdown("#### 📋 Detalle Comparativo por Estación")
+        st.dataframe(df_comp, use_container_width=True)
+
+    with tab5:
         st.subheader("Evaluación e Importancia de las Variables Explicativas (LightGBM)")
         c_m1, c_m2, c_m3 = st.columns(3)
         c_m1.metric("MAE (Error Medio Absoluto)", "0.44 bicis")
