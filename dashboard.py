@@ -100,7 +100,7 @@ def main():
     alertas_criticas = len(df_estado[df_estado['nivel_alerta'].str.contains('CRÍTICA')])
     alertas_precaucion = len(df_estado[df_estado['nivel_alerta'].str.contains('PRECAUCIÓN')])
     
-    estado_calendario = "🎉 Fiestas La Blanca" if blanca_hoy else ("🎈 Festivo" if festivo_hoy else ("🎓 Vacaciones UPV" if upv_vacaciones else "📅 Día Laborable"))
+    estado_calendario = "🎉 Fiestas La Blanca" if blanca_hoy else ("🎈 Festivo" if festivo_hoy else "📅 Día Laborable")
     
     col1.metric("Estaciones", f"{total_estaciones}")
     col2.metric("Bicicletas Activas", f"{total_bicis}")
