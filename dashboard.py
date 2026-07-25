@@ -152,27 +152,28 @@ def main():
         
         df_inutil, df_finde = cargar_resumenes_inactividad()
         
-        # Convertimos minutos a horas para mejor visualización
+        # Convertimos minutos a horas y redondeamos porcentajes
         df_inutil['horas_sin_bicis'] = (df_inutil['minutos_sin_bicis'] / 60.0).round(1)
         df_inutil['horas_sin_anclajes'] = (df_inutil['minutos_sin_anclajes'] / 60.0).round(1)
         df_inutil['horas_inutilizada'] = (df_inutil['minutos_inutilizada'] / 60.0).round(1)
+        df_inutil['pct_sin_bicis'] = df_inutil['pct_sin_bicis'].round(2)
         
         # Tarjetas de resumen rápido
-        top_sin_bicis = df_inutil.sort_values(by='horas_sin_bicis', ascending=False).iloc[0]
+        top_sin_bicis = df_inutil.sort_values(by='pct_sin_bicis', ascending=False).iloc[0]
         promedio_pct_inactiva = df_inutil['pct_inutilizada'].mean()
         total_estaciones_afectadas = len(df_inutil[df_inutil['pct_inutilizada'] > 0])
         
         c_i1, c_i2, c_i3 = st.columns(3)
-        c_i1.metric("Estación con Más Tiempo Sin Bicis", top_sin_bicis['nombre_estacion'], f"{top_sin_bicis['horas_sin_bicis']} horas", delta_color="inverse")
+        c_i1.metric("Estación con Más Tiempo Sin Bicis", top_sin_bicis['nombre_estacion'], f"{top_sin_bicis['pct_sin_bicis']:.1f}% del tiempo", delta_color="inverse")
         c_i2.metric("Promedio Inactividad Red", f"{promedio_pct_inactiva:.1f}% del tiempo operativo")
         c_i3.metric("Estaciones Afectadas por Inactividad", f"{total_estaciones_afectadas} de {len(df_inutil)}")
         
         st.divider()
         
-        # Gráfico de las Top 10 estaciones con más horas sin bicis
-        st.markdown("#### 📊 Top 10 Estaciones con Mayor Horas Vacías (Sin Bicicletas)")
-        top10_sin_bicis = df_inutil.sort_values(by='horas_sin_bicis', ascending=False).head(10)
-        st.bar_chart(top10_sin_bicis.set_index('nombre_estacion')['horas_sin_bicis'])
+        # Gráfico de las Top 10 estaciones con mayor porcentaje sin bicis
+        st.markdown("#### 📊 Top 10 Estaciones con Mayor Porcentaje de Tiempo Vacías (% Sin Bicicletas)")
+        top10_sin_bicis = df_inutil.sort_values(by='pct_sin_bicis', ascending=False).head(10)
+        st.bar_chart(top10_sin_bicis.set_index('nombre_estacion')['pct_sin_bicis'])
         
         st.divider()
         
