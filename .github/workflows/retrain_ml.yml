@@ -36,9 +36,15 @@ jobs:
       - name: Reentrenar Modelo LightGBM
         run: python modelo_prediccion.py
 
-      - name: Guardar y Subir Modelo y Parquet Actualizados
+      - name: Calcular Análisis de Inactividad de Estaciones
+        run: python analisis_estaciones.py
+
+      - name: Ejecutar Simulación de Impacto ML
+        run: python simular_redistribucion.py
+
+      - name: Guardar y Subir Resultados y Modelo Actualizados
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add modelo_lightgbm.joblib features_historico.csv historico.parquet historico.csv
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(mlops): reentrenamiento diario LightGBM y actualización Parquet [skip ci]" && git push)
+          git add modelo_lightgbm.joblib features_historico.csv historico.parquet historico.csv resumen_estaciones_inutilizadas.csv resumen_por_dias.csv resumen_laborable_vs_finde.csv resumen_simulacion_impacto.json resumen_simulacion_estaciones.csv
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(mlops): reentrenamiento diario ML y actualización de métricas estáticas [skip ci]" && git push)
