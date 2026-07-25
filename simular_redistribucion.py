@@ -1,10 +1,15 @@
 import sys
+import time
 import pandas as pd
 import numpy as np
 import joblib
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
+
+# Constantes de tiempos operativos para la simulación
+TIEMPO_BASE_PARADA_MIN = 2.0      # Minutos fijos de maniobra (aparcamiento, apertura, verificación)
+TIEMPO_POR_BICI_MIN = 1.5         # Minutos por cada bici (desanclar/anclar, transportar a furgoneta y amarrar)
 
 def cargar_recursos():
     modelo = joblib.load('modelo_lightgbm.joblib')
@@ -23,6 +28,7 @@ def obtener_tiempo_conduccion(df_distancias, orig, dest):
     return 10.0
 
 def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_furgoneta=10):
+    t_inicio = time.time()
     modelo, df_distancias, df_features = cargar_recursos()
     
     # Pre-calculamos las predicciones del modelo para todo el dataset
@@ -40,12 +46,20 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     # Ordenamos por timestamp e id_estacion
     df_features = df_features.sort_values(by=['timestamp', 'id_estacion']).reset_index(drop=True)
     
-    timestamps = df_features['timestamp'].unique()
+    # Agrupamos previamente los datos en listas nativas para evitar el uso de iterrows() en el bucle principal
+    timestamps_unicos = df_features['timestamp'].unique()
     estaciones = df_features['nombre_estacion'].unique()
     capacidades = df_features.groupby('nombre_estacion')['capacidad'].first().to_dict()
     
+    # Agrupamos las filas por marca de tiempo
+    grupos_por_timestamp = []
+    for ts, sub_df in df_features.groupby('timestamp', sort=False):
+        dt = pd.to_datetime(ts)
+        filas = sub_df[['nombre_estacion', 'bicis_disponibles', 'capacidad', 'prediccion_30m']].to_dict('records')
+        grupos_por_timestamp.append((dt, dt.hour, filas))
+        
     # Estado inicial simulado de bicicletas por estación
-    df_primer_ts = df_features[df_features['timestamp'] == timestamps[0]]
+    df_primer_ts = df_features[df_features['timestamp'] == timestamps_unicos[0]]
     bicis_simuladas = df_primer_ts.set_index('nombre_estacion')['bicis_disponibles'].to_dict()
     bicis_reales_prev = bicis_simuladas.copy()
     
@@ -72,26 +86,24 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     indisponible_sim_est = {est: 0.0 for est in estaciones}
     minutos_totales_est = {est: 0.0 for est in estaciones}
     
-    grouped = df_features.groupby('timestamp')
-    prev_ts = None
+    prev_dt = None
     
-    for ts, frame in grouped:
-        dt = pd.to_datetime(ts)
-        hora = dt.hour
+    # Recorremos la serie temporal optimizada
+    for dt, hora, filas in grupos_por_timestamp:
         es_operativo = (hora >= 6 and hora < 23)
         
-        if prev_ts is None:
+        if prev_dt is None:
             duracion_min = 5.0
         else:
-            duracion_min = (dt - prev_ts).total_seconds() / 60.0
+            duracion_min = (dt - prev_dt).total_seconds() / 60.0
             if duracion_min <= 0 or duracion_min > 30:
                 duracion_min = 5.0
-        prev_ts = dt
+        prev_dt = dt
         
         # 1. Actualizamos la demanda real del público
-        for _, row in frame.iterrows():
-            est = row['nombre_estacion']
-            b_real = row['bicis_disponibles']
+        for r in filas:
+            est = r['nombre_estacion']
+            b_real = r['bicis_disponibles']
             b_prev = bicis_reales_prev.get(est, b_real)
             
             delta_cliente = b_real - b_prev
@@ -106,10 +118,10 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
             pasos_simulacion += 1
             suma_bicis_en_furgoneta += bicis_en_furgoneta
             
-            for _, row in frame.iterrows():
-                est = row['nombre_estacion']
-                b_real = row['bicis_disponibles']
-                cap = row['capacidad']
+            for r in filas:
+                est = r['nombre_estacion']
+                b_real = r['bicis_disponibles']
+                cap = r['capacidad']
                 minutos_totales_est[est] += duracion_min
                 if b_real == 0 or b_real == cap:
                     min_indisponible_real += duracion_min
@@ -152,7 +164,7 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
                 destinos = {}
                 origenes = {}
                 
-                for _, r in frame.iterrows():
+                for r in filas:
                     est = r['nombre_estacion']
                     pred = r['prediccion_30m']
                     cap = r['capacidad']
@@ -215,7 +227,7 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     
     pct_furgoneta_ocupada = (minutos_furgoneta_activa / (pasos_simulacion * 5.0)) * 100
 
-    # Construimos tabla comparativa por estación
+    # Construimos la tabla comparativa por estación
     filas_est = []
     for est in estaciones:
         t_total_e = max(minutos_totales_est[est], 1.0)
@@ -235,6 +247,7 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
         })
         
     df_estaciones_comp = pd.DataFrame(filas_est).sort_values(by='Horas Inútil (Sin Sistema)', ascending=False).reset_index(drop=True)
+    tiempo_ejecucion_seg = round(time.time() - t_inicio, 2)
 
     resumen = {
         'horas_totales_servicio_red': round(horas_totales_servicio_red, 1),
@@ -249,7 +262,8 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
         'horas_operario_total': round(minutos_furgoneta_activa / 60.0, 1),
         'pct_furgoneta_ocupada': round(pct_furgoneta_ocupada, 1),
         'promedio_bicis_furgoneta': round(promedio_bicis_furgoneta, 2),
-        'df_estaciones_comp': df_estaciones_comp
+        'df_estaciones_comp': df_estaciones_comp,
+        'tiempo_ejecucion_seg': tiempo_ejecucion_seg
     }
     
     return resumen
@@ -259,6 +273,7 @@ def main():
     print("\n" + "=" * 70)
     print("  SIMULACIÓN CON TIEMPOS DE MANIPULACIÓN DEL OPERARIO Y CONDUCCIÓN")
     print("=" * 70)
+    print(f"Tiempo de ejecución del cálculo: {resumen['tiempo_ejecucion_seg']} segundos")
     print(f"Período analizado: ~1 mes ({resumen['horas_totales_servicio_red']} hrs/estación)")
     print(f"Indisponibilidad REAL sin sistema: {resumen['horas_indisponible_real']} hrs ({resumen['pct_real']}%)")
     print(f"Indisponibilidad SIMULADA con sistema: {resumen['horas_indisponible_sim']} hrs ({resumen['pct_sim']}%)")
