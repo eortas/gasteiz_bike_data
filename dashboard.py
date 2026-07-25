@@ -1,3 +1,5 @@
+import os
+import json
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -37,6 +39,17 @@ def cargar_resumenes_inactividad():
     df_inutil = pd.read_csv('resumen_estaciones_inutilizadas.csv')
     df_finde = pd.read_csv('resumen_laborable_vs_finde.csv')
     return df_inutil, df_finde
+
+@st.cache_data
+def cargar_resumen_simulacion_precalculado():
+    ruta_json = 'resumen_simulacion_impacto.json'
+    ruta_csv = 'resumen_simulacion_estaciones.csv'
+    if os.path.exists(ruta_json) and os.path.exists(ruta_csv):
+        with open(ruta_json, 'r', encoding='utf-8') as f:
+            resumen = json.load(f)
+        resumen['df_estaciones_comp'] = pd.read_csv(ruta_csv)
+        return resumen
+    return None
 
 @st.cache_data
 def calcular_simulacion_impacto(t_base, t_bici, cap_furgoneta):
@@ -209,7 +222,13 @@ def main():
         t_bici_sim = col_s2.number_input("Tiempo de manipulación por bici (min):", min_value=0.5, max_value=3.0, value=1.5, step=0.5)
         cap_furgoneta_sim = col_s3.number_input("Capacidad de furgoneta (bicis):", min_value=5, max_value=20, value=10, step=1)
         
-        resumen_sim = calcular_simulacion_impacto(t_base_sim, t_bici_sim, cap_furgoneta_sim)
+        # Si los parámetros son los por defecto, cargamos el precalculado instantáneo
+        resumen_sim = None
+        if t_base_sim == 2.0 and t_bici_sim == 1.5 and cap_furgoneta_sim == 10:
+            resumen_sim = cargar_resumen_simulacion_precalculado()
+            
+        if resumen_sim is None:
+            resumen_sim = calcular_simulacion_impacto(t_base_sim, t_bici_sim, cap_furgoneta_sim)
         
         st.divider()
         

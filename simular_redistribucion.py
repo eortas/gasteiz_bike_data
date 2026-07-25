@@ -1,5 +1,6 @@
 import sys
 import time
+import json
 import pandas as pd
 import numpy as np
 import joblib
@@ -46,12 +47,11 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     # Ordenamos por timestamp e id_estacion
     df_features = df_features.sort_values(by=['timestamp', 'id_estacion']).reset_index(drop=True)
     
-    # Agrupamos previamente los datos en listas nativas para evitar el uso de iterrows() en el bucle principal
     timestamps_unicos = df_features['timestamp'].unique()
     estaciones = df_features['nombre_estacion'].unique()
     capacidades = df_features.groupby('nombre_estacion')['capacidad'].first().to_dict()
     
-    # Agrupamos las filas por marca de tiempo
+    # Agrupamos las filas por marca de tiempo en listas nativas
     grupos_por_timestamp = []
     for ts, sub_df in df_features.groupby('timestamp', sort=False):
         dt = pd.to_datetime(ts)
@@ -88,7 +88,6 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     
     prev_dt = None
     
-    # Recorremos la serie temporal optimizada
     for dt, hora, filas in grupos_por_timestamp:
         es_operativo = (hora >= 6 and hora < 23)
         
@@ -227,7 +226,6 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     
     pct_furgoneta_ocupada = (minutos_furgoneta_activa / (pasos_simulacion * 5.0)) * 100
 
-    # Construimos la tabla comparativa por estación
     filas_est = []
     for est in estaciones:
         t_total_e = max(minutos_totales_est[est], 1.0)
@@ -268,22 +266,22 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     
     return resumen
 
-def main():
+def guardar_resumen_precalculado():
+    print("Precalculando resultados de simulación para carga instantánea...")
     resumen = ejecutar_simulacion()
-    print("\n" + "=" * 70)
-    print("  SIMULACIÓN CON TIEMPOS DE MANIPULACIÓN DEL OPERARIO Y CONDUCCIÓN")
-    print("=" * 70)
-    print(f"Tiempo de ejecución del cálculo: {resumen['tiempo_ejecucion_seg']} segundos")
-    print(f"Período analizado: ~1 mes ({resumen['horas_totales_servicio_red']} hrs/estación)")
-    print(f"Indisponibilidad REAL sin sistema: {resumen['horas_indisponible_real']} hrs ({resumen['pct_real']}%)")
-    print(f"Indisponibilidad SIMULADA con sistema: {resumen['horas_indisponible_sim']} hrs ({resumen['pct_sim']}%)")
-    print(f"REDUCCIÓN NETO DE INDISPONIBILIDAD: -{resumen['mejora_pct']}% de tiempo inútil")
-    print("-" * 70)
-    print(f"Total de bicicletas redistribuidas: {resumen['bicis_redistribuidas_total']} bicis/mes")
-    print(f"Horas conduciendo: {resumen['horas_conduccion']} hrs | Horas maniobra: {resumen['horas_manipulacion']} hrs")
-    print(f"Horas operario activo: {resumen['horas_operario_total']} hrs ({resumen['pct_furgoneta_ocupada']}%)")
-    print(f"Carga media en furgoneta: {resumen['promedio_bicis_furgoneta']} bicicletas")
-    print("=" * 70 + "\n")
+    
+    # Exportamos el DataFrame por estaciones a CSV
+    df_est = resumen.pop('df_estaciones_comp')
+    df_est.to_csv('resumen_simulacion_estaciones.csv', index=False)
+    
+    # Exportamos las métricas globales a JSON
+    with open('resumen_simulacion_impacto.json', 'w', encoding='utf-8') as f:
+        json.dump(resumen, f, indent=4, ensure_ascii=False)
+        
+    print("Archivos precalculados guardados con éxito (resumen_simulacion_impacto.json y resumen_simulacion_estaciones.csv).")
+
+def main():
+    guardar_resumen_precalculado()
 
 if __name__ == '__main__':
     main()
