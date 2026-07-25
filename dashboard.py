@@ -86,7 +86,7 @@ def main():
                 df_estado.loc[idx, 'anclajes_disponibles'] = a_live
                 cap = df_estado.loc[idx, 'capacidad']
                 df_estado.loc[idx, 'pct_ocupacion'] = b_live / max(cap, 1)
-        st.success("🟢 **Conectado en Tiempo Real a la API Oficial de Mugibike** (`https://mugibike.eus/api/client/entities`) — Mostrando estado y predicciones con datos vivos de la red.")
+        st.success("🟢 **Conectado - Datos tiempo real**")
     else:
         st.info("ℹ️ **Modo Histórico Offline**: No se pudo consultar la API en vivo de Mugibike. Mostrando últimas lecturas registradas.")
     
