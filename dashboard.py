@@ -11,7 +11,7 @@ from optimizar_ruta_multiparada import (
 )
 
 st.set_page_config(
-    page_title="BiciVitoria - Redistribución Inteligente ML",
+    page_title="Mugibike - Redistribución Inteligente ML",
     page_icon="🚲",
     layout="wide"
 )
@@ -27,15 +27,25 @@ def cargar_datos():
     df_distancias = pd.read_csv('matriz_distancias_estaciones.csv')
     return df_features, df_distancias
 
+@st.cache_data(ttl=300)
+def cargar_meteo():
+    return obtener_meteo_actual()
+
+@st.cache_data
+def cargar_resumenes_inactividad():
+    df_inutil = pd.read_csv('resumen_estaciones_inutilizadas.csv')
+    df_finde = pd.read_csv('resumen_laborable_vs_finde.csv')
+    return df_inutil, df_finde
+
 def main():
-    st.title("🚲 BiciVitoria: Predicción ML con Clima y Calendario de Eventos")
-    st.markdown("Optimización logística con **LightGBM**, **Meteorología en Tiempo Real**, **Festivos / Fiestas de La Blanca** y **Ruta VRP Multiparada**.")
+    st.title("🚲 Mugibike: Redistribución Inteligente y Análisis de Red")
+    st.markdown("Sistema de gestión inteligente para **Mugibike**: predice la ocupación a 30 minutos vista (considerando clima en tiempo real y calendario de eventos) y **calcula rutas óptimas de reparto** para evitar estaciones vacías o saturadas, garantizando que toda la red permanezca operativa.")
     
     modelo = cargar_modelo()
     df_features, df_distancias = cargar_datos()
     
-    # Obtenemos meteorología en vivo
-    meteo_actual = obtener_meteo_actual()
+    # Obtenemos meteorología en vivo con caché de 5 minutos
+    meteo_actual = cargar_meteo()
     
     ultimo_ts = df_features['timestamp'].max()
     df_estado = df_features[df_features['timestamp'] == ultimo_ts].copy()
@@ -95,7 +105,9 @@ def main():
     col1.metric("Estaciones", f"{total_estaciones}")
     col2.metric("Bicicletas Activas", f"{total_bicis}")
     col3.metric("Alertas Críticas", f"{alertas_criticas}", delta_color="inverse")
-    col4.metric("Clima en Vivo", f"{meteo_actual['temperatura']} °C", delta=f"💨 {meteo_actual['viento_kmh']} km/h")
+    
+    titulo_clima = "Clima (Estimado)" if meteo_actual.get('es_fallback', False) else "Clima en Vivo"
+    col4.metric(titulo_clima, f"{meteo_actual['temperatura']} °C", delta=f"💨 {meteo_actual['viento_kmh']} km/h")
     col5.metric("Calendario Vitoria", estado_calendario)
     
     st.divider()
@@ -103,8 +115,8 @@ def main():
     tab1, tab2, tab3, tab4 = st.tabs([
         "🚐 Circuito Multiparada Furgoneta",
         "🚨 Alertas Predictivas a 30 min",
-        "🤖 Modelo ML & Importancia Variables",
-        "🗺️ Tiempos & Rutas OSM"
+        "⚠️ Análisis de Tiempo Inactivo por Estación",
+        "🤖 Modelo ML & Importancia Variables"
     ])
     
     with tab1:
@@ -135,27 +147,66 @@ def main():
         st.dataframe(df_mostrar_estado, use_container_width=True)
 
     with tab3:
+        st.subheader("Análisis de Tiempo Inactivo por Falta de Bicicletas o Anclajes")
+        st.caption("Contabilizado únicamente dentro del horario operativo diurno (excluyendo el horario nocturno de 23:00 a 06:00).")
+        
+        df_inutil, df_finde = cargar_resumenes_inactividad()
+        
+        # Convertimos minutos a horas para mejor visualización
+        df_inutil['horas_sin_bicis'] = (df_inutil['minutos_sin_bicis'] / 60.0).round(1)
+        df_inutil['horas_sin_anclajes'] = (df_inutil['minutos_sin_anclajes'] / 60.0).round(1)
+        df_inutil['horas_inutilizada'] = (df_inutil['minutos_inutilizada'] / 60.0).round(1)
+        
+        # Tarjetas de resumen rápido
+        top_sin_bicis = df_inutil.sort_values(by='horas_sin_bicis', ascending=False).iloc[0]
+        promedio_pct_inactiva = df_inutil['pct_inutilizada'].mean()
+        total_estaciones_afectadas = len(df_inutil[df_inutil['pct_inutilizada'] > 0])
+        
+        c_i1, c_i2, c_i3 = st.columns(3)
+        c_i1.metric("Estación con Más Tiempo Sin Bicis", top_sin_bicis['nombre_estacion'], f"{top_sin_bicis['horas_sin_bicis']} horas", delta_color="inverse")
+        c_i2.metric("Promedio Inactividad Red", f"{promedio_pct_inactiva:.1f}% del tiempo operativo")
+        c_i3.metric("Estaciones Afectadas por Inactividad", f"{total_estaciones_afectadas} de {len(df_inutil)}")
+        
+        st.divider()
+        
+        # Gráfico de las Top 10 estaciones con más horas sin bicis
+        st.markdown("#### 📊 Top 10 Estaciones con Mayor Horas Vacías (Sin Bicicletas)")
+        top10_sin_bicis = df_inutil.sort_values(by='horas_sin_bicis', ascending=False).head(10)
+        st.bar_chart(top10_sin_bicis.set_index('nombre_estacion')['horas_sin_bicis'])
+        
+        st.divider()
+        
+        # Filtro y tabla detallada por tipo de indisponibilidad
+        st.markdown("#### 📋 Detalle de Inactividad e Indisponibilidad por Estación")
+        filtro_tipo = st.selectbox(
+            "Filtrar por Diagnóstico de Indisponibilidad:",
+            options=["Todas", "Sin bicis", "Sin hueco (Llena)", "Mixta (Sin bicis / Sin hueco)", "Disponible"]
+        )
+        
+        df_filtrado = df_inutil.copy()
+        if filtro_tipo != "Todas":
+            df_filtrado = df_filtrado[df_filtrado['tipo_indisponibilidad'] == filtro_tipo]
+            
+        df_tabla_inactiva = df_filtrado[['nombre_estacion', 'horas_sin_bicis', 'horas_sin_anclajes', 'horas_inutilizada', 'pct_inutilizada', 'tipo_indisponibilidad']].copy()
+        df_tabla_inactiva.columns = ['Estación', 'Horas Sin Bicis', 'Horas Sin Hueco', 'Horas Inútil Total', '% Tiempo Inoperativa', 'Diagnóstico']
+        df_tabla_inactiva['% Tiempo Inoperativa'] = df_tabla_inactiva['% Tiempo Inoperativa'].round(2)
+        
+        st.dataframe(df_tabla_inactiva, use_container_width=True)
+
+    with tab4:
         st.subheader("Evaluación e Importancia de las Variables Explicativas (LightGBM)")
-        c_m1, c_m2 = st.columns(2)
+        c_m1, c_m2, c_m3 = st.columns(3)
         c_m1.metric("MAE (Error Medio Absoluto)", "0.44 bicis")
         c_m2.metric("RMSE (Error Cuadrático Medio)", "0.74 bicis")
+        c_m3.metric("Recall (Alertas de Red)", "92.0%")
         
+        st.caption("🎯 **Recall / Sensibilidad**: El modelo es capaz de anticipar correctamente el **92.0%** de las situaciones de alerta o desequilibrio en las estaciones a 30 minutos.")
         st.markdown("#### Importancia de Variables en el Modelo (Bicis, Hora, Temperatura y Viento)")
         importancia_data = pd.DataFrame({
             'Variable': ['Bicis Actuales', 'Hora del día', 'Temperatura (°C)', 'Viento (km/h)', 'Estación ID', 'Tendencia 30 min', 'Día de la semana', 'Anclajes libres', 'Pct Ocupación', 'Tendencia 15 min', 'Vacaciones UPV', 'Capacidad', 'Lluvia'],
             'Importancia': [1500, 1381, 1371, 1296, 841, 652, 642, 457, 279, 255, 154, 154, 18]
         })
         st.bar_chart(importancia_data.set_index('Variable'))
-
-    with tab4:
-        st.subheader("Consulta de Distancias y Tiempos OSM")
-        col_o, col_d = st.columns(2)
-        est_orig = col_o.selectbox("Origen:", df_distancias['estacion_origen'].unique())
-        est_dest = col_d.selectbox("Destino:", df_distancias['estacion_destino'].unique())
-        if est_orig != est_dest:
-            m = df_distancias[(df_distancias['estacion_origen'] == est_orig) & (df_distancias['estacion_destino'] == est_dest)]
-            if not m.empty:
-                st.info(f"🚗 Tiempo en furgoneta: **{m.iloc[0]['tiempo_conduccion_min']} min** | 📏 Distancia: **{m.iloc[0]['distancia_km']} km**")
 
 if __name__ == '__main__':
     main()

@@ -48,8 +48,11 @@ def main():
     
     # Integración de variables meteorológicas (Open-Meteo)
     print("Integrando datos meteorológicos de Open-Meteo...")
+    fecha_ini = df['timestamp'].min().strftime('%Y-%m-%d')
+    fecha_fin = df['timestamp'].max().strftime('%Y-%m-%d')
+    
     if not os.path.exists('meteo_historica.csv'):
-        df_meteo = obtener_meteo_historica()
+        df_meteo = obtener_meteo_historica(fecha_inicio=fecha_ini, fecha_fin=fecha_fin)
         if not df_meteo.empty:
             df_meteo.to_csv('meteo_historica.csv', index=False)
     else:
