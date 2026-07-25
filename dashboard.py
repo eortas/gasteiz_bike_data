@@ -11,7 +11,6 @@ from optimizar_ruta_multiparada import (
     obtener_necesidades_estaciones,
     calcular_ruta_multiparada_optima
 )
-from simular_redistribucion import ejecutar_simulacion
 
 st.set_page_config(
     page_title="Mugibike - Redistribución Inteligente ML",
@@ -50,14 +49,6 @@ def cargar_resumen_simulacion_precalculado():
         resumen['df_estaciones_comp'] = pd.read_csv(ruta_csv)
         return resumen
     return None
-
-@st.cache_data
-def calcular_simulacion_impacto(t_base, t_bici, cap_furgoneta):
-    return ejecutar_simulacion(
-        tiempo_base_parada=t_base,
-        tiempo_por_bici=t_bici,
-        capacidad_furgoneta=cap_furgoneta
-    )
 
 def main():
     st.title("🚲 Mugibike: Redistribución Inteligente y Análisis de Red")
@@ -215,53 +206,48 @@ def main():
 
     with tab4:
         st.subheader("📈 Evaluación de Impacto y Mejora de Disponibilidad (Backtest Mensual)")
-        st.markdown("Simulación basada en los **datos históricos de todo el mes**, incorporando **tiempos reales de desplazamiento**, maniobra base del operario en cada parada y **tiempo de manipulación física por bicicleta** (carga/descarga).")
+        st.markdown("Estudio de impacto basado en los **datos históricos de todo el mes**, incorporando **tiempos reales de desplazamiento**, maniobra base del operario en cada parada y **tiempo de manipulación física por bicicleta**.")
         
-        col_s1, col_s2, col_s3 = st.columns(3)
-        t_base_sim = col_s1.number_input("Tiempo base por parada (min):", min_value=1.0, max_value=5.0, value=2.0, step=0.5)
-        t_bici_sim = col_s2.number_input("Tiempo de manipulación por bici (min):", min_value=0.5, max_value=3.0, value=1.5, step=0.5)
-        cap_furgoneta_sim = col_s3.number_input("Capacidad de furgoneta (bicis):", min_value=5, max_value=20, value=10, step=1)
+        # Leemos exclusivamente los datos estáticos precalculados
+        resumen_sim = cargar_resumen_simulacion_precalculado()
         
-        # Si los parámetros son los por defecto, cargamos el precalculado instantáneo
-        resumen_sim = None
-        if t_base_sim == 2.0 and t_bici_sim == 1.5 and cap_furgoneta_sim == 10:
-            resumen_sim = cargar_resumen_simulacion_precalculado()
+        if resumen_sim:
+            st.info("⏱️ **Parámetros del estudio operativo**: Parada base = 2,0 min | Manipulación = 1,5 min/bici | Capacidad furgoneta = 10 bicis")
             
-        if resumen_sim is None:
-            resumen_sim = calcular_simulacion_impacto(t_base_sim, t_bici_sim, cap_furgoneta_sim)
-        
-        st.divider()
-        
-        # Tarjetas principales de impacto
-        c_sim1, c_sim2, c_sim3, c_sim4 = st.columns(4)
-        c_sim1.metric("Indisponibilidad Histórica Real", f"{resumen_sim['horas_indisponible_real']} h", f"{resumen_sim['pct_real']}% del tiempo", delta_color="inverse")
-        c_sim2.metric("Indisponibilidad Con Sistema ML", f"{resumen_sim['horas_indisponible_sim']} h", f"{resumen_sim['pct_sim']}% del tiempo", delta_color="normal")
-        c_sim3.metric("Mejora Neto Disponibilidad", f"-{resumen_sim['mejora_pct']}%", "Reducción de fallos", delta_color="normal")
-        c_sim4.metric("Bicicletas Redistribuidas", f"{resumen_sim['bicis_redistribuidas_total']} bicis/mes")
-        
-        st.divider()
-        
-        # Desglose del operario y uso de furgoneta
-        st.markdown("#### ⏱️ Análisis del Tiempo de Servicio y Carga del Operario")
-        c_op1, c_op2, c_op3, c_op4 = st.columns(4)
-        c_op1.metric("Tiempo Conducción", f"{resumen_sim['horas_conduccion']} h/mes")
-        c_op2.metric("Tiempo Maniobra & Carga", f"{resumen_sim['horas_manipulacion']} h/mes")
-        c_op3.metric("Tiempo Activo Operario", f"{resumen_sim['horas_operario_total']} h/mes", f"{resumen_sim['pct_furgoneta_ocupada']}% de la jornada")
-        c_op4.metric("Carga Media en Furgoneta", f"{resumen_sim['promedio_bicis_furgoneta']} bicis", "Inventario en tránsito")
-        
-        st.caption("💡 **Conclusión Operativa**: Las bicicletas **no se quedan retenidas** en la furgoneta (promedio < 1 bici). El operario permanece activo en ruta el **23,9%** de la jornada, por lo que la operativa se cubre holgadamente con una única furgoneta.")
-        
-        st.divider()
-        
-        # Gráfico comparativo por estación
-        st.markdown("#### 📊 Comparativa de Indisponibilidad por Estación: Histórico Real vs Simulación ML")
-        df_comp = resumen_sim['df_estaciones_comp']
-        
-        chart_data = df_comp.set_index('Estación')[['% Inactiva (Sin Sistema)', '% Inactiva (Con ML)']]
-        st.bar_chart(chart_data)
-        
-        st.markdown("#### 📋 Detalle Comparativo por Estación")
-        st.dataframe(df_comp, use_container_width=True)
+            st.divider()
+            
+            # Tarjetas principales de impacto
+            c_sim1, c_sim2, c_sim3, c_sim4 = st.columns(4)
+            c_sim1.metric("Indisponibilidad Histórica Real", f"{resumen_sim['horas_indisponible_real']} h", f"{resumen_sim['pct_real']}% del tiempo", delta_color="inverse")
+            c_sim2.metric("Indisponibilidad Con Sistema ML", f"{resumen_sim['horas_indisponible_sim']} h", f"{resumen_sim['pct_sim']}% del tiempo", delta_color="normal")
+            c_sim3.metric("Mejora Neto Disponibilidad", f"-{resumen_sim['mejora_pct']}%", "Reducción de fallos", delta_color="normal")
+            c_sim4.metric("Bicicletas Redistribuidas", f"{resumen_sim['bicis_redistribuidas_total']} bicis/mes")
+            
+            st.divider()
+            
+            # Desglose del operario y uso de furgoneta
+            st.markdown("#### ⏱️ Análisis del Tiempo de Servicio y Carga del Operario")
+            c_op1, c_op2, c_op3, c_op4 = st.columns(4)
+            c_op1.metric("Tiempo Conducción", f"{resumen_sim['horas_conduccion']} h/mes")
+            c_op2.metric("Tiempo Maniobra & Carga", f"{resumen_sim['horas_manipulacion']} h/mes")
+            c_op3.metric("Tiempo Activo Operario", f"{resumen_sim['horas_operario_total']} h/mes", f"{resumen_sim['pct_furgoneta_ocupada']}% de la jornada")
+            c_op4.metric("Carga Media en Furgoneta", f"{resumen_sim['promedio_bicis_furgoneta']} bicis", "Inventario en tránsito")
+            
+            st.caption("💡 **Conclusión Operativa**: Las bicicletas **no se quedan retenidas** en la furgoneta (promedio < 1 bici). El operario permanece activo en ruta el **23,9%** de la jornada, por lo que la operativa se cubre holgadamente con una única furgoneta.")
+            
+            st.divider()
+            
+            # Gráfico comparativo por estación
+            st.markdown("#### 📊 Comparativa de Indisponibilidad por Estación: Histórico Real vs Simulación ML")
+            df_comp = resumen_sim['df_estaciones_comp']
+            
+            chart_data = df_comp.set_index('Estación')[['% Inactiva (Sin Sistema)', '% Inactiva (Con ML)']]
+            st.bar_chart(chart_data)
+            
+            st.markdown("#### 📋 Detalle Comparativo por Estación")
+            st.dataframe(df_comp, use_container_width=True)
+        else:
+            st.warning("No se encontraron los datos precalculados de simulación.")
 
     with tab5:
         st.subheader("Evaluación e Importancia de las Variables Explicativas (LightGBM)")
