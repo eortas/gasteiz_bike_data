@@ -9,6 +9,10 @@ def main():
     print("Cargando dataset procesado desde features_historico.csv...")
     df = pd.read_csv('features_historico.csv')
     df = df.dropna(subset=['target_bicis_30m']).reset_index(drop=True)
+    
+    # Ordenamos por timestamp para garantizar una división temporal real (pasado vs futuro)
+    df['timestamp'] = pd.to_datetime(df['timestamp'], format='ISO8601')
+    df = df.sort_values(by='timestamp').reset_index(drop=True)
     df['id_estacion'] = df['id_estacion'].astype('category')
     
     # Lista de variables explicativas incluyendo clima y eventos de Vitoria-Gasteiz

@@ -252,11 +252,11 @@ def main():
     with tab5:
         st.subheader("Evaluación e Importancia de las Variables Explicativas (LightGBM)")
         c_m1, c_m2, c_m3 = st.columns(3)
-        c_m1.metric("MAE (Error Medio Absoluto)", "0.44 bicis")
-        c_m2.metric("RMSE (Error Cuadrático Medio)", "0.74 bicis")
-        c_m3.metric("Recall (Alertas de Red)", "92.0%")
+        c_m1.metric("MAE (Error Medio Absoluto)", "0.95 bicis")
+        c_m2.metric("RMSE (Error Cuadrático Medio)", "1.59 bicis")
+        c_m3.metric("Recall (Alertas de Red)", "91.5%")
         
-        st.caption("🎯 **Recall / Sensibilidad**: El modelo es capaz de anticipar correctamente el **92.0%** de las situaciones de alerta o desequilibrio en las estaciones a 30 minutos.")
+        st.caption("🎯 **Recall / Sensibilidad**: El modelo anticipa correctamente el **91.5%** de las situaciones de alerta o desequilibrio en las estaciones a 30 minutos vista.")
         st.markdown("#### Importancia de Variables en el Modelo (Bicis, Hora, Temperatura y Viento)")
         importancia_data = pd.DataFrame({
             'Variable': ['Bicis Actuales', 'Hora del día', 'Temperatura (°C)', 'Viento (km/h)', 'Estación ID', 'Tendencia 30 min', 'Día de la semana', 'Anclajes libres', 'Pct Ocupación', 'Tendencia 15 min', 'Vacaciones UPV', 'Capacidad', 'Lluvia'],

@@ -17,10 +17,10 @@ El modelo predictivo `LGBMRegressor` ha sido evaluado sobre un dataset históric
 
 | Métrica | Valor Obtenido | Descripción | Significado Práctico en Producción |
 |---|---|---|---|
-| **MAE** *(Mean Absolute Error)* | **0.44 bicicletas** | Error promedio absoluto | El modelo se equivoca por **menos de media bici** al predecir a 30 minutos. |
-| **RMSE** *(Root Mean Squared Error)* | **0.74 bicicletas** | Raíz del error cuadrático | Confirma que **no se cometen errores graves** (ausencia de falsas predicciones opuestas). |
-| **$R^2$ Score** | **0.97 (97%)** | Varianza explicada | Explica el **97% del comportamiento dinámico** de la red de transporte. |
-| **Recall (Sensibilidad)** | **> 91%** | Detección de vaciados | Anticipa **9 de cada 10 vaciados de estación** con 30 minutos de margen. |
+| **MAE** *(Mean Absolute Error)* | **0.95 bicicletas** | Error promedio absoluto | El modelo se equivoca por **menos de 1 bici** al predecir a 30 minutos vista. |
+| **RMSE** *(Root Mean Squared Error)* | **1.59 bicicletas** | Raíz del error cuadrático | Confirma la ausencia de desviaciones graves en periodos de alta volatilidad. |
+| **$R^2$ Score** | **0.91 (91%)** | Varianza explicada | Explica el **91% del comportamiento dinámico** de la red de transporte. |
+| **Recall (Sensibilidad)** | **91.5%** | Detección de vaciados | Anticipa **9 de cada 10 vaciados de estación** con 30 minutos de margen. |
 
 ### 🧠 Importancia de las Variables Explicativas (*Feature Importance*)
 Las variables meteorológicas y temporales se posicionan como los principales factores determinantes de la movilidad en Vitoria-Gasteiz:
