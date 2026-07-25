@@ -8,6 +8,7 @@ import joblib
 from config import FEATURE_COLS
 from obtener_meteo import obtener_meteo_actual
 from obtener_eventos import es_festivo, es_fiestas_la_blanca, es_vacaciones_universidad
+from obtener_mugibike_realtime import obtener_estaciones_mugibike_realtime
 from optimizar_ruta_multiparada import (
     obtener_necesidades_estaciones,
     calcular_ruta_multiparada_optima
@@ -34,6 +35,10 @@ def cargar_datos():
 def cargar_meteo():
     return obtener_meteo_actual()
 
+@st.cache_data(ttl=60)
+def cargar_estaciones_realtime():
+    return obtener_estaciones_mugibike_realtime()
+
 @st.cache_data
 def cargar_resumenes_inactividad():
     df_inutil = pd.read_csv('resumen_estaciones_inutilizadas.csv')
@@ -58,11 +63,32 @@ def main():
     modelo = cargar_modelo()
     df_features, df_distancias = cargar_datos()
     
+    # Intentamos obtener la disponibilidad en vivo desde la API de Mugibike
+    df_live, exito_live = cargar_estaciones_realtime()
+    
     # Obtenemos meteorología en vivo con caché de 5 minutos
     meteo_actual = cargar_meteo()
     
     ultimo_ts = df_features['timestamp'].max()
     df_estado = df_features[df_features['timestamp'] == ultimo_ts].copy()
+    
+    # Si la consulta a la API de Mugibike tuvo éxito, inyectamos las bicis/anclajes en vivo
+    if exito_live and not df_live.empty:
+        mapping_bicis = df_live.set_index('nombre_estacion')['bicis_disponibles'].to_dict()
+        mapping_anclajes = df_live.set_index('nombre_estacion')['anclajes_disponibles'].to_dict()
+        
+        for idx in df_estado.index:
+            est_nombre = df_estado.loc[idx, 'nombre_estacion']
+            if est_nombre in mapping_bicis:
+                b_live = mapping_bicis[est_nombre]
+                a_live = mapping_anclajes[est_nombre]
+                df_estado.loc[idx, 'bicis_disponibles'] = b_live
+                df_estado.loc[idx, 'anclajes_disponibles'] = a_live
+                cap = df_estado.loc[idx, 'capacidad']
+                df_estado.loc[idx, 'pct_ocupacion'] = b_live / max(cap, 1)
+        st.success("🟢 **Conectado en Tiempo Real a la API Oficial de Mugibike** (`https://mugibike.eus/api/client/entities`) — Mostrando estado y predicciones con datos vivos de la red.")
+    else:
+        st.info("ℹ️ **Modo Histórico Offline**: No se pudo consultar la API en vivo de Mugibike. Mostrando últimas lecturas registradas.")
     
     # Inyectamos clima y eventos de la fecha actual
     df_estado['temperatura'] = meteo_actual['temperatura']
