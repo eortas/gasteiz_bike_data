@@ -137,7 +137,7 @@ def main():
         st.subheader("Estado Predictivo a 30 Minutos con Contexto de Calendario y Clima")
         df_mostrar_estado = df_estado[['nombre_estacion', 'bicis_disponibles', 'capacidad', 'prediccion_30m_round', 'nivel_alerta']].copy()
         df_mostrar_estado.columns = ['Estación', 'Bicis Actuales', 'Capacidad Total', 'Predicción a 30 min', 'Nivel de Alerta']
-        st.dataframe(df_mostrar_estado, use_container_width=True)
+        st.dataframe(df_mostrar_estado, use_container_width=True, hide_index=True)
 
     with tab2:
         st.subheader("Redistribución de Bicicletas con ML (Circuito Óptimo Multiparada)")
@@ -156,7 +156,7 @@ def main():
             
             df_pasos = pd.DataFrame(pasos_ruta)
             df_pasos.columns = ['Paso', 'Estación Parada', 'Acción Recomendada', 'Bicis en Furgoneta', 'Tiempo Tramo (min)', 'Distancia (km)']
-            st.dataframe(df_pasos, use_container_width=True)
+            st.dataframe(df_pasos, use_container_width=True, hide_index=True)
         else:
             st.success("Toda la red está equilibrada. No se requiere circuito de reabastecimiento en este momento.")
 
@@ -202,7 +202,7 @@ def main():
         df_tabla_inactiva.columns = ['Estación', 'Horas Sin Bicis', 'Horas Sin Hueco', 'Horas Inútil Total', '% Tiempo Inoperativa', 'Diagnóstico']
         df_tabla_inactiva['% Tiempo Inoperativa'] = df_tabla_inactiva['% Tiempo Inoperativa'].round(2)
         
-        st.dataframe(df_tabla_inactiva, use_container_width=True)
+        st.dataframe(df_tabla_inactiva, use_container_width=True, hide_index=True)
 
     with tab4:
         st.subheader("📈 Evaluación de Impacto y Mejora de Disponibilidad (Backtest Mensual)")
@@ -245,7 +245,7 @@ def main():
             st.bar_chart(chart_data)
             
             st.markdown("#### 📋 Detalle Comparativo por Estación")
-            st.dataframe(df_comp, use_container_width=True)
+            st.dataframe(df_comp, use_container_width=True, hide_index=True)
         else:
             st.warning("No se encontraron los datos precalculados de simulación.")
 

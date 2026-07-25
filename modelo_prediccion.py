@@ -8,6 +8,7 @@ import joblib
 def main():
     print("Cargando dataset procesado desde features_historico.csv...")
     df = pd.read_csv('features_historico.csv')
+    df = df.dropna(subset=['target_bicis_30m']).reset_index(drop=True)
     df['id_estacion'] = df['id_estacion'].astype('category')
     
     # Lista de variables explicativas incluyendo clima y eventos de Vitoria-Gasteiz

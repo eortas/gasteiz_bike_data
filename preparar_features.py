@@ -76,7 +76,8 @@ def main():
     # Target: bicis a 30 minutos
     df['target_bicis_30m'] = df.groupby('id_estacion')['bicis_disponibles'].shift(-6)
     
-    df_clean = df.dropna().reset_index(drop=True)
+    # Para inferencia en tiempo real conservamos los últimos 30 min donde target_bicis_30m aún no se conoce
+    df_clean = df.dropna(subset=['tendencia_30m']).reset_index(drop=True)
     df_clean['id_estacion'] = df_clean['id_estacion'].astype('category')
     
     print(f"Dataset de features con eventos y clima generado: {len(df_clean)} filas procesadas.")
