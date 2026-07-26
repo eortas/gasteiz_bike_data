@@ -19,9 +19,13 @@ FESTIVOS_VITORIA = [
 ]
 
 def es_festivo(fecha_dt):
-    """Devuelve 1 si la fecha es un festivo oficial en Vitoria-Gasteiz."""
+    """Devuelve 1 si la fecha es un festivo oficial o domingo en Vitoria-Gasteiz."""
+    fecha_dt = pd.to_datetime(fecha_dt)
     fecha_str = fecha_dt.strftime('%Y-%m-%d')
-    return 1 if fecha_str in FESTIVOS_VITORIA else 0
+    # Comprobamos si es domingo (weekday 6) o festivo oficial registrado
+    if fecha_dt.weekday() == 6 or fecha_str in FESTIVOS_VITORIA:
+        return 1
+    return 0
 
 def es_fiestas_la_blanca(fecha_dt):
     """Devuelve 1 si la fecha está entre el 4 y el 9 de agosto (Fiestas de La Blanca)."""
