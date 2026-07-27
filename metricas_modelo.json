@@ -1,57 +1,57 @@
 {
-    "mae": 1.04,
-    "rmse": 1.68,
-    "recall": 75.1,
-    "mae_cv_promedio": 0.78,
-    "rmse_cv_promedio": 1.21,
+    "mae": 1.01,
+    "rmse": 1.64,
+    "recall": 80.7,
+    "mae_cv_promedio": 0.77,
+    "rmse_cv_promedio": 1.2,
     "importancias": [
         {
-            "Variable": "bicis_disponibles",
-            "Importancia": 1460
+            "Variable": "temperatura",
+            "Importancia": 1484
         },
         {
             "Variable": "hora",
-            "Importancia": 1436
+            "Importancia": 1411
+        },
+        {
+            "Variable": "bicis_disponibles",
+            "Importancia": 1409
         },
         {
             "Variable": "viento_kmh",
-            "Importancia": 1354
-        },
-        {
-            "Variable": "temperatura",
-            "Importancia": 1320
+            "Importancia": 1318
         },
         {
             "Variable": "id_estacion",
-            "Importancia": 786
-        },
-        {
-            "Variable": "tendencia_30m",
-            "Importancia": 712
-        },
-        {
-            "Variable": "anclajes_disponibles",
-            "Importancia": 619
+            "Importancia": 770
         },
         {
             "Variable": "dia_semana",
-            "Importancia": 600
+            "Importancia": 685
+        },
+        {
+            "Variable": "tendencia_30m",
+            "Importancia": 646
+        },
+        {
+            "Variable": "anclajes_disponibles",
+            "Importancia": 566
         },
         {
             "Variable": "pct_ocupacion",
-            "Importancia": 283
+            "Importancia": 277
         },
         {
             "Variable": "tendencia_15m",
-            "Importancia": 252
+            "Importancia": 245
         },
         {
             "Variable": "capacidad",
-            "Importancia": 164
+            "Importancia": 173
         },
         {
             "Variable": "llueve",
-            "Importancia": 14
+            "Importancia": 16
         },
         {
             "Variable": "es_finde",
