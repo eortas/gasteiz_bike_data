@@ -1,57 +1,57 @@
 {
-    "mae": 0.74,
-    "rmse": 1.18,
-    "recall": 82.7,
-    "mae_cv_promedio": 0.78,
+    "mae": 0.75,
+    "rmse": 1.2,
+    "recall": 83.9,
+    "mae_cv_promedio": 0.79,
     "rmse_cv_promedio": 1.21,
     "importancias": [
         {
             "Variable": "bicis_disponibles",
-            "Importancia": 1422
-        },
-        {
-            "Variable": "viento_kmh",
-            "Importancia": 1412
-        },
-        {
-            "Variable": "hora",
-            "Importancia": 1393
+            "Importancia": 1448
         },
         {
             "Variable": "temperatura",
-            "Importancia": 1355
+            "Importancia": 1428
+        },
+        {
+            "Variable": "hora",
+            "Importancia": 1392
+        },
+        {
+            "Variable": "viento_kmh",
+            "Importancia": 1379
         },
         {
             "Variable": "id_estacion",
-            "Importancia": 800
+            "Importancia": 786
         },
         {
             "Variable": "tendencia_30m",
-            "Importancia": 706
+            "Importancia": 704
         },
         {
             "Variable": "dia_semana",
-            "Importancia": 573
+            "Importancia": 601
         },
         {
             "Variable": "anclajes_disponibles",
-            "Importancia": 565
+            "Importancia": 500
         },
         {
             "Variable": "pct_ocupacion",
-            "Importancia": 307
+            "Importancia": 297
         },
         {
             "Variable": "tendencia_15m",
-            "Importancia": 274
+            "Importancia": 263
         },
         {
             "Variable": "capacidad",
-            "Importancia": 165
+            "Importancia": 183
         },
         {
             "Variable": "llueve",
-            "Importancia": 28
+            "Importancia": 19
         },
         {
             "Variable": "es_finde",
