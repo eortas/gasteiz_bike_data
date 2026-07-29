@@ -90,19 +90,25 @@ def calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgo
     tiempo_total = 0.0
     distancia_total = 0.0
     
-    cargar = min(origenes[estacion_actual], capacidad_furgoneta - bicis_en_furgoneta)
-    bicis_en_furgoneta += cargar
-    origenes[estacion_actual] -= cargar
+    demanda_total_destinos = sum(info['cantidad'] for info in destinos.values())
+    cargas_posibles = min(origenes[estacion_actual], capacidad_furgoneta, demanda_total_destinos)
     
-    ruta_pasos.append({
-        'paso': 1,
-        'estacion': estacion_actual,
-        'accion': f"CARGAR {cargar} bicis",
-        'bicis_en_furgoneta': bicis_en_furgoneta,
-        'tiempo_tramo_min': 0.0,
-        'distancia_tramo_km': 0.0
-    })
-    
+    if cargas_posibles > 0:
+        cargar = cargas_posibles
+        bicis_en_furgoneta += cargar
+        origenes[estacion_actual] -= cargar
+        
+        ruta_pasos.append({
+            'paso': 1,
+            'estacion': estacion_actual,
+            'accion': f"CARGAR {cargar} bicis",
+            'bicis_en_furgoneta': bicis_en_furgoneta,
+            'tiempo_tramo_min': 0.0,
+            'distancia_tramo_km': 0.0
+        })
+    else:
+        return [], 0.0, 0.0
+        
     paso_num = 2
     max_iteraciones = 15
     iter_count = 0
@@ -110,6 +116,7 @@ def calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgo
     while iter_count < max_iteraciones:
         iter_count += 1
         destinos_pendientes = [d for d, info in destinos.items() if info['cantidad'] > 0]
+        demanda_total_destinos = sum(destinos[d]['cantidad'] for d in destinos_pendientes)
         
         if bicis_en_furgoneta > 0 and destinos_pendientes:
             max_urgencia = max(destinos[d]['urgencia'] for d in destinos_pendientes)
@@ -137,15 +144,21 @@ def calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgo
             estacion_actual = siguiente
             paso_num += 1
             
-        elif bicis_en_furgoneta < capacidad_furgoneta and any(cant > 0 for cant in origenes.values()):
+        elif bicis_en_furgoneta < capacidad_furgoneta and demanda_total_destinos > bicis_en_furgoneta and any(cant > 0 for cant in origenes.values()):
             candidatos_origen = [o for o, cant in origenes.items() if cant > 0]
             siguiente = min(candidatos_origen, key=lambda o: obtener_tiempo(df_distancias, estacion_actual, o))
             
             t_tramo = obtener_tiempo(df_distancias, estacion_actual, siguiente)
             d_tramo = obtener_distancia(df_distancias, estacion_actual, siguiente)
             
-            cargas_posibles = capacidad_furgoneta - bicis_en_furgoneta
+            espacio_furgoneta = capacidad_furgoneta - bicis_en_furgoneta
+            demanda_faltante = demanda_total_destinos - bicis_en_furgoneta
+            cargas_posibles = min(espacio_furgoneta, demanda_faltante)
+            
             cargar = min(origenes[siguiente], cargas_posibles)
+            if cargar <= 0:
+                break
+                
             bicis_en_furgoneta += cargar
             origenes[siguiente] -= cargar
             
@@ -165,7 +178,21 @@ def calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgo
         else:
             break
             
+    # Garantizamos que la furgoneta no se quede con bicicletas al terminar la ruta
+    if bicis_en_furgoneta > 0:
+        descargar_resto = bicis_en_furgoneta
+        bicis_en_furgoneta = 0
+        ruta_pasos.append({
+            'paso': paso_num,
+            'estacion': estacion_actual,
+            'accion': f"DESCARGAR {descargar_resto} bicis",
+            'bicis_en_furgoneta': 0,
+            'tiempo_tramo_min': 0.0,
+            'distancia_tramo_km': 0.0
+        })
+        
     return ruta_pasos, round(tiempo_total, 1), round(distancia_total, 2)
+
 
 def main():
     print("Cargando datos y modelo predictivo LightGBM...")
