@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mugibike - Redistribución Inteligente ML | Vitoria-Gasteiz</title>
+    <meta name="description" content="Sistema de gestión e inteligencia logística para la red de bicicletas públicas Mugibike de Vitoria-Gasteiz con Machine Learning.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-brand">
+                <span class="logo-icon">🚲</span>
+                <div>
+                    <h1>Mugibike Vitoria-Gasteiz</h1>
+                    <p class="subtitle">Redistribución Inteligente de Flota con Machine Learning</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button id="btn-recalcular" class="btn-primary">
+                    <span class="btn-icon">🔄</span>
+                    <span class="btn-text">Recalcular en Vivo</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Status Banner -->
+        <div id="status-banner" class="status-banner info">
+            <span class="status-icon">⏳</span>
+            <span id="status-text">Cargando estado en tiempo real...</span>
+        </div>
+
+        <!-- Top Metrics Grid -->
+        <section class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-header">
+                    <span class="metric-title">Estaciones</span>
+                    <span class="metric-icon">📍</span>
+                </div>
+                <div class="metric-value" id="m-estaciones">--</div>
+                <div class="metric-footer">Red activa de Vitoria</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-header">
+                    <span class="metric-title">Bicicletas Activas</span>
+                    <span class="metric-icon">🚲</span>
+                </div>
+                <div class="metric-value" id="m-bicis">--</div>
+                <div class="metric-footer">Disponibles en anclajes</div>
+            </div>
+            <div class="metric-card alert-card">
+                <div class="metric-header">
+                    <span class="metric-title">Alertas Críticas</span>
+                    <span class="metric-icon">🚨</span>
+                </div>
+                <div class="metric-value danger" id="m-criticas">--</div>
+                <div class="metric-footer">Acción prioritaria a 30m</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-header">
+                    <span class="metric-title">Clima en Vivo</span>
+                    <span class="metric-icon">🌤️</span>
+                </div>
+                <div class="metric-value" id="m-clima">-- °C</div>
+                <div class="metric-footer" id="m-viento">Viento: -- km/h</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-header">
+                    <span class="metric-title">Calendario Local</span>
+                    <span class="metric-icon">📅</span>
+                </div>
+                <div class="metric-value small" id="m-calendario">--</div>
+                <div class="metric-footer">Vitoria-Gasteiz</div>
+            </div>
+        </section>
+
+        <!-- Main Navigation Tabs -->
+        <nav class="nav-tabs">
+            <button class="tab-btn active" data-tab="tab-alertas">🚨 Alertas Predictivas 30m</button>
+            <button class="tab-btn" data-tab="tab-furgoneta">🚐 Ruta Óptima Furgoneta</button>
+            <button class="tab-btn" data-tab="tab-inactividad">⚠️ Tiempo Inactivo</button>
+            <button class="tab-btn" data-tab="tab-simulacion">📈 Evaluación de Impacto</button>
+            <button class="tab-btn" data-tab="tab-flota">📋 Auditoría Flota (50 Bicis)</button>
+        </nav>
+
+        <!-- Tab Contents -->
+        <main class="tab-content-container">
+            <!-- TAB 1: ALERTAS PREDICTIVAS -->
+            <section id="tab-alertas" class="tab-pane active">
+                <div class="section-header">
+                    <h2>Estado Predictivo a 30 Minutos</h2>
+                    <p>Predicción de ocupación mediante LightGBM evaluando clima y eventos locales en tiempo real.</p>
+                </div>
+
+                <div class="search-filter-bar">
+                    <input type="text" id="input-buscar-estacion" placeholder="🔍 Buscar estación..." class="form-input">
+                    <select id="select-filtro-alerta" class="form-select">
+                        <option value="todos">Todas las Alertas</option>
+                        <option value="critica">🔴 Solo Críticas</option>
+                        <option value="precaucion">🟡 Solo Precaución</option>
+                        <option value="normal">🟢 Solo Normales</option>
+                    </select>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Estación</th>
+                                <th>Bicis Actuales</th>
+                                <th>Capacidad</th>
+                                <th>Predicción 30 min</th>
+                                <th>Nivel de Alerta</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-estaciones">
+                            <tr><td colspan="5" class="text-center">Cargando estaciones...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TAB 2: RUTA FURGONETA -->
+            <section id="tab-furgoneta" class="tab-pane">
+                <div class="section-header">
+                    <h2>Redistribución con ML (Circuito Óptimo Multiparada)</h2>
+                    <p>Priorización estricta: Las alertas 🔴 CRÍTICAS se atienden inmediatamente.</p>
+                </div>
+
+                <div class="control-panel">
+                    <label for="slider-van-cap" class="control-label">
+                        Capacidad de la furgoneta: <strong id="van-cap-val">10</strong> bicicletas
+                    </label>
+                    <input type="range" id="slider-van-cap" min="5" max="20" value="10" step="1" class="slider-input">
+                </div>
+
+                <div class="ruta-stats-grid" id="ruta-stats">
+                    <div class="submetric">
+                        <span class="lbl">Tiempo Total en Carretera</span>
+                        <span class="val" id="r-tiempo">-- min</span>
+                    </div>
+                    <div class="submetric">
+                        <span class="lbl">Distancia Recorrida</span>
+                        <span class="val" id="r-distancia">-- km</span>
+                    </div>
+                    <div class="submetric">
+                        <span class="lbl">Total de Paradas</span>
+                        <span class="val" id="r-paradas">--</span>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Paso</th>
+                                <th>Estación Parada</th>
+                                <th>Acción Recomendada</th>
+                                <th>Bicis en Furgoneta</th>
+                                <th>Tiempo Tramo (min)</th>
+                                <th>Distancia (km)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-ruta">
+                            <tr><td colspan="6" class="text-center">Calculando circuito de reparto...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TAB 3: TIEMPO INACTIVO -->
+            <section id="tab-inactividad" class="tab-pane">
+                <div class="section-header">
+                    <h2>Análisis de Tiempo Inactivo por Estación</h2>
+                    <p>Horario diurno operativo (excluyendo horario nocturno 23:00 - 06:00).</p>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Estación</th>
+                                <th>Horas Sin Bicis</th>
+                                <th>Horas Sin Hueco</th>
+                                <th>Horas Inútil Total</th>
+                                <th>% Tiempo Inoperativa</th>
+                                <th>Diagnóstico</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-inactividad">
+                            <tr><td colspan="6" class="text-center">Cargando histórico de inactividad...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TAB 4: SIMULACIÓN DE IMPACTO -->
+            <section id="tab-simulacion" class="tab-pane">
+                <div class="section-header">
+                    <h2>Evaluación de Impacto ML (Backtest Mensual)</h2>
+                    <p>Comparativa del estado real frente a la optimización con el modelo de predicción LightGBM.</p>
+                </div>
+
+                <div class="impact-metrics-grid" id="sim-metrics-container">
+                    <div class="impact-card">
+                        <span class="impact-title">Indisponibilidad Histórica Real</span>
+                        <span class="impact-val danger" id="sim-real">-- h</span>
+                    </div>
+                    <div class="impact-card">
+                        <span class="impact-title">Indisponibilidad Con Sistema ML</span>
+                        <span class="impact-val success" id="sim-ml">-- h</span>
+                    </div>
+                    <div class="impact-card">
+                        <span class="impact-title">Mejora Neta Disponibilidad</span>
+                        <span class="impact-val highlight" id="sim-mejora">--%</span>
+                    </div>
+                    <div class="impact-card">
+                        <span class="impact-title">Bicicletas Redistribuidas</span>
+                        <span class="impact-val" id="sim-bicis">-- bicis/mes</span>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Estación</th>
+                                <th>% Inactiva (Sin Sistema)</th>
+                                <th>% Inactiva (Con ML)</th>
+                                <th>Horas Ahorradas</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-simulacion">
+                            <tr><td colspan="4" class="text-center">Cargando datos de simulación...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TAB 5: AUDITORÍA DE FLOTA -->
+            <section id="tab-flota" class="tab-pane">
+                <div class="section-header">
+                    <h2>Auditoría de Disponibilidad de Flota (50 Bicis Licitadas)</h2>
+                    <p>Cumplimiento del umbral mínimo del 85% exigido por el Ayuntamiento de Vitoria-Gasteiz.</p>
+                </div>
+
+                <div class="audit-grid" id="audit-metrics-container">
+                    <div class="audit-card">
+                        <span class="lbl">Flota Licitada</span>
+                        <span class="val">50 bicis</span>
+                    </div>
+                    <div class="audit-card">
+                        <span class="lbl">Umbral 85% Exigido</span>
+                        <span class="val">42.5 bicis</span>
+                    </div>
+                    <div class="audit-card">
+                        <span class="lbl">% Cumplimiento 4 AM</span>
+                        <span class="val success" id="audit-cumplimiento">--%</span>
+                    </div>
+                    <div class="audit-card">
+                        <span class="lbl">Días Déficit Sostenido</span>
+                        <span class="val danger" id="audit-deficit">-- días</span>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Bicis Operativas (04:00 AM)</th>
+                                <th>Cumple Umbral 85%</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-audit">
+                            <tr><td colspan="3" class="text-center">Cargando registros de auditoría...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Mugibike Smart Logistics — Vitoria-Gasteiz &copy; 2026. Desplegado en Vercel con cálculo Serverless en vivo.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

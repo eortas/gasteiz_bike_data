@@ -1,0 +1,18 @@
+{
+  "builds": [
+    {
+      "src": "api/calcular.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/calcular",
+      "dest": "api/calcular.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
