@@ -64,6 +64,7 @@ def main():
     df_features, df_distancias = cargar_datos()
     periodo_inicio = df_features['timestamp'].min().strftime('%d/%m/%Y')
     periodo_fin = df_features['timestamp'].max().strftime('%d/%m/%Y %H:%M')
+    dias_con_datos = df_features['timestamp'].dt.date.nunique()
     
     # Intentamos obtener la disponibilidad en vivo desde la API de Mugibike
     df_live, exito_live = cargar_estaciones_realtime()
@@ -197,7 +198,7 @@ def main():
 
     with tab3:
         st.subheader("Análisis de Tiempo Inactivo por Falta de Bicicletas o Anclajes")
-        st.caption(f"Análisis histórico del {periodo_inicio} al {periodo_fin}. Contabilizado únicamente dentro del horario operativo diurno de 06:00 a 23:00.")
+        st.caption(f"Análisis histórico con {dias_con_datos} días de datos entre el {periodo_inicio} y el {periodo_fin}. Contabilizado únicamente de 06:00 a 23:00.")
         
         df_inutil, df_finde = cargar_resumenes_inactividad()
         
@@ -241,7 +242,7 @@ def main():
 
     with tab4:
         st.subheader("📈 Evaluación de Impacto y Mejora de Disponibilidad (Backtest histórico)")
-        st.caption(f"Simulación histórica del {periodo_inicio} al {periodo_fin}; no representa el estado en vivo.")
+        st.caption(f"Simulación histórica con {dias_con_datos} días de datos entre el {periodo_inicio} y el {periodo_fin}; no representa el estado en vivo.")
         st.markdown("Estudio de impacto basado en los **datos históricos de todo el mes**, incorporando **tiempos reales de desplazamiento**, maniobra base del operario en cada parada y **tiempo de manipulación física por bicicleta**.")
         
         # Leemos exclusivamente los datos estáticos precalculados
@@ -249,27 +250,33 @@ def main():
         
         if resumen_sim:
             st.info("⏱️ **Parámetros del estudio operativo**: Parada base = 2,0 min | Manipulación = 1,5 min/bici | Capacidad furgoneta = 10 bicis")
-            
+
+            variacion_disponibilidad = resumen_sim['mejora_pct']
+            hay_mejora = variacion_disponibilidad >= 0
+
             st.divider()
             
             # Tarjetas principales de impacto
             c_sim1, c_sim2, c_sim3, c_sim4 = st.columns(4)
             c_sim1.metric("Indisponibilidad Histórica Real", f"{resumen_sim['horas_indisponible_real']} h", f"{resumen_sim['pct_real']}% del tiempo", delta_color="inverse")
-            c_sim2.metric("Indisponibilidad Con Sistema ML", f"{resumen_sim['horas_indisponible_sim']} h", f"{resumen_sim['pct_sim']}% del tiempo", delta_color="normal")
-            c_sim3.metric("Mejora Neto Disponibilidad", f"-{resumen_sim['mejora_pct']}%", "Reducción de fallos", delta_color="normal")
-            c_sim4.metric("Bicicletas Redistribuidas", f"{resumen_sim['bicis_redistribuidas_total']} bicis/mes")
+            c_sim2.metric("Indisponibilidad Con Sistema ML", f"{resumen_sim['horas_indisponible_sim']} h", f"{resumen_sim['pct_sim']}% del tiempo", delta_color="normal" if hay_mejora else "inverse")
+            c_sim3.metric("Variación de Disponibilidad", f"{variacion_disponibilidad:+.1f}%", "Mejora" if hay_mejora else "Regresión", delta_color="normal" if hay_mejora else "inverse")
+            c_sim4.metric("Bicicletas Redistribuidas", f"{resumen_sim['bicis_redistribuidas_total']} en el periodo")
             
             st.divider()
             
             # Desglose del operario y uso de furgoneta
             st.markdown("#### ⏱️ Análisis del Tiempo de Servicio y Carga del Operario")
             c_op1, c_op2, c_op3, c_op4 = st.columns(4)
-            c_op1.metric("Tiempo Conducción", f"{resumen_sim['horas_conduccion']} h/mes")
-            c_op2.metric("Tiempo Maniobra & Carga", f"{resumen_sim['horas_manipulacion']} h/mes")
-            c_op3.metric("Tiempo Activo Operario", f"{resumen_sim['horas_operario_total']} h/mes", f"{resumen_sim['pct_furgoneta_ocupada']}% de la jornada")
+            c_op1.metric("Tiempo Conducción", f"{resumen_sim['horas_conduccion']} h")
+            c_op2.metric("Tiempo Maniobra & Carga", f"{resumen_sim['horas_manipulacion']} h")
+            c_op3.metric("Tiempo Activo Operario", f"{resumen_sim['horas_operario_total']} h", f"{resumen_sim['pct_furgoneta_ocupada']}% de la jornada")
             c_op4.metric("Carga Media en Furgoneta", f"{resumen_sim['promedio_bicis_furgoneta']} bicis", "Inventario en tránsito")
-            
-            st.caption(f"💡 **Conclusión Operativa**: Las bicicletas **no se quedan retenidas** en la furgoneta (promedio < 1 bici). El operario permanece activo en ruta el **{resumen_sim['pct_furgoneta_ocupada']}%** de la jornada, por lo que la operativa se cubre holgadamente con una única furgoneta.")
+
+            if hay_mejora:
+                st.success(f"La simulación reduce la indisponibilidad un {variacion_disponibilidad:.1f}% con una ocupación de la furgoneta del {resumen_sim['pct_furgoneta_ocupada']}%.")
+            else:
+                st.warning(f"La estrategia simulada aumenta la indisponibilidad un {abs(variacion_disponibilidad):.1f}%. Debe ajustarse antes de considerarla una mejora operativa.")
             
             st.divider()
             
@@ -287,7 +294,7 @@ def main():
 
     with tab5:
         st.subheader("📋 Auditoría de Disponibilidad de Flota de Bicicletas (Licitación Municipal: 50 Bicis)")
-        st.caption(f"Auditoría histórica del {periodo_inicio} al {periodo_fin}. Control del umbral mínimo del 85% de flota operativa.")
+        st.caption(f"Auditoría histórica con {dias_con_datos} días de datos entre el {periodo_inicio} y el {periodo_fin}. Control del umbral mínimo del 85% de flota operativa.")
         
         ruta_csv_4am = 'resumen_flota_operativa_4am_50bicis.csv'
         ruta_csv_ventana = 'resumen_evaluacion_ventana_todos_dias.csv'

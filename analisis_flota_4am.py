@@ -21,20 +21,25 @@ def analizar_flota_4am_50_bicis():
     red_por_ts['hora'] = red_por_ts['timestamp'].dt.hour
     red_por_ts['minuto'] = red_por_ts['timestamp'].dt.minute
     
-    # Filtramos la franja nocturna de mínimo uso: 04:00 AM (entre 03:30 y 04:30)
-    df_4am = red_por_ts[(red_por_ts['hora'] == 4) | ((red_por_ts['hora'] == 3) & (red_por_ts['minuto'] >= 30))].copy()
+    # Filtramos la franja nocturna de mínimo uso: entre 03:30 y 04:30.
+    minuto_del_dia = red_por_ts['hora'] * 60 + red_por_ts['minuto']
+    df_4am = red_por_ts[minuto_del_dia.between(210, 270)].copy()
     
     # Calculamos la foto de flota operativa por cada día a las 04:00 AM
     flota_diaria_4am = df_4am.groupby('fecha').agg(
-        bicis_operativas_4am=('total_bicis_estaciones', 'median'),
-        bicis_min_4am=('total_bicis_estaciones', 'min'),
-        bicis_max_4am=('total_bicis_estaciones', 'max')
+        bicis_observadas_4am=('total_bicis_estaciones', 'median'),
+        bicis_min_observadas_4am=('total_bicis_estaciones', 'min'),
+        bicis_max_observadas_4am=('total_bicis_estaciones', 'max')
     ).reset_index()
     
     # FLOTA TOTAL LICITADA EN EL CONTRATO = 50 BICICLETAS EXACTAS
     FLOTA_LICITADA = 50.0
     UMBRAL_85_PCT = 0.85 * FLOTA_LICITADA  # 42.5 bicis (mínimo 43 bicis para cumplir)
-    
+
+    # Para la auditoría contractual, el stock computable no puede superar la flota licitada.
+    flota_diaria_4am['bicis_operativas_4am'] = flota_diaria_4am['bicis_observadas_4am'].clip(upper=FLOTA_LICITADA)
+    flota_diaria_4am['bicis_min_4am'] = flota_diaria_4am['bicis_min_observadas_4am'].clip(upper=FLOTA_LICITADA)
+    flota_diaria_4am['bicis_max_4am'] = flota_diaria_4am['bicis_max_observadas_4am'].clip(upper=FLOTA_LICITADA)
     flota_diaria_4am['pct_flota_operativa'] = (flota_diaria_4am['bicis_operativas_4am'] / FLOTA_LICITADA) * 100
     flota_diaria_4am['cumple_85_pct'] = flota_diaria_4am['bicis_operativas_4am'] >= UMBRAL_85_PCT
     flota_diaria_4am['bicis_fuera_de_servicio'] = np.maximum(0, FLOTA_LICITADA - flota_diaria_4am['bicis_operativas_4am'])
