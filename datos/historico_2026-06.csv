@@ -1,3 +1,13 @@
+2026-06-19 00:00:00,20.6,0.0,6.0,0
+2026-06-19 01:00:00,18.6,0.0,8.6,0
+2026-06-19 02:00:00,18.7,0.0,7.5,0
+2026-06-19 03:00:00,18.5,0.0,1.9,0
+2026-06-19 04:00:00,18.4,0.0,3.8,0
+2026-06-19 05:00:00,19.5,0.0,6.5,0
+2026-06-19 06:00:00,20.3,0.0,10.5,0
+2026-06-19 07:00:00,19.8,0.0,8.7,0
+2026-06-19 08:00:00,20.5,0.0,8.0,0
+2026-06-19 09:00:00,21.9,0.0,5.3,0
 2026-06-19T09:15:29.174Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-19T09:15:29.174Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,9,15
 2026-06-19T09:15:29.174Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,19
@@ -118,6 +128,7 @@
 2026-06-19T09:55:23.312Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-19T09:55:23.312Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-19T09:55:23.312Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-19 10:00:00,23.4,0.0,7.6,0
 2026-06-19T10:00:49.476Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,5,19
 2026-06-19T10:00:49.476Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,12,12
 2026-06-19T10:00:49.476Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -262,6 +273,7 @@
 2026-06-19T10:55:21.098Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-19T10:55:21.098Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-19T10:55:21.098Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-19 11:00:00,25.1,0.0,8.4,0
 2026-06-19T11:00:51.421Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-19T11:00:51.421Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-19T11:00:51.421Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -406,6 +418,7 @@
 2026-06-19T11:55:22.540Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-19T11:55:22.540Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-19T11:55:22.540Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-19 12:00:00,27.3,0.0,8.8,0
 2026-06-19T12:00:51.500Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-19T12:00:51.500Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,9,15
 2026-06-19T12:00:51.500Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -550,6 +563,7 @@
 2026-06-19T12:55:21.670Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-19T12:55:21.670Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-19T12:55:21.670Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-19 13:00:00,29.3,0.0,10.6,0
 2026-06-19T13:00:49.192Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-19T13:00:49.192Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-19T13:00:49.192Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -694,6 +708,7 @@
 2026-06-19T13:55:23.496Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-19T13:55:23.496Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-19T13:55:23.496Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-19 14:00:00,31.4,0.0,9.2,0
 2026-06-19T14:00:46.270Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-19T14:00:46.270Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-19T14:00:46.270Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -838,6 +853,7 @@
 2026-06-19T14:55:22.489Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-19T14:55:22.489Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-19T14:55:22.489Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-19 15:00:00,32.3,0.0,9.5,0
 2026-06-19T15:00:49.636Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-19T15:00:49.636Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-19T15:00:49.636Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,1,23
@@ -982,6 +998,7 @@
 2026-06-19T15:55:22.594Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-19T15:55:22.594Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-19T15:55:22.594Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-19 16:00:00,30.9,0.1,9.2,0
 2026-06-19T16:00:48.922Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-19T16:00:48.922Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-19T16:00:48.922Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,3,21
@@ -1126,6 +1143,7 @@
 2026-06-19T16:55:21.055Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-19T16:55:21.055Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-19T16:55:21.055Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-19 17:00:00,31.7,0.0,4.3,0
 2026-06-19T17:00:48.011Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-19T17:00:48.011Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-19T17:00:48.011Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,1,23
@@ -1270,6 +1288,7 @@
 2026-06-19T17:55:23.439Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-19T17:55:23.439Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-19T17:55:23.439Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-19 18:00:00,28.4,0.3,12.4,1
 2026-06-19T18:00:54.309Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,13,11
 2026-06-19T18:00:54.309Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-19T18:00:54.309Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -1414,6 +1433,7 @@
 2026-06-19T18:55:23.175Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-19T18:55:23.175Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-19T18:55:23.175Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-19 19:00:00,27.4,0.0,6.9,0
 2026-06-19T19:00:51.901Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,13,11
 2026-06-19T19:00:51.901Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-19T19:00:51.901Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -1558,6 +1578,7 @@
 2026-06-19T19:55:22.008Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-19T19:55:22.008Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-19T19:55:22.008Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-19 20:00:00,25.4,0.0,9.7,0
 2026-06-19T20:00:48.615Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-19T20:00:48.615Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-19T20:00:48.615Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,9,15
@@ -1702,6 +1723,7 @@
 2026-06-19T20:55:22.396Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-19T20:55:22.396Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-19T20:55:22.396Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-19 21:00:00,23.3,0.0,12.7,0
 2026-06-19T21:00:48.329Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-19T21:00:48.329Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-19T21:00:48.329Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,9,15
@@ -1846,6 +1868,7 @@
 2026-06-19T21:55:21.496Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-19T21:55:21.496Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-19T21:55:21.496Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-19 22:00:00,21.4,0.0,8.3,0
 2026-06-19T22:00:49.520Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-19T22:00:49.520Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-19T22:00:49.520Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,10,14
@@ -1990,6 +2013,7 @@
 2026-06-19T22:55:23.008Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-19T22:55:23.008Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-19T22:55:23.008Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-19 23:00:00,20.3,0.0,6.7,0
 2026-06-19T23:00:48.236Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-19T23:00:48.236Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-19T23:00:48.236Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,10,14
@@ -2134,6 +2158,7 @@
 2026-06-19T23:55:21.439Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-19T23:55:21.439Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-19T23:55:21.439Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-20 00:00:00,19.5,0.0,3.4,0
 2026-06-20T00:00:49.637Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-20T00:00:49.637Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-20T00:00:49.637Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -2278,6 +2303,7 @@
 2026-06-20T00:55:20.241Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-20T00:55:20.241Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-20T00:55:20.241Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-20 01:00:00,18.9,0.0,3.9,0
 2026-06-20T01:00:44.122Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-20T01:00:44.122Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-20T01:00:44.122Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -2422,6 +2448,7 @@
 2026-06-20T01:55:20.040Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-20T01:55:20.040Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-20T01:55:20.040Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-20 02:00:00,18.5,0.0,5.8,0
 2026-06-20T02:00:43.601Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-20T02:00:43.601Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-20T02:00:43.601Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -2566,6 +2593,7 @@
 2026-06-20T02:55:20.698Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-20T02:55:20.698Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-20T02:55:20.698Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-20 03:00:00,18.9,0.0,4.4,0
 2026-06-20T03:00:44.626Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-20T03:00:44.626Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-20T03:00:44.626Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -2710,6 +2738,7 @@
 2026-06-20T03:55:19.677Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-20T03:55:19.677Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-20T03:55:19.677Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-20 04:00:00,19.7,0.0,3.1,0
 2026-06-20T04:00:44.629Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,15,9
 2026-06-20T04:00:44.629Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-20T04:00:44.629Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -2854,6 +2883,7 @@
 2026-06-20T04:55:20.108Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-20T04:55:20.108Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-20T04:55:20.108Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-20 05:00:00,19.6,0.0,5.2,0
 2026-06-20T05:00:45.917Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,13,11
 2026-06-20T05:00:45.917Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-20T05:00:45.917Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -2998,6 +3028,7 @@
 2026-06-20T05:55:21.257Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-20T05:55:21.257Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-20T05:55:21.257Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-20 06:00:00,18.7,0.0,4.2,0
 2026-06-20T06:00:47.695Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-20T06:00:47.695Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-20T06:00:47.695Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -3142,6 +3173,7 @@
 2026-06-20T06:55:21.454Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-20T06:55:21.454Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-20T06:55:21.454Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-20 07:00:00,18.2,0.0,3.9,0
 2026-06-20T07:00:48.476Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-20T07:00:48.476Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-20T07:00:48.476Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -3286,6 +3318,7 @@
 2026-06-20T07:55:23.838Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-20T07:55:23.838Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-20T07:55:23.838Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-20 08:00:00,19.3,0.0,4.0,0
 2026-06-20T08:00:45.750Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-20T08:00:45.750Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-20T08:00:45.750Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -3430,6 +3463,7 @@
 2026-06-20T08:55:19.798Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-20T08:55:19.798Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-20T08:55:19.798Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-20 09:00:00,21.4,0.0,6.1,0
 2026-06-20T09:00:45.974Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,5,19
 2026-06-20T09:00:45.974Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-20T09:00:45.974Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -3574,6 +3608,7 @@
 2026-06-20T09:55:21.446Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-20T09:55:21.446Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,5,5
 2026-06-20T09:55:21.446Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-20 10:00:00,23.4,0.0,4.3,0
 2026-06-20T10:00:47.870Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-20T10:00:47.870Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-20T10:00:47.870Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -3718,6 +3753,7 @@
 2026-06-20T10:55:20.555Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-20T10:55:20.555Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-20T10:55:20.555Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-20 11:00:00,25.6,0.0,5.6,0
 2026-06-20T11:00:47.678Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-20T11:00:47.678Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-20T11:00:47.678Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -3862,6 +3898,7 @@
 2026-06-20T11:55:20.429Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-20T11:55:20.429Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-20T11:55:20.429Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-20 12:00:00,28.3,0.0,8.3,0
 2026-06-20T12:00:48.344Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,3,21
 2026-06-20T12:00:48.344Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-20T12:00:48.344Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,9,15
@@ -4006,6 +4043,7 @@
 2026-06-20T12:55:22.198Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-20T12:55:22.198Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-20T12:55:22.198Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-20 13:00:00,29.5,0.0,9.4,0
 2026-06-20T13:00:46.053Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,2,22
 2026-06-20T13:00:46.053Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-20T13:00:46.053Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -4150,6 +4188,7 @@
 2026-06-20T13:55:22.019Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-20T13:55:22.019Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-20T13:55:22.019Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-20 14:00:00,28.7,0.0,2.2,0
 2026-06-20T14:00:46.774Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,2,22
 2026-06-20T14:00:46.774Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-20T14:00:46.774Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,9,15
@@ -4294,6 +4333,7 @@
 2026-06-20T14:55:20.524Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-20T14:55:20.524Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-20T14:55:20.524Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-20 15:00:00,30.3,0.0,10.3,0
 2026-06-20T15:00:45.647Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,1,23
 2026-06-20T15:00:45.647Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-20T15:00:45.647Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,11,13
@@ -4438,6 +4478,7 @@
 2026-06-20T15:55:24.334Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,6,4
 2026-06-20T15:55:24.334Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-20T15:55:24.334Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-20 16:00:00,31.8,0.0,12.8,0
 2026-06-20T16:00:49.263Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,2,22
 2026-06-20T16:00:49.263Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-20T16:00:49.263Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -4582,6 +4623,7 @@
 2026-06-20T16:55:23.558Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,6,4
 2026-06-20T16:55:23.558Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-20T16:55:23.558Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-20 17:00:00,32.0,0.0,14.8,0
 2026-06-20T17:00:52.598Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,3,21
 2026-06-20T17:00:52.598Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-20T17:00:52.598Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -4726,6 +4768,7 @@
 2026-06-20T17:55:24.054Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,6,4
 2026-06-20T17:55:24.054Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-20T17:55:24.054Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-20 18:00:00,30.1,0.0,17.9,0
 2026-06-20T18:00:52.483Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,1,23
 2026-06-20T18:00:52.483Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-20T18:00:52.483Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,9,15
@@ -4870,6 +4913,7 @@
 2026-06-20T18:55:21.430Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,6,4
 2026-06-20T18:55:21.430Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-20T18:55:21.430Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-20 19:00:00,29.5,0.0,7.7,0
 2026-06-20T19:00:53.856Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,2,22
 2026-06-20T19:00:53.856Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-20T19:00:53.856Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -5014,6 +5058,7 @@
 2026-06-20T19:55:21.030Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,6,4
 2026-06-20T19:55:21.030Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-20T19:55:21.030Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-20 20:00:00,23.3,0.0,7.8,0
 2026-06-20T20:00:53.931Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,5,19
 2026-06-20T20:00:53.931Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-20T20:00:53.931Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -5158,6 +5203,7 @@
 2026-06-20T20:55:25.982Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,6,4
 2026-06-20T20:55:25.982Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-20T20:55:25.982Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-20 21:00:00,23.8,0.0,9.0,0
 2026-06-20T21:00:49.457Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-20T21:00:49.457Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-20T21:00:49.457Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -5302,6 +5348,7 @@
 2026-06-20T21:55:21.380Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,6,4
 2026-06-20T21:55:21.380Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-20T21:55:21.380Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-20 22:00:00,22.1,0.0,9.5,0
 2026-06-20T22:00:47.769Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-20T22:00:47.769Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-20T22:00:47.769Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -5446,6 +5493,7 @@
 2026-06-20T22:55:20.675Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,5,5
 2026-06-20T22:55:20.675Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-20T22:55:20.675Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-20 23:00:00,21.6,0.0,2.3,0
 2026-06-20T23:00:48.319Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,5,19
 2026-06-20T23:00:48.319Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-20T23:00:48.319Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -5590,6 +5638,7 @@
 2026-06-20T23:55:21.263Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,5,5
 2026-06-20T23:55:21.263Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-20T23:55:21.263Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-21 00:00:00,20.7,0.0,3.4,0
 2026-06-21T00:00:55.667Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,5,19
 2026-06-21T00:00:55.667Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-21T00:00:55.667Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,1,23
@@ -5734,6 +5783,7 @@
 2026-06-21T00:55:20.453Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,6,4
 2026-06-21T00:55:20.453Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-21T00:55:20.453Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-21 01:00:00,21.4,0.0,3.0,0
 2026-06-21T01:00:44.493Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,3,21
 2026-06-21T01:00:44.493Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-21T01:00:44.493Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -5878,6 +5928,7 @@
 2026-06-21T01:55:19.712Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-21T01:55:19.712Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-21T01:55:19.712Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-21 02:00:00,20.9,0.0,2.7,0
 2026-06-21T02:00:45.993Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,4,20
 2026-06-21T02:00:45.993Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,3,21
 2026-06-21T02:00:45.993Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -6022,6 +6073,7 @@
 2026-06-21T02:55:19.676Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-21T02:55:19.676Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-21T02:55:19.676Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-21 03:00:00,22.7,0.0,7.5,0
 2026-06-21T03:00:45.451Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-21T03:00:45.451Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-21T03:00:45.451Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -6166,6 +6218,7 @@
 2026-06-21T03:55:21.089Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-21T03:55:21.089Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-21T03:55:21.089Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-21 04:00:00,22.5,0.0,7.7,0
 2026-06-21T04:00:45.094Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-21T04:00:45.094Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-21T04:00:45.094Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -6310,6 +6363,7 @@
 2026-06-21T04:55:22.258Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-21T04:55:22.258Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-21T04:55:22.258Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-21 05:00:00,21.4,0.0,6.9,0
 2026-06-21T05:00:44.116Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-21T05:00:44.116Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-21T05:00:44.116Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -6454,6 +6508,7 @@
 2026-06-21T05:55:21.193Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-21T05:55:21.193Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-21T05:55:21.193Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-21 06:00:00,20.9,0.0,8.0,0
 2026-06-21T06:00:46.312Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-21T06:00:46.312Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-21T06:00:46.312Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -6598,6 +6653,7 @@
 2026-06-21T06:55:20.923Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-21T06:55:20.923Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-21T06:55:20.923Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-21 07:00:00,22.1,0.0,11.9,0
 2026-06-21T07:00:46.204Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,13,11
 2026-06-21T07:00:46.204Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-21T07:00:46.204Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -6742,6 +6798,7 @@
 2026-06-21T07:55:21.958Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-21T07:55:21.958Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-21T07:55:21.958Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-21 08:00:00,23.2,0.0,15.9,0
 2026-06-21T08:00:47.464Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-21T08:00:47.464Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-21T08:00:47.464Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -6886,6 +6943,7 @@
 2026-06-21T08:55:21.855Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-21T08:55:21.855Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-21T08:55:21.855Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-21 09:00:00,24.4,0.0,14.9,0
 2026-06-21T09:00:48.396Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-21T09:00:48.396Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,3,21
 2026-06-21T09:00:48.396Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -7030,6 +7088,7 @@
 2026-06-21T09:55:21.644Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-21T09:55:21.644Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-21T09:55:21.644Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-21 10:00:00,26.1,0.0,10.5,0
 2026-06-21T10:00:48.666Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-21T10:00:48.666Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-21T10:00:48.666Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -7174,6 +7233,7 @@
 2026-06-21T10:55:21.741Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-21T10:55:21.741Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-21T10:55:21.741Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-21 11:00:00,28.0,0.0,12.9,0
 2026-06-21T11:00:48.010Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-21T11:00:48.010Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,3,21
 2026-06-21T11:00:48.010Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -7318,6 +7378,7 @@
 2026-06-21T11:55:21.635Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-21T11:55:21.635Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-21T11:55:21.635Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-21 12:00:00,29.8,0.0,14.8,0
 2026-06-21T12:00:52.811Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-21T12:00:52.811Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-21T12:00:52.811Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -7462,6 +7523,7 @@
 2026-06-21T12:55:21.573Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-21T12:55:21.573Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-21T12:55:21.573Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-21 13:00:00,31.4,0.0,16.9,0
 2026-06-21T13:00:48.858Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-21T13:00:48.858Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-21T13:00:48.858Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -7606,6 +7668,7 @@
 2026-06-21T13:55:21.616Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-21T13:55:21.616Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-21T13:55:21.616Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,6,4
+2026-06-21 14:00:00,33.5,0.0,16.2,0
 2026-06-21T14:00:46.435Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-21T14:00:46.435Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-21T14:00:46.435Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -7750,6 +7813,7 @@
 2026-06-21T14:55:22.508Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-21T14:55:22.508Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-21T14:55:22.508Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,6,4
+2026-06-21 15:00:00,34.6,0.0,16.4,0
 2026-06-21T15:00:50.637Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,14,10
 2026-06-21T15:00:50.637Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,9,15
 2026-06-21T15:00:50.637Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -7894,6 +7958,7 @@
 2026-06-21T15:55:21.746Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-21T15:55:21.746Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-21T15:55:21.746Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,6,4
+2026-06-21 16:00:00,35.6,0.0,14.8,0
 2026-06-21T16:00:53.354Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,14,10
 2026-06-21T16:00:53.354Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-21T16:00:53.354Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,1,23
@@ -8038,6 +8103,7 @@
 2026-06-21T16:55:21.309Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-21T16:55:21.309Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-21T16:55:21.309Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,6,4
+2026-06-21 17:00:00,36.0,0.0,14.8,0
 2026-06-21T17:00:49.114Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,14,10
 2026-06-21T17:00:49.114Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-21T17:00:49.114Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,1,23
@@ -8182,6 +8248,7 @@
 2026-06-21T17:55:23.344Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-21T17:55:23.344Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-21T17:55:23.344Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-21 18:00:00,36.3,0.0,10.1,0
 2026-06-21T18:00:52.778Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,13,11
 2026-06-21T18:00:52.778Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-21T18:00:52.778Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -8326,6 +8393,7 @@
 2026-06-21T18:55:23.315Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-21T18:55:23.315Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-21T18:55:23.315Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-21 19:00:00,36.4,0.0,8.0,0
 2026-06-21T19:00:50.148Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-21T19:00:50.148Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-21T19:00:50.148Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,1,23
@@ -8470,6 +8538,7 @@
 2026-06-21T19:55:20.720Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-21T19:55:20.720Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-21T19:55:20.720Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-21 20:00:00,34.8,0.0,10.0,0
 2026-06-21T20:00:49.645Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-21T20:00:49.645Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-21T20:00:49.645Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,3,21
@@ -8614,6 +8683,7 @@
 2026-06-21T20:55:22.037Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-21T20:55:22.037Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-21T20:55:22.037Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-21 21:00:00,32.5,0.0,11.4,0
 2026-06-21T21:00:49.652Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-21T21:00:49.652Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,9,15
 2026-06-21T21:00:49.652Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,1,23
@@ -8758,6 +8828,7 @@
 2026-06-21T21:55:22.128Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-21T21:55:22.128Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-21T21:55:22.128Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-21 22:00:00,31.4,0.0,12.5,0
 2026-06-21T22:00:54.039Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,5,19
 2026-06-21T22:00:54.039Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-21T22:00:54.039Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -8902,6 +8973,7 @@
 2026-06-21T22:55:21.998Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-21T22:55:21.998Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-21T22:55:21.998Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-21 23:00:00,29.5,0.0,8.8,0
 2026-06-21T23:00:48.766Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-21T23:00:48.766Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-21T23:00:48.766Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -9046,6 +9118,7 @@
 2026-06-21T23:55:22.613Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-21T23:55:22.613Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-21T23:55:22.613Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-22 00:00:00,27.8,0.0,7.3,0
 2026-06-22T00:00:49.194Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,5,19
 2026-06-22T00:00:49.194Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-22T00:00:49.194Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -9190,6 +9263,7 @@
 2026-06-22T00:55:20.770Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-22T00:55:20.770Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-22T00:55:20.770Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-22 01:00:00,29.2,0.0,17.2,0
 2026-06-22T01:00:44.992Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-22T01:00:44.992Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-22T01:00:44.992Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -9334,6 +9408,7 @@
 2026-06-22T01:55:20.880Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-22T01:55:20.880Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-22T01:55:20.880Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-22 02:00:00,28.0,0.0,15.2,0
 2026-06-22T02:00:45.676Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-22T02:00:45.676Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-22T02:00:45.676Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -9478,6 +9553,7 @@
 2026-06-22T02:55:20.763Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-22T02:55:20.763Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-22T02:55:20.763Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-22 03:00:00,26.6,0.0,15.0,0
 2026-06-22T03:00:46.859Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-22T03:00:46.859Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-22T03:00:46.859Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,3,21
@@ -9622,6 +9698,7 @@
 2026-06-22T03:55:23.643Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-22T03:55:23.643Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-22T03:55:23.643Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-22 04:00:00,25.9,0.0,14.5,0
 2026-06-22T04:00:47.180Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-22T04:00:47.180Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-22T04:00:47.180Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,3,21
@@ -9766,6 +9843,7 @@
 2026-06-22T04:55:21.481Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-22T04:55:21.481Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-22T04:55:21.481Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-22 05:00:00,25.4,0.0,13.8,0
 2026-06-22T05:00:47.768Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,4,20
 2026-06-22T05:00:47.768Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-22T05:00:47.768Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -9910,6 +9988,7 @@
 2026-06-22T05:55:21.951Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-22T05:55:21.951Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-22T05:55:21.951Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-22 06:00:00,24.6,0.0,13.4,0
 2026-06-22T06:00:48.025Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-22T06:00:48.025Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,9,15
 2026-06-22T06:00:48.025Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -10054,6 +10133,7 @@
 2026-06-22T06:55:21.470Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-22T06:55:21.470Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-22T06:55:21.470Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-22 07:00:00,23.6,0.0,10.6,0
 2026-06-22T07:00:48.722Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-22T07:00:48.722Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-22T07:00:48.722Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -10198,6 +10278,7 @@
 2026-06-22T07:55:21.667Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,5,5
 2026-06-22T07:55:21.667Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-22T07:55:21.667Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-22 08:00:00,24.0,0.0,6.3,0
 2026-06-22T08:00:50.267Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-22T08:00:50.267Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-22T08:00:50.267Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -10342,6 +10423,7 @@
 2026-06-22T08:55:21.894Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,5,5
 2026-06-22T08:55:21.894Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-22T08:55:21.894Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-22 09:00:00,25.3,0.0,3.8,0
 2026-06-22T09:00:51.235Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-22T09:00:51.235Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-22T09:00:51.235Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -10486,6 +10568,7 @@
 2026-06-22T09:55:22.514Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,6,4
 2026-06-22T09:55:22.514Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-22T09:55:22.514Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-22 10:00:00,27.1,0.0,6.1,0
 2026-06-22T10:00:52.182Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-22T10:00:52.182Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-22T10:00:52.182Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -10630,6 +10713,7 @@
 2026-06-22T10:55:22.002Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,6,4
 2026-06-22T10:55:22.002Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-22T10:55:22.002Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-22 11:00:00,29.5,0.0,5.8,0
 2026-06-22T11:00:49.134Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-22T11:00:49.134Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-22T11:00:49.134Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,3,21
@@ -10774,6 +10858,7 @@
 2026-06-22T11:55:22.079Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,5,5
 2026-06-22T11:55:22.079Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-22T11:55:22.079Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-22 12:00:00,31.7,0.0,6.1,0
 2026-06-22T12:00:50.937Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-22T12:00:50.937Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-22T12:00:50.937Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -10918,6 +11003,7 @@
 2026-06-22T12:55:22.114Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-22T12:55:22.114Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-22T12:55:22.114Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-22 13:00:00,33.4,0.0,6.1,0
 2026-06-22T13:00:50.157Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-22T13:00:50.157Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,9,15
 2026-06-22T13:00:50.157Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -11062,6 +11148,7 @@
 2026-06-22T13:55:23.432Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-22T13:55:23.432Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-22T13:55:23.432Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,6,4
+2026-06-22 14:00:00,34.7,0.0,5.8,0
 2026-06-22T14:00:54.156Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-22T14:00:54.156Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,9,15
 2026-06-22T14:00:54.156Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -11206,6 +11293,7 @@
 2026-06-22T14:55:22.776Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-22T14:55:22.776Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-22T14:55:22.776Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,6,4
+2026-06-22 15:00:00,35.9,0.0,7.2,0
 2026-06-22T15:00:52.069Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-22T15:00:52.069Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-22T15:00:52.069Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -11350,6 +11438,7 @@
 2026-06-22T15:55:23.005Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-22T15:55:23.005Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-22T15:55:23.005Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,6,4
+2026-06-22 16:00:00,36.5,0.0,7.2,0
 2026-06-22T16:00:48.657Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,3,21
 2026-06-22T16:00:48.657Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,11,13
 2026-06-22T16:00:48.657Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -11494,6 +11583,7 @@
 2026-06-22T16:55:22.353Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-22T16:55:22.353Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-22T16:55:22.353Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-22 17:00:00,36.9,0.0,2.8,0
 2026-06-22T17:00:55.954Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,4,20
 2026-06-22T17:00:55.954Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-22T17:00:55.954Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,3,21
@@ -11638,6 +11728,7 @@
 2026-06-22T17:55:27.710Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-22T17:55:27.710Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-22T17:55:27.710Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-22 18:00:00,36.6,0.0,6.8,0
 2026-06-22T18:00:56.812Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-22T18:00:56.812Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,9,15
 2026-06-22T18:00:56.812Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -11782,6 +11873,7 @@
 2026-06-22T18:55:22.655Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,5,5
 2026-06-22T18:55:22.655Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-22T18:55:22.655Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-22 19:00:00,36.2,0.0,4.4,0
 2026-06-22T19:00:53.731Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-22T19:00:53.731Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-22T19:00:53.731Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -11926,6 +12018,7 @@
 2026-06-22T19:55:26.429Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-22T19:55:26.429Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-22T19:55:26.429Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-22 20:00:00,35.5,0.0,12.0,0
 2026-06-22T20:00:50.206Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-22T20:00:50.206Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-22T20:00:50.206Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -12070,6 +12163,7 @@
 2026-06-22T20:55:23.843Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-22T20:55:23.843Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-22T20:55:23.843Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-22 21:00:00,33.6,0.0,6.7,0
 2026-06-22T21:00:52.272Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,5,19
 2026-06-22T21:00:52.272Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-22T21:00:52.272Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -12214,6 +12308,7 @@
 2026-06-22T21:55:23.453Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-22T21:55:23.453Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-22T21:55:23.453Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-22 22:00:00,31.4,0.0,5.4,0
 2026-06-22T22:00:51.106Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,4,20
 2026-06-22T22:00:51.106Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-22T22:00:51.106Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -12358,6 +12453,7 @@
 2026-06-22T22:55:22.382Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-22T22:55:22.382Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-22T22:55:22.382Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-22 23:00:00,28.6,0.0,5.0,0
 2026-06-22T23:00:50.114Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,3,21
 2026-06-22T23:00:50.114Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-22T23:00:50.114Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -12502,6 +12598,7 @@
 2026-06-22T23:55:21.920Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-22T23:55:21.920Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-22T23:55:21.920Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-23 00:00:00,26.5,0.0,4.4,0
 2026-06-23T00:00:50.691Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,4,20
 2026-06-23T00:00:50.691Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-23T00:00:50.691Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,3,21
@@ -12646,6 +12743,7 @@
 2026-06-23T00:55:21.271Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-23T00:55:21.271Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-23T00:55:21.271Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-23 01:00:00,25.3,0.0,2.7,0
 2026-06-23T01:00:48.999Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,4,20
 2026-06-23T01:00:48.999Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,3,21
 2026-06-23T01:00:48.999Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,3,21
@@ -12790,6 +12888,7 @@
 2026-06-23T01:55:20.517Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-23T01:55:20.517Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-23T01:55:20.517Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-23 02:00:00,23.5,0.0,0.5,0
 2026-06-23T02:00:47.559Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,4,20
 2026-06-23T02:00:47.559Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,3,21
 2026-06-23T02:00:47.559Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,3,21
@@ -12934,6 +13033,7 @@
 2026-06-23T02:55:21.135Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-23T02:55:21.135Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-23T02:55:21.135Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-23 03:00:00,23.2,0.0,1.1,0
 2026-06-23T03:00:46.980Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,5,19
 2026-06-23T03:00:46.980Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-23T03:00:46.980Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,3,21
@@ -13078,6 +13178,7 @@
 2026-06-23T03:55:20.881Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-23T03:55:20.881Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-23T03:55:20.881Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-23 04:00:00,23.5,0.0,1.3,0
 2026-06-23T04:00:48.254Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,4,20
 2026-06-23T04:00:48.254Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-23T04:00:48.254Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,3,21
@@ -13222,6 +13323,7 @@
 2026-06-23T04:55:20.792Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-23T04:55:20.792Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-23T04:55:20.792Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-23 05:00:00,23.5,0.0,1.1,0
 2026-06-23T05:00:48.548Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,5,19
 2026-06-23T05:00:48.548Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,1,23
 2026-06-23T05:00:48.548Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,3,21
@@ -13366,6 +13468,7 @@
 2026-06-23T05:55:21.112Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-23T05:55:21.112Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-23T05:55:21.112Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-23 06:00:00,22.9,0.0,0.6,0
 2026-06-23T06:00:47.073Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-23T06:00:47.073Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,1,23
 2026-06-23T06:00:47.073Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -13510,6 +13613,7 @@
 2026-06-23T06:55:21.525Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-23T06:55:21.525Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-23T06:55:21.525Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-23 07:00:00,22.3,0.0,1.0,0
 2026-06-23T07:00:49.351Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-23T07:00:49.351Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-23T07:00:49.351Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -13654,6 +13758,7 @@
 2026-06-23T07:55:21.446Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-23T07:55:21.446Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-23T07:55:21.446Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-23 08:00:00,22.6,0.0,3.5,0
 2026-06-23T08:01:17.843Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-23T08:01:17.843Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-23T08:01:17.843Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,10,14
@@ -13798,6 +13903,7 @@
 2026-06-23T08:55:24.760Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-23T08:55:24.760Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-23T08:55:24.760Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-23 09:00:00,24.6,0.0,2.8,0
 2026-06-23T09:00:52.657Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-23T09:00:52.657Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-23T09:00:52.657Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,10,14
@@ -13942,6 +14048,7 @@
 2026-06-23T09:55:20.890Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-23T09:55:20.890Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-23T09:55:20.890Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-23 10:00:00,27.4,0.0,1.8,0
 2026-06-23T10:00:54.962Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,5,19
 2026-06-23T10:00:54.962Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-23T10:00:54.962Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,12,12
@@ -14086,6 +14193,7 @@
 2026-06-23T10:55:22.895Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-23T10:55:22.895Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-23T10:55:22.895Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-23 11:00:00,29.5,0.0,2.2,0
 2026-06-23T11:00:52.316Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,5,19
 2026-06-23T11:00:52.316Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-23T11:00:52.316Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,12,12
@@ -14230,6 +14338,7 @@
 2026-06-23T11:55:23.480Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-23T11:55:23.480Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-23T11:55:23.480Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-23 12:00:00,31.4,0.0,3.2,0
 2026-06-23T12:00:54.008Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,4,20
 2026-06-23T12:00:54.008Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,3,21
 2026-06-23T12:00:54.008Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,12,12
@@ -14374,6 +14483,7 @@
 2026-06-23T12:55:21.616Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-23T12:55:21.616Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-23T12:55:21.616Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-23 13:00:00,33.2,0.0,3.9,0
 2026-06-23T13:00:52.537Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,3,21
 2026-06-23T13:00:52.537Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-23T13:00:52.537Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,9,15
@@ -14518,6 +14628,7 @@
 2026-06-23T13:55:20.804Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-23T13:55:20.804Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-23T13:55:20.804Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-23 14:00:00,36.2,0.0,7.9,0
 2026-06-23T14:00:52.548Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,1,23
 2026-06-23T14:00:52.548Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-23T14:00:52.548Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,10,14
@@ -14662,6 +14773,7 @@
 2026-06-23T14:55:21.168Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-23T14:55:21.168Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-23T14:55:21.168Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-23 15:00:00,36.9,0.0,8.8,0
 2026-06-23T15:00:56.527Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,0,24
 2026-06-23T15:00:56.527Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-23T15:00:56.527Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,13,11
@@ -14806,6 +14918,7 @@
 2026-06-23T15:55:23.753Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-23T15:55:23.753Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-23T15:55:23.753Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-23 16:00:00,37.0,0.0,10.4,0
 2026-06-23T16:00:58.102Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,0,24
 2026-06-23T16:00:58.102Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-23T16:00:58.102Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,13,11
@@ -14950,6 +15063,7 @@
 2026-06-23T16:55:21.430Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-23T16:55:21.430Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-23T16:55:21.430Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-23 17:00:00,37.1,0.0,8.9,0
 2026-06-23T17:00:59.627Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,1,23
 2026-06-23T17:00:59.627Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-23T17:00:59.627Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,13,11
@@ -15094,6 +15208,7 @@
 2026-06-23T17:55:22.973Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-23T17:55:22.973Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-23T17:55:22.973Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-23 18:00:00,36.9,0.0,6.0,0
 2026-06-23T18:00:54.203Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,4,20
 2026-06-23T18:00:54.203Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-23T18:00:54.203Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,13,11
@@ -15238,6 +15353,7 @@
 2026-06-23T18:55:22.283Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-23T18:55:22.283Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-23T18:55:22.283Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-23 19:00:00,36.7,0.0,6.8,0
 2026-06-23T19:00:56.152Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,1,23
 2026-06-23T19:00:56.152Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-23T19:00:56.152Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,18,6
@@ -15382,6 +15498,7 @@
 2026-06-23T19:55:28.200Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-23T19:55:28.200Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-23T19:55:28.200Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-23 20:00:00,34.8,0.0,13.5,0
 2026-06-23T20:00:59.694Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,1,23
 2026-06-23T20:00:59.694Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,1,23
 2026-06-23T20:00:59.694Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,22,2
@@ -15526,6 +15643,7 @@
 2026-06-23T20:55:26.122Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-23T20:55:26.122Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-23T20:55:26.122Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-23 21:00:00,32.3,0.0,10.8,0
 2026-06-23T21:00:58.784Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,1,23
 2026-06-23T21:00:58.784Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-23T21:00:58.784Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,22,2
@@ -15670,6 +15788,7 @@
 2026-06-23T21:55:24.521Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,6,4
 2026-06-23T21:55:24.521Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-23T21:55:24.521Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,6,4
+2026-06-23 22:00:00,30.8,0.0,9.3,0
 2026-06-23T22:00:55.877Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,0,24
 2026-06-23T22:00:55.877Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,1,23
 2026-06-23T22:00:55.877Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,17,7
@@ -15814,6 +15933,7 @@
 2026-06-23T22:55:23.087Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,7,3
 2026-06-23T22:55:23.087Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-23T22:55:23.087Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-23 23:00:00,29.1,0.0,8.1,0
 2026-06-23T23:00:53.528Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,3,21
 2026-06-23T23:00:53.528Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,1,23
 2026-06-23T23:00:53.528Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,10,14
@@ -15958,6 +16078,7 @@
 2026-06-23T23:55:25.642Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,7,3
 2026-06-23T23:55:25.642Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-23T23:55:25.642Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-24 00:00:00,27.6,0.0,6.7,0
 2026-06-24T00:00:49.100Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-24T00:00:49.100Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-24T00:00:49.100Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -16102,6 +16223,7 @@
 2026-06-24T00:55:21.055Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,7,3
 2026-06-24T00:55:21.055Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-24T00:55:21.055Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-24 01:00:00,26.0,0.0,5.4,0
 2026-06-24T01:00:46.053Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-24T01:00:46.053Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-24T01:00:46.053Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -16246,6 +16368,7 @@
 2026-06-24T01:55:20.172Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-24T01:55:20.172Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,5,5
 2026-06-24T01:55:20.172Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-24 02:00:00,24.3,0.0,4.2,0
 2026-06-24T02:00:45.924Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-24T02:00:45.924Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-24T02:00:45.924Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -16390,6 +16513,7 @@
 2026-06-24T02:55:20.030Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-24T02:55:20.030Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,6,4
 2026-06-24T02:55:20.030Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-24 03:00:00,24.6,0.0,1.7,0
 2026-06-24T03:00:46.221Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-24T03:00:46.221Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-24T03:00:46.221Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -16534,6 +16658,7 @@
 2026-06-24T03:55:21.126Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-24T03:55:21.126Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,6,4
 2026-06-24T03:55:21.126Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-24 04:00:00,24.4,0.0,2.3,0
 2026-06-24T04:00:43.576Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-24T04:00:43.576Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-24T04:00:43.576Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -16678,6 +16803,7 @@
 2026-06-24T04:55:20.666Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-24T04:55:20.666Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,6,4
 2026-06-24T04:55:20.666Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-24 05:00:00,24.1,0.0,2.7,0
 2026-06-24T05:00:46.800Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-24T05:00:46.800Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-24T05:00:46.800Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -16822,6 +16948,7 @@
 2026-06-24T05:55:22.027Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-24T05:55:22.027Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,6,4
 2026-06-24T05:55:22.027Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-24 06:00:00,23.4,0.0,4.4,0
 2026-06-24T06:00:47.929Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,13,11
 2026-06-24T06:00:47.929Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-24T06:00:47.929Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -16966,6 +17093,7 @@
 2026-06-24T06:55:21.482Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-24T06:55:21.482Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-24T06:55:21.482Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-24 07:00:00,23.4,0.0,1.8,0
 2026-06-24T07:00:48.830Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-24T07:00:48.830Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-24T07:00:48.830Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -17110,6 +17238,7 @@
 2026-06-24T07:55:23.485Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-24T07:55:23.485Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-24T07:55:23.485Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-24 08:00:00,24.8,0.0,1.0,0
 2026-06-24T08:00:50.033Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-24T08:00:50.033Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-24T08:00:50.033Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -17254,6 +17383,7 @@
 2026-06-24T08:55:22.884Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-24T08:55:22.884Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-24T08:55:22.884Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-24 09:00:00,26.4,0.0,1.4,0
 2026-06-24T09:00:50.129Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-24T09:00:50.129Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-24T09:00:50.129Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -17398,6 +17528,7 @@
 2026-06-24T09:55:23.662Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-24T09:55:23.662Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-24T09:55:23.662Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-24 10:00:00,28.9,0.0,3.4,0
 2026-06-24T10:00:55.077Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-24T10:00:55.077Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-24T10:00:55.077Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -17542,6 +17673,7 @@
 2026-06-24T10:55:24.223Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-24T10:55:24.223Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-24T10:55:24.223Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-24 11:00:00,31.0,0.0,6.7,0
 2026-06-24T11:00:53.231Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-24T11:00:53.231Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-24T11:00:53.231Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,10,14
@@ -17686,6 +17818,7 @@
 2026-06-24T11:55:21.595Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-24T11:55:21.595Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-24T11:55:21.595Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-24 12:00:00,33.1,0.0,9.1,0
 2026-06-24T12:00:51.779Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-24T12:00:51.779Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-24T12:00:51.779Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,10,14
@@ -17830,6 +17963,7 @@
 2026-06-24T12:55:21.149Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-24T12:55:21.149Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-24T12:55:21.149Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-24 13:00:00,34.8,0.0,10.6,0
 2026-06-24T13:00:55.240Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-24T13:00:55.240Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,9,15
 2026-06-24T13:00:55.240Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -17974,6 +18108,7 @@
 2026-06-24T13:55:26.450Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-24T13:55:26.450Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-24T13:55:26.450Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-24 14:00:00,36.4,0.0,10.5,0
 2026-06-24T14:00:57.012Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-24T14:00:57.012Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,9,15
 2026-06-24T14:00:57.012Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,9,15
@@ -18118,6 +18253,7 @@
 2026-06-24T14:55:22.408Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-24T14:55:22.408Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-24T14:55:22.408Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-24 15:00:00,36.9,0.0,7.0,0
 2026-06-24T15:00:54.392Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-24T15:00:54.392Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-24T15:00:54.392Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -18262,6 +18398,7 @@
 2026-06-24T15:55:22.916Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-24T15:55:22.916Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-24T15:55:22.916Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-24 16:00:00,37.1,0.0,7.4,0
 2026-06-24T16:00:52.569Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-24T16:00:52.569Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-24T16:00:52.569Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,9,15
@@ -18406,6 +18543,7 @@
 2026-06-24T16:55:21.763Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-24T16:55:21.763Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-24T16:55:21.763Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-24 17:00:00,37.0,0.0,9.9,0
 2026-06-24T17:00:57.808Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-24T17:00:57.808Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-24T17:00:57.808Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -18550,6 +18688,7 @@
 2026-06-24T17:55:23.834Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-24T17:55:23.834Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-24T17:55:23.834Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-24 18:00:00,36.5,0.0,11.8,0
 2026-06-24T18:00:50.650Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-24T18:00:50.650Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-24T18:00:50.650Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -18694,6 +18833,7 @@
 2026-06-24T18:55:22.086Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-24T18:55:22.086Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-24T18:55:22.086Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-24 19:00:00,36.1,0.0,11.8,0
 2026-06-24T19:00:52.857Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-24T19:00:52.857Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-24T19:00:52.857Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -18838,6 +18978,7 @@
 2026-06-24T19:55:23.542Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-24T19:55:23.542Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-24T19:55:23.542Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-24 20:00:00,35.0,0.0,15.4,0
 2026-06-24T20:00:51.820Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-24T20:00:51.820Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-24T20:00:51.820Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -18982,6 +19123,7 @@
 2026-06-24T20:55:23.932Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-24T20:55:23.932Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-24T20:55:23.932Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-24 21:00:00,33.4,0.0,9.0,0
 2026-06-24T21:00:48.721Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-24T21:00:48.721Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-24T21:00:48.721Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -19126,6 +19268,7 @@
 2026-06-24T21:55:23.404Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-24T21:55:23.404Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-24T21:55:23.404Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-24 22:00:00,31.7,0.0,11.5,0
 2026-06-24T22:00:47.864Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-24T22:00:47.864Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-24T22:00:47.864Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -19270,6 +19413,7 @@
 2026-06-24T22:55:20.675Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-24T22:55:20.675Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,5,5
 2026-06-24T22:55:20.675Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-24 23:00:00,29.9,0.0,8.0,0
 2026-06-24T23:00:47.415Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-24T23:00:47.415Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,3,21
 2026-06-24T23:00:47.415Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -19414,6 +19558,7 @@
 2026-06-24T23:55:20.450Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-24T23:55:20.450Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,5,5
 2026-06-24T23:55:20.450Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-25 00:00:00,28.6,0.0,7.8,0
 2026-06-25T00:00:47.405Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-25T00:00:47.405Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-25T00:00:47.405Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -19558,6 +19703,7 @@
 2026-06-25T00:55:19.568Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-25T00:55:19.568Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-25T00:55:19.568Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-25 01:00:00,26.9,0.0,4.7,0
 2026-06-25T01:00:45.321Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-25T01:00:45.321Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-25T01:00:45.321Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -19702,6 +19848,7 @@
 2026-06-25T01:55:19.996Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-25T01:55:19.996Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-25T01:55:19.996Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-25 02:00:00,24.8,0.0,4.5,0
 2026-06-25T02:00:45.744Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-25T02:00:45.744Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-25T02:00:45.744Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -19846,6 +19993,7 @@
 2026-06-25T02:55:19.925Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-25T02:55:19.925Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-25T02:55:19.925Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-25 03:00:00,25.7,0.0,6.9,0
 2026-06-25T03:00:43.873Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-25T03:00:43.873Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-25T03:00:43.873Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -19990,6 +20138,7 @@
 2026-06-25T03:55:20.014Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-25T03:55:20.014Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-25T03:55:20.014Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-25 04:00:00,26.1,0.0,11.5,0
 2026-06-25T04:00:44.197Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-25T04:00:44.197Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-25T04:00:44.197Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -20134,6 +20283,7 @@
 2026-06-25T04:55:21.649Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-25T04:55:21.649Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-25T04:55:21.649Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-25 05:00:00,25.4,0.0,14.5,0
 2026-06-25T05:00:45.233Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-25T05:00:45.233Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,1,23
 2026-06-25T05:00:45.233Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -20278,6 +20428,7 @@
 2026-06-25T05:55:20.453Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-25T05:55:20.453Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-25T05:55:20.453Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-25 06:00:00,25.0,0.0,17.1,0
 2026-06-25T06:00:46.194Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-25T06:00:46.194Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-25T06:00:46.194Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -20422,6 +20573,7 @@
 2026-06-25T06:55:20.309Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-25T06:55:20.309Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-25T06:55:20.309Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-25 07:00:00,24.3,0.0,16.1,0
 2026-06-25T07:00:44.298Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-25T07:00:44.298Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-25T07:00:44.298Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -20566,6 +20718,7 @@
 2026-06-25T07:55:19.844Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-25T07:55:19.844Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-25T07:55:19.844Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-25 08:00:00,25.1,0.0,17.3,0
 2026-06-25T08:00:46.934Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-25T08:00:46.934Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-25T08:00:46.934Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -20710,6 +20863,7 @@
 2026-06-25T08:55:20.630Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,5,5
 2026-06-25T08:55:20.630Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-25T08:55:20.630Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-25 09:00:00,26.1,0.0,15.8,0
 2026-06-25T09:00:45.290Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-25T09:00:45.290Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-25T09:00:45.290Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,9,15
@@ -20854,6 +21008,7 @@
 2026-06-25T09:55:21.003Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-25T09:55:21.003Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-25T09:55:21.003Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-25 10:00:00,27.8,0.0,15.4,0
 2026-06-25T10:00:46.788Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-25T10:00:46.788Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-25T10:00:46.788Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -20998,6 +21153,7 @@
 2026-06-25T10:55:21.231Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-25T10:55:21.231Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-25T10:55:21.231Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-25 11:00:00,29.9,0.0,15.5,0
 2026-06-25T11:00:49.270Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-25T11:00:49.270Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-25T11:00:49.270Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -21142,6 +21298,7 @@
 2026-06-25T11:55:21.053Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-25T11:55:21.053Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-25T11:55:21.053Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-25 12:00:00,31.4,0.0,13.1,0
 2026-06-25T12:00:47.963Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-25T12:00:47.963Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-25T12:00:47.963Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -21286,6 +21443,7 @@
 2026-06-25T12:55:20.661Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,5,5
 2026-06-25T12:55:20.661Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-25T12:55:20.661Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-25 13:00:00,32.3,0.0,13.3,0
 2026-06-25T13:00:47.038Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-25T13:00:47.038Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-25T13:00:47.038Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -21430,6 +21588,7 @@
 2026-06-25T13:55:20.572Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,5,5
 2026-06-25T13:55:20.572Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-25T13:55:20.572Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-25 14:00:00,34.0,0.0,15.3,0
 2026-06-25T14:00:45.493Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-25T14:00:45.493Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-25T14:00:45.493Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -21574,6 +21733,7 @@
 2026-06-25T14:55:20.057Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-25T14:55:20.057Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-25T14:55:20.057Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-25 15:00:00,28.1,0.6,22.8,1
 2026-06-25T15:00:48.133Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-25T15:00:48.133Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-25T15:00:48.133Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,9,15
@@ -21718,6 +21878,7 @@
 2026-06-25T15:55:18.483Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-25T15:55:18.483Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-25T15:55:18.483Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-25 16:00:00,27.9,0.2,13.2,1
 2026-06-25T16:00:46.196Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-25T16:00:46.196Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-25T16:00:46.196Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -21862,6 +22023,7 @@
 2026-06-25T16:55:19.190Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,5,5
 2026-06-25T16:55:19.190Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-25T16:55:19.190Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-25 17:00:00,28.8,0.3,13.8,1
 2026-06-25T17:00:46.665Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-25T17:00:46.665Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-25T17:00:46.665Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -22006,6 +22168,7 @@
 2026-06-25T17:55:19.180Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,5,5
 2026-06-25T17:55:19.180Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-25T17:55:19.180Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-25 18:00:00,29.3,0.1,14.7,0
 2026-06-25T18:00:47.649Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-25T18:00:47.649Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-25T18:00:47.649Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -22150,6 +22313,7 @@
 2026-06-25T18:55:19.627Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,5,5
 2026-06-25T18:55:19.627Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-25T18:55:19.627Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-25 19:00:00,29.3,0.0,10.8,0
 2026-06-25T19:00:46.556Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-25T19:00:46.556Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,9,15
 2026-06-25T19:00:46.556Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -22294,6 +22458,7 @@
 2026-06-25T19:55:21.181Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-25T19:55:21.181Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-25T19:55:21.181Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-25 20:00:00,29.4,0.0,6.0,0
 2026-06-25T20:00:50.671Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-25T20:00:50.671Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-25T20:00:50.671Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -22438,6 +22603,7 @@
 2026-06-25T20:55:20.079Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-25T20:55:20.079Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-25T20:55:20.079Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-25 21:00:00,28.5,0.0,0.6,0
 2026-06-25T21:00:45.841Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-25T21:00:45.841Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-25T21:00:45.841Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -22582,6 +22748,7 @@
 2026-06-25T21:55:19.374Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-25T21:55:19.374Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-25T21:55:19.374Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-25 22:00:00,25.2,0.0,16.6,0
 2026-06-25T22:00:47.482Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-25T22:00:47.482Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,1,23
 2026-06-25T22:00:47.482Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -22726,6 +22893,7 @@
 2026-06-25T22:55:19.976Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-25T22:55:19.976Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-25T22:55:19.976Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-25 23:00:00,19.4,0.0,16.5,0
 2026-06-25T23:00:46.576Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-25T23:00:46.576Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,1,23
 2026-06-25T23:00:46.576Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -22870,6 +23038,7 @@
 2026-06-25T23:55:20.442Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-25T23:55:20.442Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-25T23:55:20.442Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-26 00:00:00,19.9,0.0,15.2,0
 2026-06-26T00:00:53.696Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-26T00:00:53.696Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-26T00:00:53.696Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -23014,6 +23183,7 @@
 2026-06-26T00:55:19.370Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-26T00:55:19.370Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-26T00:55:19.370Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-26 01:00:00,19.0,0.0,8.6,0
 2026-06-26T01:00:44.521Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-26T01:00:44.521Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-26T01:00:44.521Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -23158,6 +23328,7 @@
 2026-06-26T01:55:18.335Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-26T01:55:18.335Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-26T01:55:18.335Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-26 02:00:00,18.7,0.0,7.0,0
 2026-06-26T02:00:46.294Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-26T02:00:46.294Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-26T02:00:46.294Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -23302,6 +23473,7 @@
 2026-06-26T02:55:20.234Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-26T02:55:20.234Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-26T02:55:20.234Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-26 03:00:00,18.8,0.0,5.8,0
 2026-06-26T03:00:47.904Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,13,11
 2026-06-26T03:00:47.904Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-26T03:00:47.904Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,1,23
@@ -23446,6 +23618,7 @@
 2026-06-26T03:55:18.237Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-26T03:55:18.237Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-26T03:55:18.237Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-26 04:00:00,18.5,0.0,3.6,0
 2026-06-26T04:00:46.351Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,13,11
 2026-06-26T04:00:46.351Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,3,21
 2026-06-26T04:00:46.351Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -23590,6 +23763,7 @@
 2026-06-26T04:55:19.399Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-26T04:55:19.399Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-26T04:55:19.399Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-26 05:00:00,18.0,0.0,2.0,0
 2026-06-26T05:00:47.006Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,14,10
 2026-06-26T05:00:47.006Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-26T05:00:47.006Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -23734,6 +23908,7 @@
 2026-06-26T05:55:19.459Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-26T05:55:19.459Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-26T05:55:19.459Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-26 06:00:00,18.2,0.0,3.5,0
 2026-06-26T06:00:48.806Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-26T06:00:48.806Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-26T06:00:48.806Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,1,23
@@ -23878,6 +24053,7 @@
 2026-06-26T06:55:20.144Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-26T06:55:20.144Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-26T06:55:20.144Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-26 07:00:00,18.1,0.0,3.6,0
 2026-06-26T07:00:49.770Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-26T07:00:49.770Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-26T07:00:49.770Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -24022,6 +24198,7 @@
 2026-06-26T07:55:20.205Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-26T07:55:20.205Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-26T07:55:20.205Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-26 08:00:00,18.8,0.0,1.1,0
 2026-06-26T08:00:49.941Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-26T08:00:49.941Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-26T08:00:49.941Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -24166,6 +24343,7 @@
 2026-06-26T08:55:19.875Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-26T08:55:19.875Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-26T08:55:19.875Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-26 09:00:00,20.3,0.0,2.3,0
 2026-06-26T09:00:47.832Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-26T09:00:47.832Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-26T09:00:47.832Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,9,15
@@ -24310,6 +24488,7 @@
 2026-06-26T09:55:20.691Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-26T09:55:20.691Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-26T09:55:20.691Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-26 10:00:00,22.5,0.0,4.1,0
 2026-06-26T10:00:48.838Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-26T10:00:48.838Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-26T10:00:48.838Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,10,14
@@ -24454,6 +24633,7 @@
 2026-06-26T10:55:20.206Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-26T10:55:20.206Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-26T10:55:20.206Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-26 11:00:00,24.8,0.0,5.1,0
 2026-06-26T11:00:47.595Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-26T11:00:47.595Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-26T11:00:47.595Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,11,13
@@ -24598,6 +24778,7 @@
 2026-06-26T11:55:20.171Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-26T11:55:20.171Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-26T11:55:20.171Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-26 12:00:00,26.4,0.0,2.5,0
 2026-06-26T12:05:20.160Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-26T12:05:20.160Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-26T12:05:20.160Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,11,13
@@ -24730,6 +24911,7 @@
 2026-06-26T12:55:19.816Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-26T12:55:19.816Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-26T12:55:19.816Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-26 13:00:00,27.8,0.0,1.5,0
 2026-06-26T13:00:51.221Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,5,19
 2026-06-26T13:00:51.221Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-26T13:00:51.221Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,11,13
@@ -24874,6 +25056,7 @@
 2026-06-26T13:55:20.702Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-26T13:55:20.702Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-26T13:55:20.702Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-26 14:00:00,29.2,0.0,4.4,0
 2026-06-26T14:00:47.143Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,5,19
 2026-06-26T14:00:47.143Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-26T14:00:47.143Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,12,12
@@ -25018,6 +25201,7 @@
 2026-06-26T14:55:19.562Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-26T14:55:19.562Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-26T14:55:19.562Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-26 15:00:00,30.4,0.2,4.1,1
 2026-06-26T15:00:49.080Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-26T15:00:49.080Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-26T15:00:49.080Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,10,14
@@ -25162,6 +25346,7 @@
 2026-06-26T15:55:22.055Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-26T15:55:22.055Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-26T15:55:22.055Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-26 16:00:00,30.7,0.1,5.2,0
 2026-06-26T16:00:47.815Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-26T16:00:47.815Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-26T16:00:47.815Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,9,15
@@ -25306,6 +25491,7 @@
 2026-06-26T16:55:19.675Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-26T16:55:19.675Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-26T16:55:19.675Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-26 17:00:00,30.7,0.1,2.7,0
 2026-06-26T17:00:50.457Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-26T17:00:50.457Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-26T17:00:50.457Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,9,15
@@ -25450,6 +25636,7 @@
 2026-06-26T17:55:19.151Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-26T17:55:19.151Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-26T17:55:19.151Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-26 18:00:00,30.9,0.1,0.2,0
 2026-06-26T18:00:48.018Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-26T18:00:48.018Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-26T18:00:48.018Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -25594,6 +25781,7 @@
 2026-06-26T18:55:22.172Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-26T18:55:22.172Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-26T18:55:22.172Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-26 19:00:00,30.7,0.0,5.9,0
 2026-06-26T19:00:46.215Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,14,10
 2026-06-26T19:00:46.215Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,3,21
 2026-06-26T19:00:46.215Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,9,15
@@ -25738,6 +25926,7 @@
 2026-06-26T19:55:20.756Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-26T19:55:20.756Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-26T19:55:20.756Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-26 20:00:00,28.0,0.0,16.4,0
 2026-06-26T20:00:47.608Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-26T20:00:47.608Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-26T20:00:47.608Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,10,14
@@ -25882,6 +26071,7 @@
 2026-06-26T20:55:19.908Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-26T20:55:19.908Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-26T20:55:19.908Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-26 21:00:00,26.8,0.0,13.2,0
 2026-06-26T21:00:48.008Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-26T21:00:48.008Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,3,21
 2026-06-26T21:00:48.008Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,10,14
@@ -26026,6 +26216,7 @@
 2026-06-26T21:55:18.802Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-26T21:55:18.802Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-26T21:55:18.802Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-26 22:00:00,24.7,0.0,13.6,0
 2026-06-26T22:00:47.766Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-26T22:00:47.766Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-26T22:00:47.766Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -26170,6 +26361,7 @@
 2026-06-26T22:55:19.216Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-26T22:55:19.216Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-26T22:55:19.216Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-26 23:00:00,23.2,0.0,11.1,0
 2026-06-26T23:00:46.227Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-26T23:00:46.227Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-26T23:00:46.227Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -26314,6 +26506,7 @@
 2026-06-26T23:55:18.633Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-26T23:55:18.633Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-26T23:55:18.633Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-27 00:00:00,22.3,0.0,10.4,0
 2026-06-27T00:00:47.369Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-27T00:00:47.369Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,12,12
 2026-06-27T00:00:47.369Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -26458,6 +26651,7 @@
 2026-06-27T00:55:17.926Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-27T00:55:17.926Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-27T00:55:17.926Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-27 01:00:00,21.7,0.0,7.9,0
 2026-06-27T01:00:43.110Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-27T01:00:43.110Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,11,13
 2026-06-27T01:00:43.110Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -26602,6 +26796,7 @@
 2026-06-27T01:55:18.041Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-27T01:55:18.041Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-27T01:55:18.041Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-27 02:00:00,20.5,0.0,7.9,0
 2026-06-27T02:00:44.338Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-27T02:00:44.338Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-27T02:00:44.338Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,3,21
@@ -26746,6 +26941,7 @@
 2026-06-27T02:55:18.877Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-27T02:55:18.877Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-27T02:55:18.877Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-27 03:00:00,20.2,0.0,6.7,0
 2026-06-27T03:00:44.516Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-27T03:00:44.516Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,3,21
 2026-06-27T03:00:44.516Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -26890,6 +27086,7 @@
 2026-06-27T03:55:18.633Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-27T03:55:18.633Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-27T03:55:18.633Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-27 04:00:00,19.6,0.0,6.6,0
 2026-06-27T04:00:43.697Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-27T04:00:43.697Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-27T04:00:43.697Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -27034,6 +27231,7 @@
 2026-06-27T04:55:18.971Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-27T04:55:18.971Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-27T04:55:18.971Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-27 05:00:00,19.3,0.0,5.9,0
 2026-06-27T05:00:43.333Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-27T05:00:43.333Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-27T05:00:43.333Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -27178,6 +27376,7 @@
 2026-06-27T05:55:18.526Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-27T05:55:18.526Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-27T05:55:18.526Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-27 06:00:00,19.1,0.0,5.0,0
 2026-06-27T06:00:43.667Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-27T06:00:43.667Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-27T06:00:43.667Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -27322,6 +27521,7 @@
 2026-06-27T06:55:20.033Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-27T06:55:20.033Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-27T06:55:20.033Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-27 07:00:00,18.7,0.0,5.1,0
 2026-06-27T07:00:44.120Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-27T07:00:44.120Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-27T07:00:44.120Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -27466,6 +27666,7 @@
 2026-06-27T07:55:19.765Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-27T07:55:19.765Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-27T07:55:19.765Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-27 08:00:00,19.6,0.0,4.2,0
 2026-06-27T08:00:43.660Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-27T08:00:43.660Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-27T08:00:43.660Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -27610,6 +27811,7 @@
 2026-06-27T08:55:19.358Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-27T08:55:19.358Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-27T08:55:19.358Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-27 09:00:00,22.6,0.0,4.3,0
 2026-06-27T09:00:43.579Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-27T09:00:43.579Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-27T09:00:43.579Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -27754,6 +27956,7 @@
 2026-06-27T09:55:17.938Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-27T09:55:17.938Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-27T09:55:17.938Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-27 10:00:00,24.8,0.0,4.9,0
 2026-06-27T10:00:43.208Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-27T10:00:43.208Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-27T10:00:43.208Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -27898,6 +28101,7 @@
 2026-06-27T10:55:19.018Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-27T10:55:19.018Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-27T10:55:19.018Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-27 11:00:00,26.5,0.0,6.7,0
 2026-06-27T11:00:45.471Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-27T11:00:45.471Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-27T11:00:45.471Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -28042,6 +28246,7 @@
 2026-06-27T11:55:19.668Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-27T11:55:19.668Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-27T11:55:19.668Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-27 12:00:00,28.2,0.0,7.7,0
 2026-06-27T12:00:43.373Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-27T12:00:43.373Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-27T12:00:43.373Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -28186,6 +28391,7 @@
 2026-06-27T12:55:18.554Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-27T12:55:18.554Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-27T12:55:18.554Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-27 13:00:00,29.9,0.0,6.6,0
 2026-06-27T13:00:44.400Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-27T13:00:44.400Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-27T13:00:44.400Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -28330,6 +28536,7 @@
 2026-06-27T13:55:19.401Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-27T13:55:19.401Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-27T13:55:19.401Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-27 14:00:00,31.4,0.0,7.6,0
 2026-06-27T14:00:43.675Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-27T14:00:43.675Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-27T14:00:43.675Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -28474,6 +28681,7 @@
 2026-06-27T14:55:19.564Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-27T14:55:19.564Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-27T14:55:19.564Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-27 15:00:00,31.7,0.0,5.0,0
 2026-06-27T15:00:45.505Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-27T15:00:45.505Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-27T15:00:45.505Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -28618,6 +28826,7 @@
 2026-06-27T15:55:18.438Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-27T15:55:18.438Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-27T15:55:18.438Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-27 16:00:00,32.6,0.0,6.8,0
 2026-06-27T16:00:45.782Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-27T16:00:45.782Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-27T16:00:45.782Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -28762,6 +28971,7 @@
 2026-06-27T16:55:18.773Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-27T16:55:18.773Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-27T16:55:18.773Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-27 17:00:00,32.8,0.0,10.8,0
 2026-06-27T17:00:45.759Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-27T17:00:45.759Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-27T17:00:45.759Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -28906,6 +29116,7 @@
 2026-06-27T17:55:18.802Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-27T17:55:18.802Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-27T17:55:18.802Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-27 18:00:00,33.4,0.0,10.4,0
 2026-06-27T18:00:43.050Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-27T18:00:43.050Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-27T18:00:43.050Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -29050,6 +29261,7 @@
 2026-06-27T18:55:18.728Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-27T18:55:18.728Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-27T18:55:18.728Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-27 19:00:00,29.7,0.0,18.4,0
 2026-06-27T19:00:42.443Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,4,20
 2026-06-27T19:00:42.443Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-27T19:00:42.443Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -29194,6 +29406,7 @@
 2026-06-27T19:55:18.719Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-27T19:55:18.719Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-27T19:55:18.719Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-27 20:00:00,25.0,0.0,20.3,0
 2026-06-27T20:00:43.849Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-27T20:00:43.849Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-27T20:00:43.849Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -29338,6 +29551,7 @@
 2026-06-27T20:55:18.631Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-27T20:55:18.631Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-27T20:55:18.631Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-27 21:00:00,22.7,0.1,17.0,0
 2026-06-27T21:00:44.765Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-27T21:00:44.765Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,9,15
 2026-06-27T21:00:44.765Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,3,21
@@ -29482,6 +29696,7 @@
 2026-06-27T21:55:18.679Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-27T21:55:18.679Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-27T21:55:18.679Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-27 22:00:00,21.2,0.1,14.3,0
 2026-06-27T22:00:45.786Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-27T22:00:45.786Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,11,13
 2026-06-27T22:00:45.786Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -29626,6 +29841,7 @@
 2026-06-27T22:55:19.046Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-27T22:55:19.046Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-27T22:55:19.046Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-27 23:00:00,20.3,0.2,13.3,1
 2026-06-27T23:00:43.572Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,4,20
 2026-06-27T23:00:43.572Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-27T23:00:43.572Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -29770,6 +29986,7 @@
 2026-06-27T23:55:17.625Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-27T23:55:17.625Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-27T23:55:17.625Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-28 00:00:00,20.1,0.1,12.1,0
 2026-06-28T00:00:50.427Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-28T00:00:50.427Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-28T00:00:50.427Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -29914,6 +30131,7 @@
 2026-06-28T00:55:18.229Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-28T00:55:18.229Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-28T00:55:18.229Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-28 01:00:00,19.6,0.0,10.3,0
 2026-06-28T01:00:41.560Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-28T01:00:41.560Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,3,21
 2026-06-28T01:00:41.560Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -30058,6 +30276,7 @@
 2026-06-28T01:55:18.237Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-28T01:55:18.237Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-28T01:55:18.237Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-28 02:00:00,19.0,0.0,9.6,0
 2026-06-28T02:00:43.251Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-28T02:00:43.251Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,1,23
 2026-06-28T02:00:43.251Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -30202,6 +30421,7 @@
 2026-06-28T02:55:17.926Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-28T02:55:17.926Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-28T02:55:17.926Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-28 03:00:00,18.8,0.0,12.0,0
 2026-06-28T03:00:44.508Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-28T03:00:44.508Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-28T03:00:44.508Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -30346,6 +30566,7 @@
 2026-06-28T03:55:18.509Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-28T03:55:18.509Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-28T03:55:18.509Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-28 04:00:00,18.6,0.0,12.1,0
 2026-06-28T04:00:41.185Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,14,10
 2026-06-28T04:00:41.185Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-28T04:00:41.185Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -30490,6 +30711,7 @@
 2026-06-28T04:55:18.818Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-28T04:55:18.818Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-28T04:55:18.818Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-28 05:00:00,18.5,0.0,11.0,0
 2026-06-28T05:00:44.038Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,13,11
 2026-06-28T05:00:44.038Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-28T05:00:44.038Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -30634,6 +30856,7 @@
 2026-06-28T05:55:18.415Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-28T05:55:18.415Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-28T05:55:18.415Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-28 06:00:00,18.7,0.0,10.8,0
 2026-06-28T06:00:43.571Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,13,11
 2026-06-28T06:00:43.571Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-28T06:00:43.571Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -30778,6 +31001,7 @@
 2026-06-28T06:55:18.528Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-28T06:55:18.528Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-28T06:55:18.528Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-28 07:00:00,18.7,0.0,10.2,0
 2026-06-28T07:00:45.411Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,14,10
 2026-06-28T07:00:45.411Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-28T07:00:45.411Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,1,23
@@ -30922,6 +31146,7 @@
 2026-06-28T07:55:20.020Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-28T07:55:20.020Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-28T07:55:20.020Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-28 08:00:00,19.0,0.0,9.9,0
 2026-06-28T08:00:43.662Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-28T08:00:43.662Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,6,18
 2026-06-28T08:00:43.662Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -31066,6 +31291,7 @@
 2026-06-28T08:55:19.464Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-28T08:55:19.464Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-28T08:55:19.464Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-28 09:00:00,19.7,0.0,10.2,0
 2026-06-28T09:00:44.639Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-28T09:00:44.639Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-28T09:00:44.639Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -31210,6 +31436,7 @@
 2026-06-28T09:55:20.552Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-28T09:55:20.552Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-28T09:55:20.552Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-28 10:00:00,20.7,0.0,10.3,0
 2026-06-28T10:00:45.805Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-28T10:00:45.805Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-28T10:00:45.805Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -31354,6 +31581,7 @@
 2026-06-28T10:55:18.926Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-28T10:55:18.926Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-28T10:55:18.926Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-28 11:00:00,21.8,0.1,10.2,0
 2026-06-28T11:00:45.456Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-28T11:00:45.456Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,3,21
 2026-06-28T11:00:45.456Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,0,24
@@ -31498,6 +31726,7 @@
 2026-06-28T11:55:20.441Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-28T11:55:20.441Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-28T11:55:20.441Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,7,3
+2026-06-28 12:00:00,22.8,0.0,9.2,0
 2026-06-28T12:00:45.829Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-28T12:00:45.829Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,3,21
 2026-06-28T12:00:45.829Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -31642,6 +31871,7 @@
 2026-06-28T12:55:19.227Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-28T12:55:19.227Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-28T12:55:19.227Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,9,1
+2026-06-28 13:00:00,24.2,0.0,8.5,0
 2026-06-28T13:00:48.955Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-28T13:00:48.955Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,3,21
 2026-06-28T13:00:48.955Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,3,21
@@ -31786,6 +32016,7 @@
 2026-06-28T13:55:18.913Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-28T13:55:18.913Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-28T13:55:18.913Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,11,0
+2026-06-28 14:00:00,25.2,0.0,11.1,0
 2026-06-28T14:00:45.274Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-28T14:00:45.274Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-28T14:00:45.274Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,1,23
@@ -31930,6 +32161,7 @@
 2026-06-28T14:55:20.325Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-28T14:55:20.325Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-28T14:55:20.325Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,11,0
+2026-06-28 15:00:00,26.3,0.0,15.7,0
 2026-06-28T15:00:44.534Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-28T15:00:44.534Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-28T15:00:44.534Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,1,23
@@ -32074,6 +32306,7 @@
 2026-06-28T15:55:19.965Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-28T15:55:19.965Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-28T15:55:19.965Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,11,0
+2026-06-28 16:00:00,23.8,0.0,18.0,0
 2026-06-28T16:00:47.644Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,13,11
 2026-06-28T16:00:47.644Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-28T16:00:47.644Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,1,23
@@ -32218,6 +32451,7 @@
 2026-06-28T16:55:19.405Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-28T16:55:19.405Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-28T16:55:19.405Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,9,1
+2026-06-28 17:00:00,23.1,0.1,14.2,0
 2026-06-28T17:00:47.057Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,14,10
 2026-06-28T17:00:47.057Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-28T17:00:47.057Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -32362,6 +32596,7 @@
 2026-06-28T17:55:19.069Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-28T17:55:19.069Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-28T17:55:19.069Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-28 18:00:00,22.1,0.3,18.9,1
 2026-06-28T18:00:48.535Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,14,10
 2026-06-28T18:00:48.535Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-28T18:00:48.535Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -32506,6 +32741,7 @@
 2026-06-28T18:55:20.512Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-28T18:55:20.512Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-28T18:55:20.512Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-28 19:00:00,20.7,0.0,20.2,0
 2026-06-28T19:00:46.705Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,14,10
 2026-06-28T19:00:46.705Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-28T19:00:46.705Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -32650,6 +32886,7 @@
 2026-06-28T19:55:21.156Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-28T19:55:21.156Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-28T19:55:21.156Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-28 20:00:00,19.1,0.0,16.1,0
 2026-06-28T20:00:46.866Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,14,10
 2026-06-28T20:00:46.866Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-28T20:00:46.866Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -32794,6 +33031,7 @@
 2026-06-28T20:55:19.559Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-28T20:55:19.559Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-28T20:55:19.559Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-28 21:00:00,18.5,0.3,13.2,1
 2026-06-28T21:00:45.096Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,13,11
 2026-06-28T21:00:45.096Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-28T21:00:45.096Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -32938,6 +33176,7 @@
 2026-06-28T21:55:19.370Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-28T21:55:19.370Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-28T21:55:19.370Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-28 22:00:00,18.2,0.2,11.8,1
 2026-06-28T22:00:47.071Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-28T22:00:47.071Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-28T22:00:47.071Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -33082,6 +33321,7 @@
 2026-06-28T22:55:18.619Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-28T22:55:18.619Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-28T22:55:18.619Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-28 23:00:00,17.9,0.5,9.8,1
 2026-06-28T23:00:45.579Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-28T23:00:45.579Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-28T23:00:45.579Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -33226,6 +33466,7 @@
 2026-06-28T23:55:18.938Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-28T23:55:18.938Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-28T23:55:18.938Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-29 00:00:00,17.8,0.2,11.3,1
 2026-06-29T00:00:48.959Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-29T00:00:48.959Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-29T00:00:48.959Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -33370,6 +33611,7 @@
 2026-06-29T00:55:18.228Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-29T00:55:18.228Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-29T00:55:18.228Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-29 01:00:00,17.6,0.1,11.0,0
 2026-06-29T01:00:45.411Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-29T01:00:45.411Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-29T01:00:45.411Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -33514,6 +33756,7 @@
 2026-06-29T01:55:18.448Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-29T01:55:18.448Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-29T01:55:18.448Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-29 02:00:00,17.5,0.0,7.6,0
 2026-06-29T02:00:43.802Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-29T02:00:43.802Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-29T02:00:43.802Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -33658,6 +33901,7 @@
 2026-06-29T02:55:19.646Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-29T02:55:19.646Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-29T02:55:19.646Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-29 03:00:00,17.6,0.1,7.6,0
 2026-06-29T03:00:46.165Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-29T03:00:46.165Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-29T03:00:46.165Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -33802,6 +34046,7 @@
 2026-06-29T03:55:18.009Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-29T03:55:18.009Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-29T03:55:18.009Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-29 04:00:00,17.5,0.1,12.2,0
 2026-06-29T04:00:46.058Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,10,14
 2026-06-29T04:00:46.058Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,10,14
 2026-06-29T04:00:46.058Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -33946,6 +34191,7 @@
 2026-06-29T04:55:19.979Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-29T04:55:19.979Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-29T04:55:19.979Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-29 05:00:00,17.3,0.0,11.4,0
 2026-06-29T05:00:47.862Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-29T05:00:47.862Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,9,15
 2026-06-29T05:00:47.862Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -34090,6 +34336,7 @@
 2026-06-29T05:55:18.397Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-29T05:55:18.397Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-29T05:55:18.397Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-29 06:00:00,17.2,0.0,11.7,0
 2026-06-29T06:00:46.981Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-29T06:00:46.981Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,9,15
 2026-06-29T06:00:46.981Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -34234,6 +34481,7 @@
 2026-06-29T06:55:19.184Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-29T06:55:19.184Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-29T06:55:19.184Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-29 07:00:00,17.1,0.0,10.9,0
 2026-06-29T07:00:46.552Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-29T07:00:46.552Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-29T07:00:46.552Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,3,21
@@ -34378,6 +34626,7 @@
 2026-06-29T07:55:17.950Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-29T07:55:17.950Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-29T07:55:17.950Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-29 08:00:00,17.6,0.0,8.5,0
 2026-06-29T08:00:44.660Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-29T08:00:44.660Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-29T08:00:44.660Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,3,21
@@ -34522,6 +34771,7 @@
 2026-06-29T08:55:18.732Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-29T08:55:18.732Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-29T08:55:18.732Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-29 09:00:00,18.3,0.0,11.0,0
 2026-06-29T09:00:53.651Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-29T09:00:53.651Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,9,15
 2026-06-29T09:00:53.651Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -34666,6 +34916,7 @@
 2026-06-29T09:55:18.612Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-29T09:55:18.612Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-29T09:55:18.612Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-29 10:00:00,19.6,0.0,14.0,0
 2026-06-29T10:00:42.853Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-29T10:00:42.853Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-29T10:00:42.853Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -34810,6 +35061,7 @@
 2026-06-29T10:55:17.658Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-29T10:55:17.658Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-29T10:55:17.658Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-29 11:00:00,20.5,0.1,14.7,0
 2026-06-29T11:00:45.642Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-29T11:00:45.642Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-29T11:00:45.642Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -34954,6 +35206,7 @@
 2026-06-29T11:55:17.981Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-29T11:55:17.981Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-29T11:55:17.981Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-29 12:00:00,22.1,0.2,13.9,1
 2026-06-29T12:00:44.534Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,11,13
 2026-06-29T12:00:44.534Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-29T12:00:44.534Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,5,19
@@ -35098,6 +35351,7 @@
 2026-06-29T12:55:17.232Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-29T12:55:17.232Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-29T12:55:17.232Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-29 13:00:00,22.4,0.2,14.4,1
 2026-06-29T13:00:53.895Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-29T13:00:53.895Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-29T13:00:53.895Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,3,21
@@ -35242,6 +35496,7 @@
 2026-06-29T13:55:16.614Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-29T13:55:16.614Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-29T13:55:16.614Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-29 14:00:00,22.7,0.1,14.3,0
 2026-06-29T14:00:43.712Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-29T14:00:43.712Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,3,21
 2026-06-29T14:00:43.712Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,3,21
@@ -35386,6 +35641,7 @@
 2026-06-29T14:55:17.780Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-29T14:55:17.780Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-29T14:55:17.780Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,6,4
+2026-06-29 15:00:00,23.2,0.0,13.4,0
 2026-06-29T15:00:48.047Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-29T15:00:48.047Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-29T15:00:48.047Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,4,20
@@ -35530,6 +35786,7 @@
 2026-06-29T15:55:17.714Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-29T15:55:17.714Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-29T15:55:17.714Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-29 16:00:00,23.3,0.0,13.4,0
 2026-06-29T16:00:45.775Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-29T16:00:45.775Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-29T16:00:45.775Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,2,22
@@ -35674,6 +35931,7 @@
 2026-06-29T16:55:17.238Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-29T16:55:17.238Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-29T16:55:17.238Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-29 17:00:00,23.7,0.0,15.4,0
 2026-06-29T17:00:42.877Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-29T17:00:42.877Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-29T17:00:42.877Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -35818,6 +36076,7 @@
 2026-06-29T17:55:17.925Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-29T17:55:17.925Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-29T17:55:17.925Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-29 18:00:00,22.4,0.0,15.9,0
 2026-06-29T18:00:42.269Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-29T18:00:42.269Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-29T18:00:42.269Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -35962,6 +36221,7 @@
 2026-06-29T18:55:17.941Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-29T18:55:17.941Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-29T18:55:17.941Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-29 19:00:00,22.3,0.0,15.5,0
 2026-06-29T19:00:42.335Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,12,12
 2026-06-29T19:00:42.335Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,3,21
 2026-06-29T19:00:42.335Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -36106,6 +36366,7 @@
 2026-06-29T19:55:22.078Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,1,9
 2026-06-29T19:55:22.078Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-29T19:55:22.078Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-29 20:00:00,21.4,0.0,15.0,0
 2026-06-29T20:00:41.651Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-29T20:00:41.651Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-29T20:00:41.651Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -36238,6 +36499,7 @@
 2026-06-29T20:55:18.068Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-29T20:55:18.068Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-29T20:55:18.068Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-29 21:00:00,19.9,0.0,14.6,0
 2026-06-29T21:00:40.718Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-29T21:00:40.718Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-29T21:00:40.718Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,6,18
@@ -36382,6 +36644,7 @@
 2026-06-29T21:55:17.877Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-29T21:55:17.877Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-29T21:55:17.877Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-29 22:00:00,18.3,0.0,13.4,0
 2026-06-29T22:00:43.098Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,5,19
 2026-06-29T22:00:43.098Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-29T22:00:43.098Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -36526,6 +36789,7 @@
 2026-06-29T22:55:17.109Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-29T22:55:17.109Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-29T22:55:17.109Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-29 23:00:00,17.8,0.0,10.7,0
 2026-06-29T23:00:41.580Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-29T23:00:41.580Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-29T23:00:41.580Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -36658,6 +36922,7 @@
 2026-06-29T23:55:17.263Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-29T23:55:17.263Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-29T23:55:17.263Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-30 00:00:00,17.6,0.0,10.5,0
 2026-06-30T00:00:45.476Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-30T00:00:45.476Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-30T00:00:45.476Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -36790,6 +37055,7 @@
 2026-06-30T00:55:16.898Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-30T00:55:16.898Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-30T00:55:16.898Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-30 01:00:00,17.2,0.0,10.1,0
 2026-06-30T01:00:41.621Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-30T01:00:41.621Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,1,23
 2026-06-30T01:00:41.621Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -36934,6 +37200,7 @@
 2026-06-30T01:55:16.566Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-30T01:55:16.566Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-30T01:55:16.566Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-30 02:00:00,16.4,0.0,8.0,0
 2026-06-30T02:00:39.639Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-30T02:00:39.639Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,1,23
 2026-06-30T02:00:39.639Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -37078,6 +37345,7 @@
 2026-06-30T02:55:18.547Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-30T02:55:18.547Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-30T02:55:18.547Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-30 03:00:00,16.4,0.0,3.6,0
 2026-06-30T03:00:41.803Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-30T03:00:41.803Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,1,23
 2026-06-30T03:00:41.803Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -37222,6 +37490,7 @@
 2026-06-30T03:55:18.007Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-30T03:55:18.007Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,5,5
 2026-06-30T03:55:18.007Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-30 04:00:00,16.0,0.0,2.7,0
 2026-06-30T04:00:42.776Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-30T04:00:42.776Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-30T04:00:42.776Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -37366,6 +37635,7 @@
 2026-06-30T04:55:17.798Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-30T04:55:17.798Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,5,5
 2026-06-30T04:55:17.798Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-30 05:00:00,15.8,0.0,3.4,0
 2026-06-30T05:00:42.313Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-30T05:00:42.313Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-30T05:00:42.313Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -37510,6 +37780,7 @@
 2026-06-30T05:55:19.537Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,0,10
 2026-06-30T05:55:19.537Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,5,5
 2026-06-30T05:55:19.537Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,5,5
+2026-06-30 06:00:00,16.1,0.0,6.7,0
 2026-06-30T06:00:42.992Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-30T06:00:42.992Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-30T06:00:42.992Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,9,15
@@ -37654,6 +37925,7 @@
 2026-06-30T06:55:19.729Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-30T06:55:19.729Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-30T06:55:19.729Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-30 07:00:00,16.3,0.0,7.4,0
 2026-06-30T07:00:47.658Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-30T07:00:47.658Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,0,24
 2026-06-30T07:00:47.658Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,9,15
@@ -37798,6 +38070,7 @@
 2026-06-30T07:55:19.267Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-30T07:55:19.267Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,5,5
 2026-06-30T07:55:19.267Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,4,6
+2026-06-30 08:00:00,17.0,0.0,11.1,0
 2026-06-30T08:00:46.173Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-30T08:00:46.173Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-30T08:00:46.173Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,11,13
@@ -37942,6 +38215,7 @@
 2026-06-30T08:55:19.249Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-30T08:55:19.249Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-30T08:55:19.249Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,6,4
+2026-06-30 09:00:00,18.4,0.0,10.2,0
 2026-06-30T09:00:45.434Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,5,19
 2026-06-30T09:00:45.434Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-30T09:00:45.434Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,9,15
@@ -38086,6 +38360,7 @@
 2026-06-30T09:55:19.469Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-30T09:55:19.469Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,5,5
 2026-06-30T09:55:19.469Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-30 10:00:00,19.9,0.0,10.0,0
 2026-06-30T10:00:47.772Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-30T10:00:47.772Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-30T10:00:47.772Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -38230,6 +38505,7 @@
 2026-06-30T10:55:18.371Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,5,5
 2026-06-30T10:55:18.371Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-30T10:55:18.371Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,3,7
+2026-06-30 11:00:00,21.5,0.0,11.0,0
 2026-06-30T11:00:44.905Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-30T11:00:44.905Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-30T11:00:44.905Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -38374,6 +38650,7 @@
 2026-06-30T11:55:19.375Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,5,5
 2026-06-30T11:55:19.375Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,5,5
 2026-06-30T11:55:19.375Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-30 12:00:00,23.3,0.0,11.4,0
 2026-06-30T12:00:45.093Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-30T12:00:45.093Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,3,21
 2026-06-30T12:00:45.093Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,10,14
@@ -38518,6 +38795,7 @@
 2026-06-30T12:55:17.298Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,5,5
 2026-06-30T12:55:17.298Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,5,5
 2026-06-30T12:55:17.298Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-30 13:00:00,24.2,0.0,12.7,0
 2026-06-30T13:00:45.191Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,9,15
 2026-06-30T13:00:45.191Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-30T13:00:45.191Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -38662,6 +38940,7 @@
 2026-06-30T13:55:18.016Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,5,5
 2026-06-30T13:55:18.016Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,4,6
 2026-06-30T13:55:18.016Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-30 14:00:00,24.6,0.0,13.2,0
 2026-06-30T14:00:45.492Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-30T14:00:45.492Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-30T14:00:45.492Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -38806,6 +39085,7 @@
 2026-06-30T14:55:17.838Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,5,5
 2026-06-30T14:55:17.838Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-30T14:55:17.838Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-30 15:00:00,24.8,0.0,15.4,0
 2026-06-30T15:00:42.399Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-30T15:00:42.399Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,4,20
 2026-06-30T15:00:42.399Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -38950,6 +39230,7 @@
 2026-06-30T15:55:17.009Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,5,5
 2026-06-30T15:55:17.009Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-30T15:55:17.009Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,0,10
+2026-06-30 16:00:00,24.8,0.0,17.1,0
 2026-06-30T16:00:43.468Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-30T16:00:43.468Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,8,16
 2026-06-30T16:00:43.468Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,7,17
@@ -39094,6 +39375,7 @@
 2026-06-30T16:55:16.438Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-30T16:55:16.438Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-30T16:55:16.438Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-30 17:00:00,24.4,0.0,17.3,0
 2026-06-30T17:00:43.134Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-30T17:00:43.134Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-30T17:00:43.134Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -39238,6 +39520,7 @@
 2026-06-30T17:55:17.140Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-30T17:55:17.140Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-30T17:55:17.140Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,2,8
+2026-06-30 18:00:00,23.0,0.0,18.1,0
 2026-06-30T18:00:42.840Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,7,17
 2026-06-30T18:00:42.840Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-30T18:00:42.840Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,8,16
@@ -39382,6 +39665,7 @@
 2026-06-30T18:55:16.540Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-30T18:55:16.540Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-30T18:55:16.540Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-30 19:00:00,22.1,0.0,18.1,0
 2026-06-30T19:00:40.340Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-30T19:00:40.340Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,7,17
 2026-06-30T19:00:40.340Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,10,14
@@ -39526,6 +39810,7 @@
 2026-06-30T19:55:17.430Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,2,8
 2026-06-30T19:55:17.430Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,0,10
 2026-06-30T19:55:17.430Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-30 20:00:00,21.0,0.0,18.0,0
 2026-06-30T20:00:40.701Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-30T20:00:40.701Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,5,19
 2026-06-30T20:00:40.701Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,11,13
@@ -39670,6 +39955,7 @@
 2026-06-30T20:55:16.770Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,3,7
 2026-06-30T20:55:16.770Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,1,9
 2026-06-30T20:55:16.770Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-30 21:00:00,19.4,0.0,16.6,0
 2026-06-30T21:00:42.707Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-30T21:00:42.707Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,3,21
 2026-06-30T21:00:42.707Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,12,12
@@ -39814,6 +40100,7 @@
 2026-06-30T21:55:17.395Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-30T21:55:17.395Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,2,8
 2026-06-30T21:55:17.395Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-30 22:00:00,18.7,0.0,15.8,0
 2026-06-30T22:00:43.219Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,8,16
 2026-06-30T22:00:43.219Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-30T22:00:43.219Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,10,14
@@ -39958,6 +40245,7 @@
 2026-06-30T22:55:16.597Z,st_d4sl14p4gpvs73agnoi0,11 San Martin (Udala) - Ayuntamiento San Martín,4,6
 2026-06-30T22:55:16.597Z,st_d51sccd4faec738epl3g,12 Zabalganeko gizarte-etxea - CC Zabalgana,3,7
 2026-06-30T22:55:16.597Z,st_d7p43v8g4a6c73a823dg,8 Tren geltokia - Estación de Tren,1,9
+2026-06-30 23:00:00,17.9,0.0,14.8,0
 2026-06-30T23:00:41.875Z,st_d4sl1494gpvs73agno80,1 Autobus geltokia - Estación de autobuses,6,18
 2026-06-30T23:00:41.875Z,st_d4sl14d0ol7c73bfvs4g,4 Antso Jakituna - Sancho el Sabio,2,22
 2026-06-30T23:00:41.875Z,st_d4sl14emk29c73efcpf0,2 Leizaola plaza - Plaza de Leizaola,10,14

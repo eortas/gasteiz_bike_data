@@ -25,6 +25,7 @@ def cargar_historico_completo():
     historico['timestamp'] = pd.to_datetime(
         historico['timestamp'], format='ISO8601', utc=True
     )
+    historico = historico[historico['id_estacion'].astype(str).str.startswith('st_')]
     historico = historico.drop_duplicates(
         subset=['timestamp', 'id_estacion'], keep='last'
     )
