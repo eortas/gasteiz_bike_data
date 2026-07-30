@@ -22,13 +22,17 @@ def obtener_estaciones_mugibike_realtime():
         with urllib.request.urlopen(req, timeout=10) as resp:
             data = json.loads(resp.read().decode('utf-8'))
             stations = data.get('data', {}).get('stations', [])
+            anclajes_api_validos = any(
+                s.get('availableSlots') not in (None, 0)
+                for s in stations
+            )
             
             filas = []
             for s in stations:
                 b_disp = s.get('availableBikes', 0)
-                a_disp = s.get('availableSlots', 0)
-                cap = b_disp + a_disp
-                pct_oc = b_disp / cap if cap > 0 else 0.0
+                a_disp = s.get('availableSlots') if anclajes_api_validos else None
+                cap = b_disp + a_disp if a_disp is not None else None
+                pct_oc = b_disp / cap if cap else None
                 
                 filas.append({
                     'id_estacion': s.get('id'),

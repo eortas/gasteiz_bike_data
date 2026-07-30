@@ -54,9 +54,14 @@ class handler(BaseHTTPRequestHandler):
                     if est_nombre in mapping_bicis:
                         b_live = mapping_bicis[est_nombre]
                         a_live = mapping_anclajes[est_nombre]
+                        cap = df_estado.loc[idx, 'capacidad']
+
+                        # La API no siempre informa de los anclajes libres.
+                        if pd.isna(a_live):
+                            a_live = max(cap - b_live, 0)
+
                         df_estado.loc[idx, 'bicis_disponibles'] = b_live
                         df_estado.loc[idx, 'anclajes_disponibles'] = a_live
-                        cap = df_estado.loc[idx, 'capacidad']
                         df_estado.loc[idx, 'pct_ocupacion'] = b_live / max(cap, 1)
 
             df_estado['temperatura'] = meteo_actual['temperatura']
