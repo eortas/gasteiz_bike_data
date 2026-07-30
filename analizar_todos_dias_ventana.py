@@ -1,19 +1,15 @@
 import sys
 import pandas as pd
 import numpy as np
+from cargar_historico import cargar_historico_completo
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
 def analizar_todos_los_dias_ventana():
     print("Analizando todos los días del dataset con la ventana de seguridad (20:00 - 04:00 - 12:00)...")
-    df = pd.read_csv('features_historico.csv')
-        
-    df['timestamp'] = pd.to_datetime(df['timestamp'])
-    if df['timestamp'].dt.tz is not None:
-        df['timestamp'] = df['timestamp'].dt.tz_convert('Europe/Madrid').dt.tz_localize(None)
-    else:
-        df['timestamp'] = df['timestamp'].dt.tz_localize(None)
+    df = cargar_historico_completo()
+    df['timestamp'] = df['timestamp'].dt.tz_convert('Europe/Madrid').dt.tz_localize(None)
         
     red_por_ts = df.groupby('timestamp').agg(
         total_bicis_estaciones=('bicis_disponibles', 'sum')

@@ -1,15 +1,14 @@
 import sys
 import pandas as pd
 import numpy as np
+from cargar_historico import cargar_historico_completo
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
 def analizar_flota_4am_50_bicis():
     print("Cargando datos para el estudio de flota operativa a las 04:00 AM sobre las 50 bicis licitadas...")
-    df = pd.read_csv('features_historico.csv')
-        
-    df['timestamp'] = pd.to_datetime(df['timestamp'])
+    df = cargar_historico_completo()
     
     # Agrupamos por marca de tiempo para obtener la foto completa de la red
     red_por_ts = df.groupby('timestamp').agg(

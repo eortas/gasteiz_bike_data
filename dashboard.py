@@ -62,9 +62,19 @@ def main():
     
     modelo = cargar_modelo()
     df_features, df_distancias = cargar_datos()
-    periodo_inicio = df_features['timestamp'].min().strftime('%d/%m/%Y')
-    periodo_fin = df_features['timestamp'].max().strftime('%d/%m/%Y %H:%M')
-    dias_con_datos = df_features['timestamp'].dt.date.nunique()
+    periodo_modelo_inicio = df_features['timestamp'].min().strftime('%d/%m/%Y')
+    periodo_modelo_fin = df_features['timestamp'].max().strftime('%d/%m/%Y %H:%M')
+    dias_modelo = df_features['timestamp'].dt.date.nunique()
+    ruta_auditoria = 'resumen_flota_operativa_4am_50bicis.csv'
+    if os.path.exists(ruta_auditoria):
+        fechas_historicas = pd.to_datetime(pd.read_csv(ruta_auditoria)['fecha'])
+        periodo_inicio = fechas_historicas.min().strftime('%d/%m/%Y')
+        periodo_fin = fechas_historicas.max().strftime('%d/%m/%Y')
+        dias_con_datos = len(fechas_historicas)
+    else:
+        periodo_inicio = df_features['timestamp'].min().strftime('%d/%m/%Y')
+        periodo_fin = df_features['timestamp'].max().strftime('%d/%m/%Y %H:%M')
+        dias_con_datos = df_features['timestamp'].dt.date.nunique()
     
     # Intentamos obtener la disponibilidad en vivo desde la API de Mugibike
     df_live, exito_live = cargar_estaciones_realtime()
@@ -242,7 +252,7 @@ def main():
 
     with tab4:
         st.subheader("📈 Evaluación de Impacto y Mejora de Disponibilidad (Backtest histórico)")
-        st.caption(f"Simulación histórica con {dias_con_datos} días de datos entre el {periodo_inicio} y el {periodo_fin}; no representa el estado en vivo.")
+        st.caption(f"Simulación histórica con {dias_modelo} días de datos entre el {periodo_modelo_inicio} y el {periodo_modelo_fin}; no representa el estado en vivo.")
         st.markdown("Estudio de impacto basado en los **datos históricos de todo el mes**, incorporando **tiempos reales de desplazamiento**, maniobra base del operario en cada parada y **tiempo de manipulación física por bicicleta**.")
         
         # Leemos exclusivamente los datos estáticos precalculados

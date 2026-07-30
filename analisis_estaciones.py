@@ -1,4 +1,5 @@
 import pandas as pd
+from cargar_historico import cargar_historico_completo
 
 # Definimos la franja horaria nocturna sin servicio (de 23:00 a 06:00)
 HORA_INICIO_NOCHE = 23
@@ -7,11 +8,11 @@ HORA_FIN_NOCHE = 6
 def cargar_y_preparar_datos(ruta_csv):
     columnas = ['timestamp', 'id_estacion', 'nombre_estacion', 'bicis_disponibles', 'anclajes_disponibles']
 
-    # Cargamos las columnas necesarias del histórico de features actualizado.
-    df = pd.read_csv(ruta_csv, usecols=columnas)
+    # Combinamos el histórico raíz y las particiones mensuales disponibles.
+    df = cargar_historico_completo()[columnas].copy()
     
     # Convertimos la columna timestamp a tipo fecha (datetime)
-    df['timestamp'] = pd.to_datetime(df['timestamp'])
+    df['timestamp'] = pd.to_datetime(df['timestamp'], utc=True)
     
     # Ordenamos los datos por estación y fecha/hora
     df = df.sort_values(by=['id_estacion', 'timestamp']).reset_index(drop=True)
