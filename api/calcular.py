@@ -81,7 +81,15 @@ class handler(BaseHTTPRequestHandler):
             def clasificar_alerta(row):
                 pred = row['prediccion_30m']
                 cap = row['capacidad']
-                if pred <= 1.0:
+                bicis_actuales = row['bicis_disponibles']
+                anclajes_actuales = row['anclajes_disponibles']
+
+                # El estado actual es más urgente que cualquier predicción.
+                if bicis_actuales <= 1:
+                    return '🔴 CRÍTICA (Sin bicicletas ahora)'
+                elif anclajes_actuales <= 1:
+                    return '🔴 CRÍTICA (Sin anclajes ahora)'
+                elif pred <= 1.0:
                     return '🔴 CRÍTICA (Vaciado inminente)'
                 elif pred >= cap - 1.0:
                     return '🔴 CRÍTICA (Saturación inminente)'

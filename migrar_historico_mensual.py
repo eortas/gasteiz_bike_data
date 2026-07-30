@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 def main():
-    repo_dir = r"c:\Users\ortas\OneDrive\Documentos\gasteiz_bike_data-1"
+    repo_dir = os.path.dirname(os.path.abspath(__file__))
     csv_path = os.path.join(repo_dir, "historico.csv")
     datos_dir = os.path.join(repo_dir, "datos")
     
