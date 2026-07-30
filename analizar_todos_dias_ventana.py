@@ -40,9 +40,10 @@ def analizar_todos_los_dias_ventana():
         idx_central = (red_por_ts['timestamp'] - ts_central).abs().idxmin()
         idx_plus = (red_por_ts['timestamp'] - ts_plus_8h).abs().idxmin()
         
-        bicis_20pm = red_por_ts.loc[idx_minus, 'total_bicis_estaciones']
-        bicis_4am = red_por_ts.loc[idx_central, 'total_bicis_estaciones']
-        bicis_12pm = red_por_ts.loc[idx_plus, 'total_bicis_estaciones']
+        # Limitamos el cómputo al máximo de 50 bicicletas de la referencia contractual.
+        bicis_20pm = min(red_por_ts.loc[idx_minus, 'total_bicis_estaciones'], FLOTA_LICITADA)
+        bicis_4am = min(red_por_ts.loc[idx_central, 'total_bicis_estaciones'], FLOTA_LICITADA)
+        bicis_12pm = min(red_por_ts.loc[idx_plus, 'total_bicis_estaciones'], FLOTA_LICITADA)
         
         promedio_ventana = (bicis_20pm + bicis_4am + bicis_12pm) / 3.0
         

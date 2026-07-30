@@ -23,8 +23,10 @@ def cargar_y_preparar_datos(ruta_csv):
     df['siguiente_timestamp'] = df.groupby('id_estacion')['timestamp'].shift(-1)
     df['duracion_minutos'] = (df['siguiente_timestamp'] - df['timestamp']).dt.total_seconds() / 60.0
     
-    # Si la última muestra de una estación no tiene siguiente registro, asignamos la mediana del intervalo
-    mediana_intervalo = df['duracion_minutos'].median()
+    # Evitamos contabilizar como inactividad los huecos sin mediciones.
+    intervalos_validos = df['duracion_minutos'].between(0, 30, inclusive='right')
+    mediana_intervalo = df.loc[intervalos_validos, 'duracion_minutos'].median()
+    df.loc[~intervalos_validos, 'duracion_minutos'] = mediana_intervalo
     df['duracion_minutos'] = df['duracion_minutos'].fillna(mediana_intervalo)
     
     # Definimos el tiempo operativo durante el día (fuera del horario nocturno de 23:00 a 06:00)
