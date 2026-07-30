@@ -62,6 +62,8 @@ def main():
     
     modelo = cargar_modelo()
     df_features, df_distancias = cargar_datos()
+    periodo_inicio = df_features['timestamp'].min().strftime('%d/%m/%Y')
+    periodo_fin = df_features['timestamp'].max().strftime('%d/%m/%Y %H:%M')
     
     # Intentamos obtener la disponibilidad en vivo desde la API de Mugibike
     df_live, exito_live = cargar_estaciones_realtime()
@@ -149,7 +151,7 @@ def main():
     estado_calendario = "🎉 Fiestas La Blanca" if blanca_hoy else ("🎈 Festivo" if festivo_hoy else "📅 Día Laborable")
     
     col1.metric("Estaciones", f"{total_estaciones}")
-    col2.metric("Bicicletas Activas", f"{total_bicis}")
+    col2.metric("Bicicletas en estaciones", f"{total_bicis}")
     col3.metric("Alertas Críticas", f"{alertas_criticas}", delta_color="inverse")
     
     titulo_clima = "Clima (Estimado)" if meteo_actual.get('es_fallback', False) else "Clima en Vivo"
@@ -178,7 +180,7 @@ def main():
         
         capacidad_van = st.slider("Capacidad máxima de la furgoneta de reparto (bicicletas):", 5, 20, 10)
         
-        necesidades = obtener_necesidades_estaciones(modelo, df_features)
+        necesidades = obtener_necesidades_estaciones(modelo, df_features, df_estado)
         pasos_ruta, t_total, d_total = calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgoneta=capacidad_van)
         
         if pasos_ruta:
@@ -195,7 +197,7 @@ def main():
 
     with tab3:
         st.subheader("Análisis de Tiempo Inactivo por Falta de Bicicletas o Anclajes")
-        st.caption("Contabilizado únicamente dentro del horario operativo diurno (excluyendo el horario nocturno de 23:00 a 06:00).")
+        st.caption(f"Análisis histórico del {periodo_inicio} al {periodo_fin}. Contabilizado únicamente dentro del horario operativo diurno de 06:00 a 23:00.")
         
         df_inutil, df_finde = cargar_resumenes_inactividad()
         
@@ -238,7 +240,8 @@ def main():
         st.dataframe(df_tabla_inactiva, use_container_width=True, hide_index=True)
 
     with tab4:
-        st.subheader("📈 Evaluación de Impacto y Mejora de Disponibilidad (Backtest Mensual)")
+        st.subheader("📈 Evaluación de Impacto y Mejora de Disponibilidad (Backtest histórico)")
+        st.caption(f"Simulación histórica del {periodo_inicio} al {periodo_fin}; no representa el estado en vivo.")
         st.markdown("Estudio de impacto basado en los **datos históricos de todo el mes**, incorporando **tiempos reales de desplazamiento**, maniobra base del operario en cada parada y **tiempo de manipulación física por bicicleta**.")
         
         # Leemos exclusivamente los datos estáticos precalculados
@@ -284,7 +287,7 @@ def main():
 
     with tab5:
         st.subheader("📋 Auditoría de Disponibilidad de Flota de Bicicletas (Licitación Municipal: 50 Bicis)")
-        st.caption("Control automático del cumplimiento del umbral mínimo del 85% de flota operativa exigido por el Ayuntamiento de Vitoria-Gasteiz.")
+        st.caption(f"Auditoría histórica del {periodo_inicio} al {periodo_fin}. Control del umbral mínimo del 85% de flota operativa.")
         
         ruta_csv_4am = 'resumen_flota_operativa_4am_50bicis.csv'
         ruta_csv_ventana = 'resumen_evaluacion_ventana_todos_dias.csv'

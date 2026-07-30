@@ -108,7 +108,7 @@ class handler(BaseHTTPRequestHandler):
             df_estado['nivel_alerta'] = df_estado.apply(clasificar_alerta, axis=1)
 
             # Cálculo de la ruta de la furgoneta
-            necesidades = obtener_necesidades_estaciones(modelo, df_features)
+            necesidades = obtener_necesidades_estaciones(modelo, df_features, df_estado)
             pasos_ruta, t_total, d_total = calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgoneta=capacidad_van)
 
             # Formatear lista de estaciones

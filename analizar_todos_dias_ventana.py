@@ -7,10 +7,7 @@ if hasattr(sys.stdout, 'reconfigure'):
 
 def analizar_todos_los_dias_ventana():
     print("Analizando todos los días del dataset con la ventana de seguridad (20:00 - 04:00 - 12:00)...")
-    try:
-        df = pd.read_parquet('historico.parquet')
-    except Exception:
-        df = pd.read_csv('features_historico.csv')
+    df = pd.read_csv('features_historico.csv')
         
     df['timestamp'] = pd.to_datetime(df['timestamp'])
     if df['timestamp'].dt.tz is not None:

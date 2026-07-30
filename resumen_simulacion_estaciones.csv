@@ -1,13 +1,13 @@
 Estación,Horas Inútil (Sin Sistema),Horas Inútil (Con ML),% Inactiva (Sin Sistema),% Inactiva (Con ML),% Mejora
-6 Unibertsitatea - Universidad,53.2,10.0,22.72,4.27,81.2
-5 Mendizorrotza - Mendizorroza,52.1,22.3,22.29,9.55,57.1
-7 Salburuko gizarte-etxea - C.C. Salburua,45.2,10.7,19.31,4.56,76.4
-9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,44.6,25.3,19.07,10.8,43.3
-12 Zabalganeko gizarte-etxea - CC Zabalgana,44.0,9.6,18.81,4.1,78.2
-10 AUO - HUA,31.6,16.1,13.5,6.87,49.1
-8 Tren geltokia - Estación de Tren,26.3,1.2,11.25,0.53,95.3
-2 Leizaola plaza - Plaza de Leizaola,23.2,13.6,9.9,5.81,41.3
-11 San Martin (Udala) - Ayuntamiento San Martín,14.9,17.7,6.37,7.58,-19.0
-4 Antso Jakituna - Sancho el Sabio,13.1,11.8,5.59,5.02,10.2
-3 Ballester apezpikua - Obispo Ballester,6.2,10.8,2.63,4.63,-75.7
-1 Autobus geltokia - Estación de autobuses,3.7,10.0,1.56,4.27,-173.1
+6 Unibertsitatea - Universidad,53.2,69.4,22.72,29.66,-30.5
+5 Mendizorrotza - Mendizorroza,52.1,64.9,22.29,27.74,-24.5
+7 Salburuko gizarte-etxea - C.C. Salburua,45.2,22.7,19.31,9.69,49.8
+9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,44.6,25.8,19.07,11.01,42.2
+12 Zabalganeko gizarte-etxea - CC Zabalgana,44.0,35.2,18.81,15.04,20.0
+10 AUO - HUA,31.6,13.5,13.5,5.77,57.3
+8 Tren geltokia - Estación de Tren,26.3,49.2,11.25,21.04,-87.0
+2 Leizaola plaza - Plaza de Leizaola,23.2,20.5,9.9,8.76,11.5
+11 San Martin (Udala) - Ayuntamiento San Martín,14.9,22.7,6.37,9.69,-52.0
+4 Antso Jakituna - Sancho el Sabio,13.1,18.2,5.59,7.76,-38.8
+3 Ballester apezpikua - Obispo Ballester,6.2,10.5,2.63,4.48,-70.1
+1 Autobus geltokia - Estación de autobuses,3.7,17.1,1.56,7.3,-366.6

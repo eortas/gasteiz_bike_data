@@ -7,10 +7,7 @@ if hasattr(sys.stdout, 'reconfigure'):
 
 def analizar_flota_4am_50_bicis():
     print("Cargando datos para el estudio de flota operativa a las 04:00 AM sobre las 50 bicis licitadas...")
-    try:
-        df = pd.read_parquet('historico.parquet')
-    except Exception:
-        df = pd.read_csv('features_historico.csv')
+    df = pd.read_csv('features_historico.csv')
         
     df['timestamp'] = pd.to_datetime(df['timestamp'])
     

@@ -173,19 +173,37 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
                     pred = r['prediccion_30m']
                     cap = r['capacidad']
                     b_sim = bicis_simuladas[est]
-                    
-                    if pred <= 2.0 and b_sim <= 3:
-                        necesidad = min(4, cap - b_sim)
+
+                    nivel_seguro = min(b_sim, pred)
+                    if b_sim <= 1 or pred <= 2.5:
+                        meta = min(5, cap - 2)
+                        necesidad = min(5, int(np.ceil(meta - nivel_seguro)))
                         if necesidad > 0:
-                            destinos[est] = necesidad
-                    elif pred >= cap - 2.0 or b_sim >= 6:
-                        sobrante = min(b_sim - 5, 4)
+                            urgencia = 100 if b_sim <= 1 or pred <= 1.0 else 10
+                            destinos[est] = {
+                                'cantidad': necesidad,
+                                'urgencia': urgencia
+                            }
+                    elif b_sim >= 5 and pred >= 5:
+                        sobrante = min(int(np.floor(nivel_seguro - 5)), 4)
                         if sobrante > 0:
                             origenes[est] = sobrante
                             
                 if bicis_en_furgoneta > 0 and destinos:
-                    est_destino = min(destinos.keys(), key=lambda d: obtener_tiempo_conduccion(df_distancias, estacion_actual_furgoneta, d))
-                    cant_b = min(bicis_en_furgoneta, destinos[est_destino])
+                    max_urgencia = max(info['urgencia'] for info in destinos.values())
+                    destinos_urgentes = [
+                        est for est, info in destinos.items()
+                        if info['urgencia'] == max_urgencia
+                    ]
+                    est_destino = min(
+                        destinos_urgentes,
+                        key=lambda d: obtener_tiempo_conduccion(
+                            df_distancias,
+                            estacion_actual_furgoneta,
+                            d
+                        )
+                    )
+                    cant_b = min(bicis_en_furgoneta, destinos[est_destino]['cantidad'])
                     
                     t_conduccion = obtener_tiempo_conduccion(df_distancias, estacion_actual_furgoneta, est_destino)
                     t_manipulacion = tiempo_base_parada + (cant_b * tiempo_por_bici)

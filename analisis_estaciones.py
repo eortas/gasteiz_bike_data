@@ -5,11 +5,10 @@ HORA_INICIO_NOCHE = 23
 HORA_FIN_NOCHE = 6
 
 def cargar_y_preparar_datos(ruta_csv):
-    # Definimos los nombres de las columnas ya que el CSV no tiene cabecera
     columnas = ['timestamp', 'id_estacion', 'nombre_estacion', 'bicis_disponibles', 'anclajes_disponibles']
-    
-    # Cargamos el archivo CSV con pandas
-    df = pd.read_csv(ruta_csv, header=None, names=columnas)
+
+    # Cargamos las columnas necesarias del histórico de features actualizado.
+    df = pd.read_csv(ruta_csv, usecols=columnas)
     
     # Convertimos la columna timestamp a tipo fecha (datetime)
     df['timestamp'] = pd.to_datetime(df['timestamp'])
@@ -118,7 +117,7 @@ def calcular_resumen_por_dias(df):
     return resumen_dias, resumen_tipo_dia
 
 def main():
-    ruta_archivo = 'historico.csv'
+    ruta_archivo = 'features_historico.csv'
     
     # Cargamos y preparamos los datos
     df = cargar_y_preparar_datos(ruta_archivo)

@@ -17,39 +17,45 @@ def cargar_datos():
     df_features['timestamp'] = pd.to_datetime(df_features['timestamp'], format='ISO8601')
     return modelo, df_distancias, df_features
 
-def obtener_necesidades_estaciones(modelo, df_features):
-    ultimo_ts = df_features['timestamp'].max()
-    df_estado = df_features[df_features['timestamp'] == ultimo_ts].copy()
-    
-    meteo_actual = obtener_meteo_actual()
-    df_estado['temperatura'] = meteo_actual['temperatura']
-    df_estado['llueve'] = meteo_actual['llueve']
-    df_estado['viento_kmh'] = meteo_actual['viento_kmh']
-    
-    dt_actual = df_estado['timestamp'].iloc[0]
-    df_estado['es_festivo'] = es_festivo(dt_actual)
-    df_estado['es_la_blanca'] = es_fiestas_la_blanca(dt_actual)
-    df_estado['es_vacaciones_upv'] = es_vacaciones_universidad(dt_actual)
-    
-    X = df_estado[FEATURE_COLS].copy()
-    X['id_estacion'] = X['id_estacion'].astype('category')
-    
-    df_estado['prediccion_30m'] = np.clip(modelo.predict(X), 0, df_estado['capacidad'])
+def obtener_necesidades_estaciones(modelo, df_features, df_estado_actual=None):
+    if df_estado_actual is not None:
+        # Usamos el mismo estado en vivo que se muestra en el dashboard.
+        df_estado = df_estado_actual.copy()
+    else:
+        ultimo_ts = df_features['timestamp'].max()
+        df_estado = df_features[df_features['timestamp'] == ultimo_ts].copy()
+
+        meteo_actual = obtener_meteo_actual()
+        df_estado['temperatura'] = meteo_actual['temperatura']
+        df_estado['llueve'] = meteo_actual['llueve']
+        df_estado['viento_kmh'] = meteo_actual['viento_kmh']
+
+        dt_actual = df_estado['timestamp'].iloc[0]
+        df_estado['es_festivo'] = es_festivo(dt_actual)
+        df_estado['es_la_blanca'] = es_fiestas_la_blanca(dt_actual)
+        df_estado['es_vacaciones_upv'] = es_vacaciones_universidad(dt_actual)
+
+        X = df_estado[FEATURE_COLS].copy()
+        X['id_estacion'] = X['id_estacion'].astype('category')
+
+        df_estado['prediccion_30m'] = np.clip(modelo.predict(X), 0, df_estado['capacidad'])
     
     necesidades = {}
     for _, row in df_estado.iterrows():
         nombre = row['nombre_estacion']
         pred = row['prediccion_30m']
         cap = row['capacidad']
-        
-        if pred <= 2.5:
-            urgencia = 100 if pred <= 1.0 else 10
+        bicis_actuales = row['bicis_disponibles']
+        nivel_seguro = min(bicis_actuales, pred)
+
+        if bicis_actuales <= 1 or pred <= 2.5:
+            urgencia = 100 if bicis_actuales <= 1 or pred <= 1.0 else 10
             meta = min(5, cap - 2)
-            necesidad = int(np.ceil(meta - pred))
+            necesidad = int(np.ceil(meta - nivel_seguro))
             if necesidad > 0:
                 necesidades[nombre] = {'tipo': 'DESTINO', 'cantidad': necesidad, 'urgencia': urgencia}
-        elif pred >= 5.0:
-            cedible = int(np.floor(pred - 5.0))
+        elif bicis_actuales >= 5.0 and pred >= 5.0:
+            cedible = int(np.floor(nivel_seguro - 5.0))
             if cedible > 0:
                 necesidades[nombre] = {'tipo': 'ORIGEN', 'cantidad': cedible, 'urgencia': 0}
                 
