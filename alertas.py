@@ -49,7 +49,15 @@ def generar_predicciones_y_alertas(df_estado, modelo):
     def clasificar_alerta(row):
         pred = row['prediccion_30m']
         cap = row['capacidad']
-        if pred <= 1.0:
+        bicis_actuales = row['bicis_disponibles']
+        anclajes_actuales = row['anclajes_disponibles']
+
+        # El estado actual es más urgente que cualquier predicción.
+        if bicis_actuales <= 1:
+            return 'CRITICA (Sin bicicletas ahora)'
+        elif anclajes_actuales <= 1:
+            return 'CRITICA (Sin anclajes ahora)'
+        elif pred <= 1.0:
             return 'CRITICA (Vaciado inminente)'
         elif pred >= cap - 1.0:
             return 'CRITICA (Saturacion inminente)'
