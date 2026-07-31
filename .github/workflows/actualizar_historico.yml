@@ -1,0 +1,41 @@
+name: Actualizar histórico de Mugibike
+
+on:
+  repository_dispatch:
+    types: [actualizar-historico]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repository-write
+  cancel-in-progress: false
+
+jobs:
+  guardar-lectura:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Guardar lectura actual
+        run: python actualizar_historico.py
+
+      - name: Subir histórico actualizado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add datos/historico_*.csv
+          git diff --staged --quiet && exit 0
+          git commit -m "Actualizar histórico Mugibike"
+          git pull --rebase origin main
+          git push origin HEAD:main
