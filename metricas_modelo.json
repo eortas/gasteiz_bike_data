@@ -1,57 +1,61 @@
 {
-    "mae": 0.77,
-    "rmse": 1.25,
-    "recall": 83.3,
-    "mae_cv_promedio": 0.77,
-    "rmse_cv_promedio": 1.2,
+    "mae": 0.71,
+    "rmse": 1.21,
+    "recall": 83.6,
+    "mae_cv_promedio": 0.72,
+    "rmse_cv_promedio": 1.15,
     "importancias": [
         {
-            "Variable": "hora",
-            "Importancia": 1434
+            "Variable": "bicis_disponibles",
+            "Importancia": 1588
         },
         {
-            "Variable": "bicis_disponibles",
-            "Importancia": 1410
+            "Variable": "hora",
+            "Importancia": 1401
         },
         {
             "Variable": "temperatura",
-            "Importancia": 1366
+            "Importancia": 1281
         },
         {
             "Variable": "viento_kmh",
-            "Importancia": 1275
+            "Importancia": 1183
         },
         {
             "Variable": "id_estacion",
-            "Importancia": 793
-        },
-        {
-            "Variable": "dia_semana",
-            "Importancia": 710
+            "Importancia": 994
         },
         {
             "Variable": "tendencia_30m",
-            "Importancia": 693
+            "Importancia": 630
+        },
+        {
+            "Variable": "dia_semana",
+            "Importancia": 597
         },
         {
             "Variable": "anclajes_disponibles",
-            "Importancia": 609
+            "Importancia": 515
         },
         {
             "Variable": "pct_ocupacion",
-            "Importancia": 304
+            "Importancia": 305
         },
         {
             "Variable": "tendencia_15m",
-            "Importancia": 221
+            "Importancia": 212
+        },
+        {
+            "Variable": "es_vacaciones_upv",
+            "Importancia": 146
         },
         {
             "Variable": "capacidad",
-            "Importancia": 174
+            "Importancia": 130
         },
         {
             "Variable": "llueve",
-            "Importancia": 11
+            "Importancia": 18
         },
         {
             "Variable": "es_finde",
@@ -63,10 +67,6 @@
         },
         {
             "Variable": "es_la_blanca",
-            "Importancia": 0
-        },
-        {
-            "Variable": "es_vacaciones_upv",
             "Importancia": 0
         }
     ]
