@@ -5,6 +5,10 @@ on:
     - cron: '0 3 * * *' # Se ejecuta automáticamente todas las noches a las 03:00 AM UTC
   workflow_dispatch: # Permite ejecutar el reentrenamiento manualmente desde GitHub en cualquier momento
 
+concurrency:
+  group: repository-write
+  cancel-in-progress: false
+
 jobs:
   retrain:
     runs-on: ubuntu-latest
