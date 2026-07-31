@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 from cargar_historico import cargar_historico_completo
 
+MAX_DESFASE_MINUTOS = 30
+
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
@@ -35,6 +37,15 @@ def analizar_todos_los_dias_ventana():
         idx_minus = (red_por_ts['timestamp'] - ts_minus_8h).abs().idxmin()
         idx_central = (red_por_ts['timestamp'] - ts_central).abs().idxmin()
         idx_plus = (red_por_ts['timestamp'] - ts_plus_8h).abs().idxmin()
+
+        marcas_objetivo = [ts_minus_8h, ts_central, ts_plus_8h]
+        indices = [idx_minus, idx_central, idx_plus]
+        desfases = [
+            abs(red_por_ts.loc[indice, 'timestamp'] - marca).total_seconds() / 60
+            for indice, marca in zip(indices, marcas_objetivo)
+        ]
+        if any(desfase > MAX_DESFASE_MINUTOS for desfase in desfases):
+            continue
         
         # Limitamos el cómputo al máximo de 50 bicicletas de la referencia contractual.
         bicis_20pm = min(red_por_ts.loc[idx_minus, 'total_bicis_estaciones'], FLOTA_LICITADA)
@@ -59,6 +70,11 @@ def analizar_todos_los_dias_ventana():
         })
         
     df_eval = pd.DataFrame(registros_dias)
+
+    if df_eval.empty:
+        print("No hay días con las tres observaciones necesarias para el análisis.")
+        df_eval.to_csv('resumen_evaluacion_ventana_todos_dias.csv', index=False)
+        return
     
     total_dias = len(df_eval)
     dias_criticos_4am = df_eval['Critico 4 AM'].sum()
