@@ -18,6 +18,9 @@ def cargar_recursos():
     modelo = joblib.load('modelo_lightgbm.joblib')
     df_distancias = pd.read_csv('matriz_distancias_estaciones.csv')
     df_features = pd.read_csv('features_historico.csv')
+    df_features = df_features[
+        df_features['id_estacion'].astype(str).str.startswith('st_')
+    ].copy()
     df_features['timestamp'] = pd.to_datetime(df_features['timestamp'], format='ISO8601')
     return modelo, df_distancias, df_features
 

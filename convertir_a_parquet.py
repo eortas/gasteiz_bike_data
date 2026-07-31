@@ -23,6 +23,7 @@ def main():
     
     for csv_file in archivos_csv:
         df = pd.read_csv(csv_file, header=None, names=columnas)
+        df = df[df['id_estacion'].astype(str).str.startswith('st_')].copy()
         df['timestamp'] = pd.to_datetime(df['timestamp'], format='ISO8601', utc=True)
         df['id_estacion'] = df['id_estacion'].astype('category')
         df['nombre_estacion'] = df['nombre_estacion'].astype('category')

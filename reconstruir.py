@@ -17,7 +17,8 @@ conjunto_lineas = set()
 for linea in out.splitlines():
     if linea.startswith("+202"):
         linea_limpia = linea[1:].strip()
-        if len(linea_limpia.split(",")) == 5:
+        datos_linea = linea_limpia.split(",")
+        if len(datos_linea) == 5 and datos_linea[1].startswith("st_"):
             conjunto_lineas.add(linea_limpia)
 
 print(f"Total de líneas únicas encontradas: {len(conjunto_lineas)}")

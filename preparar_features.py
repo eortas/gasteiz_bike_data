@@ -23,7 +23,8 @@ def main():
         df = pd.concat(dfs, ignore_index=True)
         df['timestamp'] = pd.to_datetime(df['timestamp'], format='ISO8601')
     
-    df['timestamp'] = pd.to_datetime(df['timestamp'], format='ISO8601')
+    df = df[df['id_estacion'].astype(str).str.startswith('st_')].copy()
+    df['timestamp'] = pd.to_datetime(df['timestamp'], format='ISO8601', utc=True)
     # Si los timestamps tienen zona horaria, los convertimos a hora local Europe/Madrid
     if df['timestamp'].dt.tz is not None:
         df['timestamp'] = df['timestamp'].dt.tz_convert('Europe/Madrid').dt.tz_localize(None)
