@@ -24,7 +24,8 @@ print(f"Total de líneas únicas encontradas: {len(conjunto_lineas)}")
 
 datos = [linea.split(",") for linea in conjunto_lineas]
 df = pd.DataFrame(datos, columns=["timestamp", "id_estacion", "nombre_estacion", "bicis_disponibles", "anclajes_disponibles"])
-df["timestamp_dt"] = pd.to_datetime(df["timestamp"], format='ISO8601')
+# Convertimos todas las fechas a UTC para unificar zonas horarias distintas.
+df["timestamp_dt"] = pd.to_datetime(df["timestamp"], format="ISO8601", utc=True)
 df = df.sort_values(by=["timestamp_dt", "id_estacion"])
 
 # Particionamos por año y mes
