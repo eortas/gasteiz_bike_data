@@ -58,6 +58,15 @@ jobs:
           # Descartamos cambios accidentales en los CSV de datos para no colisionar con el scraper
           git checkout -- datos/*.csv historico.csv 2>/dev/null || true
           git add datos/*.parquet features_historico.csv meteo_historica.csv modelo_lightgbm.joblib metricas_modelo.json resumen_*.csv resumen_*.json matriz_distancias_estaciones.csv 2>/dev/null || true
-          git diff --staged --quiet || (git commit -m "chore(mlops): reentrenamiento diario ML, auditoría de flota y actualización de métricas [skip ci]" && git pull --rebase origin main && git push origin HEAD:main)
+          git diff --staged --quiet && exit 0
+          git commit -m "chore(mlops): reentrenamiento diario ML, auditoría de flota y actualización de métricas [skip ci]"
+
+          # Reintentamos el pull --rebase y push por si hay bloqueos temporales de concurrencia en GitHub
+          for intento in {1..5}; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            echo "Aviso: no se pudo hacer push en el intento $intento/5. Reintentamos en 3 segundos..."
+            sleep 3
+          done
+          exit 1
 
 
