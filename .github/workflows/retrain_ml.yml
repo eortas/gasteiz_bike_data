@@ -61,6 +61,11 @@ jobs:
           git diff --staged --quiet && exit 0
           git commit -m "chore(mlops): reentrenamiento diario ML, auditoría de flota y actualización de métricas [skip ci]"
 
+          # Algunos scripts pueden dejar cambios fuera de la lista anterior.
+          # Mostramos esos residuos y limpiamos el runner antes del rebase.
+          git status --short
+          git restore --worktree -- .
+
           # Reintentamos el pull --rebase y push por si hay bloqueos temporales de concurrencia en GitHub
           for intento in {1..5}; do
             git pull --rebase origin main && git push origin HEAD:main && exit 0
