@@ -1,65 +1,65 @@
 {
-    "mae": 0.65,
+    "mae": 0.64,
     "rmse": 1.09,
-    "recall": 80.6,
-    "mae_cv_promedio": 0.69,
-    "rmse_cv_promedio": 1.15,
+    "recall": 81.0,
+    "mae_cv_promedio": 0.7,
+    "rmse_cv_promedio": 1.17,
     "importancias": [
         {
             "Variable": "bicis_disponibles",
-            "Importancia": 1654
+            "Importancia": 1644
         },
         {
             "Variable": "hora",
-            "Importancia": 1514
+            "Importancia": 1477
         },
         {
             "Variable": "temperatura",
-            "Importancia": 1032
+            "Importancia": 1063
         },
         {
             "Variable": "id_estacion",
-            "Importancia": 936
+            "Importancia": 929
         },
         {
             "Variable": "viento_kmh",
-            "Importancia": 910
+            "Importancia": 908
         },
         {
             "Variable": "tendencia_30m",
-            "Importancia": 714
+            "Importancia": 701
         },
         {
             "Variable": "dia_semana",
-            "Importancia": 562
+            "Importancia": 574
         },
         {
             "Variable": "anclajes_disponibles",
-            "Importancia": 540
+            "Importancia": 570
         },
         {
             "Variable": "pct_ocupacion",
-            "Importancia": 369
+            "Importancia": 335
         },
         {
             "Variable": "tendencia_15m",
-            "Importancia": 244
+            "Importancia": 284
         },
         {
             "Variable": "capacidad",
-            "Importancia": 219
+            "Importancia": 188
         },
         {
             "Variable": "es_vacaciones_upv",
-            "Importancia": 123
+            "Importancia": 144
         },
         {
             "Variable": "es_la_blanca",
-            "Importancia": 88
+            "Importancia": 90
         },
         {
             "Variable": "es_festivo",
-            "Importancia": 86
+            "Importancia": 84
         },
         {
             "Variable": "llueve",
