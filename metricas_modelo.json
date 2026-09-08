@@ -1,69 +1,69 @@
 {
-    "mae": 0.69,
-    "rmse": 1.14,
+    "mae": 0.7,
+    "rmse": 1.16,
     "recall": 81.5,
-    "mae_cv_promedio": 0.72,
-    "rmse_cv_promedio": 1.19,
+    "mae_cv_promedio": 0.71,
+    "rmse_cv_promedio": 1.17,
     "importancias": [
         {
             "Variable": "bicis_disponibles",
-            "Importancia": 1654
+            "Importancia": 1630
         },
         {
             "Variable": "hora",
-            "Importancia": 1515
-        },
-        {
-            "Variable": "temperatura",
-            "Importancia": 990
-        },
-        {
-            "Variable": "id_estacion",
-            "Importancia": 929
+            "Importancia": 1520
         },
         {
             "Variable": "viento_kmh",
-            "Importancia": 893
+            "Importancia": 942
+        },
+        {
+            "Variable": "temperatura",
+            "Importancia": 940
+        },
+        {
+            "Variable": "id_estacion",
+            "Importancia": 920
         },
         {
             "Variable": "tendencia_30m",
-            "Importancia": 686
-        },
-        {
-            "Variable": "anclajes_disponibles",
-            "Importancia": 587
+            "Importancia": 710
         },
         {
             "Variable": "dia_semana",
-            "Importancia": 563
+            "Importancia": 580
+        },
+        {
+            "Variable": "anclajes_disponibles",
+            "Importancia": 573
         },
         {
             "Variable": "pct_ocupacion",
-            "Importancia": 368
+            "Importancia": 392
         },
         {
             "Variable": "tendencia_15m",
-            "Importancia": 276
+            "Importancia": 248
         },
         {
             "Variable": "capacidad",
-            "Importancia": 236
+            "Importancia": 227
         },
         {
             "Variable": "es_vacaciones_upv",
-            "Importancia": 119
+            "Importancia": 133
         },
         {
             "Variable": "es_festivo",
-            "Importancia": 91
+            "Importancia": 86
         },
         {
             "Variable": "es_la_blanca",
-            "Importancia": 83
+            "Importancia": 84
         },
         {
             "Variable": "llueve",
-            "Importancia": 10
+            "Importancia": 15
         },
         {
             "Variable": "es_finde",
