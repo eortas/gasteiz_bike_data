@@ -1,16 +1,16 @@
 {
     "evaluar_24h": false,
-    "horas_totales_servicio_red": 1724.5,
-    "horas_indisponible_real": 3546.1,
-    "horas_indisponible_sim": 3157.7,
-    "pct_real": 17.14,
-    "pct_sim": 15.26,
+    "horas_totales_servicio_red": 1741.4,
+    "horas_indisponible_real": 3560.5,
+    "horas_indisponible_sim": 3167.6,
+    "pct_real": 17.04,
+    "pct_sim": 15.16,
     "mejora_pct": 11.0,
-    "bicis_redistribuidas_total": 2476,
-    "horas_conduccion": 495.1,
-    "horas_manipulacion": 322.2,
-    "horas_operario_total": 993.5,
-    "pct_furgoneta_ocupada": 57.6,
-    "promedio_bicis_furgoneta": 0.89,
-    "tiempo_ejecucion_seg": 44.27
+    "bicis_redistribuidas_total": 2488,
+    "horas_conduccion": 509.2,
+    "horas_manipulacion": 324.0,
+    "horas_operario_total": 1011.1,
+    "pct_furgoneta_ocupada": 58.1,
+    "promedio_bicis_furgoneta": 0.88,
+    "tiempo_ejecucion_seg": 37.91
 }
