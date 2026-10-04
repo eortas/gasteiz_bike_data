@@ -1,69 +1,69 @@
 {
     "mae": 1.01,
     "rmse": 1.46,
-    "recall": 70.6,
-    "mae_cv_promedio": 0.71,
+    "recall": 71.6,
+    "mae_cv_promedio": 0.72,
     "rmse_cv_promedio": 1.18,
     "importancias": [
         {
             "Variable": "hora",
-            "Importancia": 1583
+            "Importancia": 1587
         },
         {
             "Variable": "bicis_disponibles",
-            "Importancia": 1568
+            "Importancia": 1517
         },
         {
             "Variable": "id_estacion",
-            "Importancia": 960
+            "Importancia": 944
         },
         {
             "Variable": "temperatura",
-            "Importancia": 871
+            "Importancia": 926
         },
         {
             "Variable": "viento_kmh",
-            "Importancia": 752
+            "Importancia": 754
         },
         {
             "Variable": "tendencia_30m",
-            "Importancia": 700
+            "Importancia": 731
         },
         {
             "Variable": "dia_semana",
-            "Importancia": 580
+            "Importancia": 576
         },
         {
             "Variable": "anclajes_disponibles",
-            "Importancia": 579
+            "Importancia": 520
         },
         {
             "Variable": "pct_ocupacion",
-            "Importancia": 500
+            "Importancia": 492
         },
         {
             "Variable": "tendencia_15m",
-            "Importancia": 289
+            "Importancia": 314
         },
         {
             "Variable": "capacidad",
-            "Importancia": 262
+            "Importancia": 295
         },
         {
             "Variable": "es_vacaciones_upv",
-            "Importancia": 172
+            "Importancia": 158
         },
         {
             "Variable": "es_festivo",
-            "Importancia": 96
+            "Importancia": 98
         },
         {
             "Variable": "es_la_blanca",
-            "Importancia": 85
+            "Importancia": 84
         },
         {
             "Variable": "llueve",
-            "Importancia": 3
+            "Importancia": 4
         },
         {
             "Variable": "es_finde",
