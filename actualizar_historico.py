@@ -8,28 +8,48 @@ from urllib.request import Request, urlopen
 API_URL = "https://mugibike.eus/api/client/entities"
 
 
-def obtener_capacidades():
-    capacidades = {}
-    archivos = [Path("historico.csv")]
-    archivos.extend(Path("datos").glob("historico_*.csv"))
+# Capacidades nominales conocidas de las estaciones de Mugibike Vitoria-Gasteiz
+CAPACIDADES_CONOCIDAS = {
+    "st_d4sl1494gpvs73agno80": 24,
+    "st_d4sl14d0ol7c73bfvs4g": 24,
+    "st_d4sl14emk29c73efcpf0": 24,
+    "st_d4sl14ffimdc73fprpdg": 24,
+    "st_d4sl14gvnoqc739efe8g": 13,
+    "st_d4sl14gvnoqc739efea0": 17,
+    "st_d4sl14gvnoqc739efebg": 23,
+    "st_d4sl14gvnoqc739efed0": 12,
+    "st_d4sl14h4gpvs73agnodg": 10,
+    "st_d4sl14p4gpvs73agnoi0": 11,
+    "st_d51sccd4faec738epl3g": 10,
+    "st_d7p43v8g4a6c73a823dg": 11,
+}
 
-    for archivo in archivos:
-        if not archivo.exists():
-            continue
 
-        with archivo.open(encoding="utf-8") as csv_file:
-            for fila in csv.reader(csv_file):
-                if len(fila) != 5 or not fila[1].startswith("st_"):
-                    continue
+def obtener_capacidades(estaciones_api=None):
+    capacidades = dict(CAPACIDADES_CONOCIDAS)
 
-                try:
-                    capacidad = int(float(fila[3])) + int(float(fila[4]))
-                except ValueError:
-                    continue
+    # Si detectamos estaciones en la API que no están en el mapa conocido, consultamos el histórico local
+    if estaciones_api:
+        desconocidas = {
+            e.get("id") for e in estaciones_api
+            if e.get("id") and e.get("id") not in capacidades
+        }
+        if desconocidas:
+            archivos = sorted(Path("datos").glob("historico_*.csv"), reverse=True)
+            if Path("historico.csv").exists():
+                archivos.append(Path("historico.csv"))
 
-                capacidades[fila[1]] = max(capacidades.get(fila[1], 0), capacidad)
-
+            for archivo in archivos:
+                with archivo.open(encoding="utf-8") as csv_file:
+                    for fila in csv.reader(csv_file):
+                        if len(fila) == 5 and fila[1] in desconocidas:
+                            try:
+                                cap = int(float(fila[3])) + int(float(fila[4]))
+                                capacidades[fila[1]] = max(capacidades.get(fila[1], 0), cap)
+                            except ValueError:
+                                continue
     return capacidades
+
 
 
 def obtener_lecturas():
@@ -46,7 +66,7 @@ def obtener_lecturas():
 
     timestamp = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     estaciones = datos_api.get("data", {}).get("stations", [])
-    capacidades = obtener_capacidades()
+    capacidades = obtener_capacidades(estaciones)
     lecturas = []
 
     for estacion in estaciones:

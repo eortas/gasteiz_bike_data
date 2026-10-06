@@ -20,28 +20,29 @@ jobs:
       - name: Descargar repositorio
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-
-      - name: Configurar Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
+          fetch-depth: 1
 
       - name: Guardar lectura actual
-        run: python actualizar_historico.py
+        run: python3 actualizar_historico.py
 
       - name: Subir histórico actualizado
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add datos/historico_*.csv
-          git diff --staged --quiet && exit 0
-          git commit -m "Actualizar histórico Mugibike"
 
-          # Reintentamos el pull --rebase y push por si hay bloqueos temporales de concurrencia en GitHub
-          for intento in {1..5}; do
-            git pull --rebase origin main && git push origin HEAD:main && exit 0
-            echo "Aviso: no se pudo hacer push en el intento $intento/5. Reintentamos en 3 segundos..."
-            sleep 3
+          # Reintentamos el push; si hay colisión, sincronizamos con origin/main y reaplicamos la lectura
+          for intento in 1 2 3 4 5; do
+            git add datos/historico_*.csv
+            git diff --staged --quiet && exit 0
+            git commit -m "Actualizar histórico Mugibike" || true
+            git push origin HEAD:main && exit 0
+
+            echo "Aviso: no se pudo hacer push en el intento $intento/5. Sincronizando con origin/main..."
+            sleep 2
+            git fetch origin main --depth=1
+            git rebase --abort 2>/dev/null || true
+            git reset --hard origin/main
+            python3 actualizar_historico.py
           done
           exit 1
+
