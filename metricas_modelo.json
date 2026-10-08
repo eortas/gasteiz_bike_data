@@ -1,61 +1,61 @@
 {
-    "mae": 1.03,
-    "rmse": 1.47,
-    "recall": 70.9,
-    "mae_cv_promedio": 0.71,
-    "rmse_cv_promedio": 1.18,
+    "mae": 1.01,
+    "rmse": 1.45,
+    "recall": 72.7,
+    "mae_cv_promedio": 0.72,
+    "rmse_cv_promedio": 1.19,
     "importancias": [
         {
             "Variable": "hora",
-            "Importancia": 1691
+            "Importancia": 1626
         },
         {
             "Variable": "bicis_disponibles",
-            "Importancia": 1570
+            "Importancia": 1561
         },
         {
             "Variable": "id_estacion",
-            "Importancia": 966
+            "Importancia": 1004
         },
         {
             "Variable": "temperatura",
-            "Importancia": 844
-        },
-        {
-            "Variable": "viento_kmh",
-            "Importancia": 729
+            "Importancia": 835
         },
         {
             "Variable": "tendencia_30m",
-            "Importancia": 709
+            "Importancia": 725
+        },
+        {
+            "Variable": "viento_kmh",
+            "Importancia": 700
         },
         {
             "Variable": "dia_semana",
-            "Importancia": 607
+            "Importancia": 588
         },
         {
             "Variable": "anclajes_disponibles",
-            "Importancia": 520
+            "Importancia": 563
         },
         {
             "Variable": "pct_ocupacion",
-            "Importancia": 433
+            "Importancia": 459
         },
         {
             "Variable": "tendencia_15m",
-            "Importancia": 301
+            "Importancia": 299
         },
         {
             "Variable": "capacidad",
-            "Importancia": 271
+            "Importancia": 261
         },
         {
             "Variable": "es_vacaciones_upv",
-            "Importancia": 158
+            "Importancia": 174
         },
         {
             "Variable": "es_festivo",
-            "Importancia": 110
+            "Importancia": 114
         },
         {
             "Variable": "es_la_blanca",
