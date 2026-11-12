@@ -1,69 +1,69 @@
 {
     "mae": 0.85,
     "rmse": 1.28,
-    "recall": 82.6,
+    "recall": 82.1,
     "mae_cv_promedio": 0.8,
     "rmse_cv_promedio": 1.26,
     "importancias": [
         {
             "Variable": "hora",
-            "Importancia": 1619
+            "Importancia": 1609
         },
         {
             "Variable": "bicis_disponibles",
-            "Importancia": 1518
+            "Importancia": 1503
         },
         {
             "Variable": "id_estacion",
-            "Importancia": 1102
+            "Importancia": 1091
         },
         {
             "Variable": "tendencia_30m",
-            "Importancia": 988
+            "Importancia": 985
         },
         {
             "Variable": "temperatura",
-            "Importancia": 695
+            "Importancia": 704
         },
         {
             "Variable": "viento_kmh",
-            "Importancia": 633
+            "Importancia": 584
         },
         {
             "Variable": "dia_semana",
-            "Importancia": 549
+            "Importancia": 545
         },
         {
             "Variable": "anclajes_disponibles",
-            "Importancia": 462
+            "Importancia": 515
         },
         {
             "Variable": "pct_ocupacion",
-            "Importancia": 360
+            "Importancia": 382
         },
         {
             "Variable": "tendencia_15m",
-            "Importancia": 299
+            "Importancia": 309
         },
         {
             "Variable": "es_vacaciones_upv",
-            "Importancia": 295
+            "Importancia": 296
         },
         {
             "Variable": "capacidad",
-            "Importancia": 270
+            "Importancia": 279
         },
         {
             "Variable": "es_festivo",
-            "Importancia": 119
+            "Importancia": 115
         },
         {
             "Variable": "es_la_blanca",
-            "Importancia": 85
+            "Importancia": 80
         },
         {
             "Variable": "llueve",
-            "Importancia": 6
+            "Importancia": 3
         },
         {
             "Variable": "es_finde",
