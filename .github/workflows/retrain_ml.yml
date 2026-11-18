@@ -40,6 +40,12 @@ jobs:
       - name: Reentrenar Modelo LightGBM
         run: python modelo_prediccion.py
 
+      - name: Verificar Umbral de Calidad del Modelo
+        run: python verificar_calidad.py
+
+      - name: Calcular Demanda Histórica por Estación
+        run: python calcular_demanda_estaciones.py
+
       - name: Calcular Análisis de Inactividad de Estaciones
         run: python analisis_estaciones.py
 
@@ -57,7 +63,7 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # Descartamos cambios accidentales en los CSV de datos para no colisionar con el scraper
           git checkout -- datos/*.csv historico.csv 2>/dev/null || true
-          git add datos/*.parquet features_historico.csv meteo_historica.csv modelo_lightgbm.joblib metricas_modelo.json resumen_*.csv resumen_*.json matriz_distancias_estaciones.csv 2>/dev/null || true
+          git add datos/*.parquet features_historico.csv meteo_historica.csv modelo_lightgbm.joblib metricas_modelo.json demanda_estaciones.csv resumen_*.csv resumen_*.json matriz_distancias_estaciones.csv 2>/dev/null || true
           git diff --staged --quiet && exit 0
           git commit -m "chore(mlops): reentrenamiento diario ML, auditoría de flota y actualización de métricas [skip ci]"
 

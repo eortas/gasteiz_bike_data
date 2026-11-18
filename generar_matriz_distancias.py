@@ -45,7 +45,9 @@ def obtener_matriz_osrm(nombres, coords):
                 a = math.sin(dlat/2)**2 + math.cos(math.radians(c1['lat'])) * math.cos(math.radians(c2['lat'])) * math.sin(dlon/2)**2
                 dist_km = 6371 * 2 * math.atan2(math.sqrt(a), math.sqrt(1-a)) * 1.3
                 distances[i][j] = dist_km * 1000
-                durations[i][j] = (dist_km / 16.0) * 3600
+                # El factor de tráfico de main (2.2) ya modela la velocidad efectiva
+                # de ~16 km/h; aquí partimos de flujo libre para no penalizar dos veces.
+                durations[i][j] = (dist_km / 35.2) * 3600
         return durations, distances
 
 def main():

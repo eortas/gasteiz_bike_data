@@ -5,3 +5,5 @@ lightgbm
 streamlit
 joblib
 pyarrow
+requests
+holidays

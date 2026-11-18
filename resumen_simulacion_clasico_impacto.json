@@ -1,0 +1,17 @@
+{
+    "modo_priorizacion": "clasico",
+    "evaluar_24h": false,
+    "horas_totales_servicio_red": 2553.8,
+    "horas_indisponible_real": 4806.8,
+    "horas_indisponible_sim": 4404.0,
+    "pct_real": 15.69,
+    "pct_sim": 14.37,
+    "mejora_pct": 8.4,
+    "bicis_redistribuidas_total": 3748,
+    "horas_conduccion": 781.7,
+    "horas_manipulacion": 481.8,
+    "horas_operario_total": 1526.4,
+    "pct_furgoneta_ocupada": 59.8,
+    "promedio_bicis_furgoneta": 0.87,
+    "tiempo_ejecucion_seg": 69.75
+}

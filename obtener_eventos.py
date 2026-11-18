@@ -1,6 +1,13 @@
 import pandas as pd
 
-# Festivos y eventos clave de Vitoria-Gasteiz
+try:
+    import holidays as _holidays
+    # Festivos nacionales y del País Vasco calculados por año (sin caducidad manual).
+    _FESTIVOS_PV = _holidays.Spain(subdiv='PV', years=range(2024, 2036))
+except Exception:  # Si la librería no está disponible, usamos la lista manual de reserva.
+    _FESTIVOS_PV = None
+
+# Festivos locales y eventos clave de Vitoria-Gasteiz que no cubre el calendario autonómico.
 FESTIVOS_VITORIA = [
     '2026-01-01', # Año Nuevo
     '2026-01-06', # Reyes
@@ -18,12 +25,21 @@ FESTIVOS_VITORIA = [
     '2026-12-25'  # Navidad
 ]
 
+# Festivos locales con fecha fija que no cubre el calendario autonómico.
+FESTIVOS_LOCALES_ANUALES = [(4, 28), (7, 25)]
+
 def es_festivo(fecha_dt):
     """Devuelve 1 si la fecha es un festivo oficial o domingo en Vitoria-Gasteiz."""
     fecha_dt = pd.to_datetime(fecha_dt)
     fecha_str = fecha_dt.strftime('%Y-%m-%d')
-    # Comprobamos si es domingo (weekday 6) o festivo oficial registrado
-    if fecha_dt.weekday() == 6 or fecha_str in FESTIVOS_VITORIA:
+    # Comprobamos si es domingo (weekday 6) o festivo oficial registrado.
+    if fecha_dt.weekday() == 6:
+        return 1
+    if _FESTIVOS_PV is not None and fecha_dt.date() in _FESTIVOS_PV:
+        return 1
+    if (fecha_dt.month, fecha_dt.day) in FESTIVOS_LOCALES_ANUALES:
+        return 1
+    if fecha_str in FESTIVOS_VITORIA:
         return 1
     return 0
 

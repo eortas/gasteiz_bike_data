@@ -4,7 +4,6 @@ import json
 import urllib.parse
 from http.server import BaseHTTPRequestHandler
 import pandas as pd
-import numpy as np
 import joblib
 
 # Añadimos el directorio raíz al path para importar módulos locales
@@ -12,9 +11,9 @@ BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 if BASE_DIR not in sys.path:
     sys.path.insert(0, BASE_DIR)
 
-from config import FEATURE_COLS
+from demanda import cargar_demanda_estaciones
+from inferencia import construir_estado_inferencia, predecir_30m
 from obtener_meteo import obtener_meteo_actual
-from obtener_eventos import es_festivo, es_fiestas_la_blanca, es_vacaciones_universidad
 from obtener_mugibike_realtime import obtener_estaciones_mugibike_realtime
 from optimizar_ruta_multiparada import (
     obtener_necesidades_estaciones,
@@ -28,59 +27,34 @@ class handler(BaseHTTPRequestHandler):
             query = urllib.parse.parse_qs(url_path.query)
             capacidad_van = int(query.get('capacidad_van', [10])[0])
 
-            # Cargar modelo y matrices
+            # Cargar modelo, demanda histórica y matriz de distancias
             ruta_modelo = os.path.join(BASE_DIR, 'modelo_lightgbm.joblib')
             ruta_features = os.path.join(BASE_DIR, 'features_historico.csv')
             ruta_distancias = os.path.join(BASE_DIR, 'matriz_distancias_estaciones.csv')
+            ruta_demanda = os.path.join(BASE_DIR, 'demanda_estaciones.csv')
 
             modelo = joblib.load(ruta_modelo)
             df_features = pd.read_csv(ruta_features)
             df_features['timestamp'] = pd.to_datetime(df_features['timestamp'], format='ISO8601')
             df_distancias = pd.read_csv(ruta_distancias)
+            df_demanda = cargar_demanda_estaciones(ruta_demanda)
 
             # Cargar clima y Mugibike en vivo
             meteo_actual = obtener_meteo_actual()
             df_live, exito_live = obtener_estaciones_mugibike_realtime()
 
-            ultimo_ts = df_features['timestamp'].max()
-            df_estado = df_features[df_features['timestamp'] == ultimo_ts].copy()
+            # Reconstruimos el estado con la hora, calendario y tendencias del instante actual.
+            df_estado = construir_estado_inferencia(
+                df_features,
+                df_live if (exito_live and not df_live.empty) else None,
+                meteo_actual,
+                directorio_datos=BASE_DIR
+            )
 
-            if exito_live and not df_live.empty:
-                mapping_bicis = df_live.set_index('nombre_estacion')['bicis_disponibles'].to_dict()
-                mapping_anclajes = df_live.set_index('nombre_estacion')['anclajes_disponibles'].to_dict()
+            festivo_hoy = int(df_estado['es_festivo'].iloc[0])
+            blanca_hoy = int(df_estado['es_la_blanca'].iloc[0])
 
-                for idx in df_estado.index:
-                    est_nombre = df_estado.loc[idx, 'nombre_estacion']
-                    if est_nombre in mapping_bicis:
-                        b_live = mapping_bicis[est_nombre]
-                        a_live = mapping_anclajes[est_nombre]
-                        cap = df_estado.loc[idx, 'capacidad']
-
-                        # La API no siempre informa de los anclajes libres.
-                        if pd.isna(a_live):
-                            a_live = max(cap - b_live, 0)
-
-                        df_estado.loc[idx, 'bicis_disponibles'] = b_live
-                        df_estado.loc[idx, 'anclajes_disponibles'] = a_live
-                        df_estado.loc[idx, 'pct_ocupacion'] = b_live / max(cap, 1)
-
-            df_estado['temperatura'] = meteo_actual['temperatura']
-            df_estado['llueve'] = meteo_actual['llueve']
-            df_estado['viento_kmh'] = meteo_actual['viento_kmh']
-
-            dt_actual = df_estado['timestamp'].iloc[0]
-            festivo_hoy = es_festivo(dt_actual)
-            blanca_hoy = es_fiestas_la_blanca(dt_actual)
-            upv_vacaciones = es_vacaciones_universidad(dt_actual)
-
-            df_estado['es_festivo'] = festivo_hoy
-            df_estado['es_la_blanca'] = blanca_hoy
-            df_estado['es_vacaciones_upv'] = upv_vacaciones
-
-            X = df_estado[FEATURE_COLS].copy()
-            X['id_estacion'] = X['id_estacion'].astype('category')
-
-            df_estado['prediccion_30m'] = np.clip(modelo.predict(X), 0, df_estado['capacidad'])
+            df_estado['prediccion_30m'] = predecir_30m(modelo, df_estado)
             df_estado['prediccion_30m_round'] = df_estado['prediccion_30m'].round(1)
 
             def clasificar_alerta(row):
@@ -108,7 +82,7 @@ class handler(BaseHTTPRequestHandler):
             df_estado['nivel_alerta'] = df_estado.apply(clasificar_alerta, axis=1)
 
             # Cálculo de la ruta de la furgoneta
-            necesidades = obtener_necesidades_estaciones(modelo, df_features, df_estado)
+            necesidades = obtener_necesidades_estaciones(modelo, df_features, df_estado, df_demanda)
             pasos_ruta, t_total, d_total = calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgoneta=capacidad_van)
 
             # Formatear lista de estaciones

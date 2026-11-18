@@ -2,12 +2,11 @@ import os
 import json
 import streamlit as st
 import pandas as pd
-import numpy as np
 import joblib
 
-from config import FEATURE_COLS
+from demanda import cargar_demanda_estaciones
+from inferencia import construir_estado_inferencia, predecir_30m
 from obtener_meteo import obtener_meteo_actual
-from obtener_eventos import es_festivo, es_fiestas_la_blanca, es_vacaciones_universidad
 from obtener_mugibike_realtime import obtener_estaciones_mugibike_realtime
 from optimizar_ruta_multiparada import (
     obtener_necesidades_estaciones,
@@ -40,6 +39,10 @@ def cargar_estaciones_realtime():
     return obtener_estaciones_mugibike_realtime()
 
 @st.cache_data
+def cargar_demanda():
+    return cargar_demanda_estaciones()
+
+@st.cache_data
 def cargar_resumenes_inactividad():
     df_inutil = pd.read_csv('resumen_estaciones_inutilizadas.csv')
     df_finde = pd.read_csv('resumen_laborable_vs_finde.csv')
@@ -62,6 +65,7 @@ def main():
     
     modelo = cargar_modelo()
     df_features, df_distancias = cargar_datos()
+    df_demanda = cargar_demanda()
     periodo_modelo_inicio = df_features['timestamp'].min().strftime('%d/%m/%Y')
     periodo_modelo_fin = df_features['timestamp'].max().strftime('%d/%m/%Y %H:%M')
     dias_modelo = df_features['timestamp'].dt.date.nunique()
@@ -82,50 +86,24 @@ def main():
     # Obtenemos meteorología en vivo con caché de 5 minutos
     meteo_actual = cargar_meteo()
     
-    ultimo_ts = df_features['timestamp'].max()
-    df_estado = df_features[df_features['timestamp'] == ultimo_ts].copy()
-    
-    # Si la consulta a la API de Mugibike tuvo éxito, inyectamos las bicis/anclajes en vivo
+    # Reconstruimos el estado con la hora, el calendario y las tendencias del instante
+    # actual, inyectando bicis y anclajes en vivo cuando la API responde.
+    df_estado = construir_estado_inferencia(
+        df_features,
+        df_live if (exito_live and not df_live.empty) else None,
+        meteo_actual
+    )
+
     if exito_live and not df_live.empty:
-        mapping_bicis = df_live.set_index('nombre_estacion')['bicis_disponibles'].to_dict()
-        mapping_anclajes = df_live.set_index('nombre_estacion')['anclajes_disponibles'].to_dict()
-        
-        for idx in df_estado.index:
-            est_nombre = df_estado.loc[idx, 'nombre_estacion']
-            if est_nombre in mapping_bicis:
-                b_live = mapping_bicis[est_nombre]
-                a_live = mapping_anclajes[est_nombre]
-                cap = df_estado.loc[idx, 'capacidad']
-
-                # La API no siempre informa de los anclajes libres.
-                if pd.isna(a_live):
-                    a_live = max(cap - b_live, 0)
-
-                df_estado.loc[idx, 'bicis_disponibles'] = b_live
-                df_estado.loc[idx, 'anclajes_disponibles'] = a_live
-                df_estado.loc[idx, 'pct_ocupacion'] = b_live / max(cap, 1)
         st.success("🟢 **Conectado - Datos tiempo real**")
     else:
-        st.info("ℹ️ **Modo Histórico Offline**: No se pudo consultar la API en vivo de Mugibike. Mostrando últimas lecturas registradas.")
-    
-    # Inyectamos clima y eventos de la fecha actual
-    df_estado['temperatura'] = meteo_actual['temperatura']
-    df_estado['llueve'] = meteo_actual['llueve']
-    df_estado['viento_kmh'] = meteo_actual['viento_kmh']
-    
-    dt_actual = df_estado['timestamp'].iloc[0]
-    festivo_hoy = es_festivo(dt_actual)
-    blanca_hoy = es_fiestas_la_blanca(dt_actual)
-    upv_vacaciones = es_vacaciones_universidad(dt_actual)
-    
-    df_estado['es_festivo'] = festivo_hoy
-    df_estado['es_la_blanca'] = blanca_hoy
-    df_estado['es_vacaciones_upv'] = upv_vacaciones
-    
-    X = df_estado[FEATURE_COLS].copy()
-    X['id_estacion'] = X['id_estacion'].astype('category')
-    
-    df_estado['prediccion_30m'] = np.clip(modelo.predict(X), 0, df_estado['capacidad'])
+        st.info("ℹ️ **Modo Histórico Offline**: No se pudo consultar la API en vivo de Mugibike. Mostrando las últimas lecturas registradas.")
+
+    festivo_hoy = int(df_estado['es_festivo'].iloc[0])
+    blanca_hoy = int(df_estado['es_la_blanca'].iloc[0])
+    upv_vacaciones = int(df_estado['es_vacaciones_upv'].iloc[0])
+
+    df_estado['prediccion_30m'] = predecir_30m(modelo, df_estado)
     df_estado['prediccion_30m_round'] = df_estado['prediccion_30m'].round(1)
     
     def clasificar_alerta(row):
@@ -191,7 +169,7 @@ def main():
         
         capacidad_van = st.slider("Capacidad máxima de la furgoneta de reparto (bicicletas):", 5, 20, 10)
         
-        necesidades = obtener_necesidades_estaciones(modelo, df_features, df_estado)
+        necesidades = obtener_necesidades_estaciones(modelo, df_features, df_estado, df_demanda)
         pasos_ruta, t_total, d_total = calcular_ruta_multiparada_optima(necesidades, df_distancias, capacidad_furgoneta=capacidad_van)
         
         if pasos_ruta:
