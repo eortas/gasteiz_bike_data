@@ -204,25 +204,29 @@
             <section id="tab-simulacion" class="tab-pane">
                 <div class="section-header">
                     <h2>Evaluación de Impacto ML (Backtest Mensual)</h2>
-                    <p>Comparativa del estado real frente a la optimización con el modelo de predicción LightGBM.</p>
+                    <p>Comparativa del escenario sin furgoneta, la operación real observada y la optimización con el modelo LightGBM.</p>
                 </div>
 
                 <div class="impact-metrics-grid" id="sim-metrics-container">
                     <div class="impact-card">
-                        <span class="impact-title">Indisponibilidad Histórica Real</span>
-                        <span class="impact-val danger" id="sim-real">-- h</span>
+                        <span class="impact-title">Sin Furgoneta (Contrafactual)</span>
+                        <span class="impact-val danger" id="sim-sin-van">-- h</span>
+                    </div>
+                    <div class="impact-card">
+                        <span class="impact-title">Operación Real Observada</span>
+                        <span class="impact-val" id="sim-real">-- h</span>
                     </div>
                     <div class="impact-card">
                         <span class="impact-title">Indisponibilidad Con Sistema ML</span>
                         <span class="impact-val success" id="sim-ml">-- h</span>
                     </div>
                     <div class="impact-card">
-                        <span class="impact-title">Mejora Neta Disponibilidad</span>
+                        <span class="impact-title">Mejora vs Sin Furgoneta</span>
                         <span class="impact-val highlight" id="sim-mejora">--%</span>
                     </div>
                     <div class="impact-card">
                         <span class="impact-title">Bicicletas Redistribuidas</span>
-                        <span class="impact-val" id="sim-bicis">-- bicis/mes</span>
+                        <span class="impact-val" id="sim-bicis">-- bicis</span>
                     </div>
                 </div>
 
@@ -231,13 +235,14 @@
                         <thead>
                             <tr>
                                 <th>Estación</th>
-                                <th>% Inactiva (Sin Sistema)</th>
+                                <th>% Inactiva (Sin Furgoneta)</th>
+                                <th>% Inactiva (Real Observada)</th>
                                 <th>% Inactiva (Con ML)</th>
-                                <th>Horas Ahorradas</th>
+                                <th>Mejora vs Real</th>
                             </tr>
                         </thead>
                         <tbody id="tbody-simulacion">
-                            <tr><td colspan="4" class="text-center">Cargando datos de simulación...</td></tr>
+                            <tr><td colspan="5" class="text-center">Cargando datos de simulación...</td></tr>
                         </tbody>
                     </table>
                 </div>

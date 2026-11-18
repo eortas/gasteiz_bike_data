@@ -240,17 +240,19 @@ def main():
             st.info("⏱️ **Parámetros del estudio operativo**: Parada base = 2,0 min | Manipulación = 1,5 min/bici | Capacidad furgoneta = 10 bicis")
 
             variacion_disponibilidad = resumen_sim['mejora_pct']
+            variacion_vs_real = resumen_sim.get('mejora_pct_vs_real', 0.0)
             hay_mejora = variacion_disponibilidad >= 0
 
             st.divider()
             
             # Tarjetas principales de impacto
             c_sim1, c_sim2, c_sim3, c_sim4 = st.columns(4)
-            c_sim1.metric("Indisponibilidad Histórica Real", f"{resumen_sim['horas_indisponible_real']} h", f"{resumen_sim['pct_real']}% del tiempo", delta_color="inverse")
-            c_sim2.metric("Indisponibilidad Con Sistema ML", f"{resumen_sim['horas_indisponible_sim']} h", f"{resumen_sim['pct_sim']}% del tiempo", delta_color="normal" if hay_mejora else "inverse")
-            c_sim3.metric("Variación de Disponibilidad", f"{variacion_disponibilidad:+.1f}%", "Mejora" if hay_mejora else "Regresión", delta_color="normal" if hay_mejora else "inverse")
-            c_sim4.metric("Bicicletas Redistribuidas", f"{resumen_sim['bicis_redistribuidas_total']} en el periodo")
-            
+            c_sim1.metric("Sin Furgoneta (contrafactual)", f"{resumen_sim['horas_indisponible_sin_van']} h", f"{resumen_sim['pct_sin_van']}% del tiempo", delta_color="inverse")
+            c_sim2.metric("Operación Real Observada", f"{resumen_sim['horas_indisponible_real']} h", f"{resumen_sim['pct_real']}% del tiempo", delta_color="inverse")
+            c_sim3.metric("Con Sistema ML", f"{resumen_sim['horas_indisponible_sim']} h", f"{resumen_sim['pct_sim']}% del tiempo", delta_color="normal" if hay_mejora else "inverse")
+            c_sim4.metric("Bicicletas Redistribuidas", f"{resumen_sim['bicis_redistribuidas_total']} en el periodo", f"{variacion_disponibilidad:+.1f}% vs sin furgoneta", delta_color="normal" if hay_mejora else "inverse")
+
+            st.caption("La referencia 'sin furgoneta' reconstruye la red sin la operación real detectada. Es una cota inferior: no puede recuperar la demanda que se perdió por falta de bicis.")
             st.divider()
             
             # Desglose del operario y uso de furgoneta
@@ -262,17 +264,21 @@ def main():
             c_op4.metric("Carga Media en Furgoneta", f"{resumen_sim['promedio_bicis_furgoneta']} bicis", "Inventario en tránsito")
 
             if hay_mejora:
-                st.success(f"La simulación reduce la indisponibilidad un {variacion_disponibilidad:.1f}% con una ocupación de la furgoneta del {resumen_sim['pct_furgoneta_ocupada']}%.")
+                st.success(f"La simulación reduce la indisponibilidad un {variacion_disponibilidad:.1f}% frente a no tener furgoneta y un {variacion_vs_real:.1f}% frente a la operación observada, con una ocupación de la furgoneta del {resumen_sim['pct_furgoneta_ocupada']}%.")
             else:
                 st.warning(f"La estrategia simulada aumenta la indisponibilidad un {abs(variacion_disponibilidad):.1f}%. Debe ajustarse antes de considerarla una mejora operativa.")
             
             st.divider()
             
             # Gráfico comparativo por estación
-            st.markdown("#### 📊 Comparativa de Indisponibilidad por Estación: Histórico Real vs Simulación ML")
+            st.markdown("#### 📊 Comparativa de Indisponibilidad por Estación: Sin Furgoneta, Real Observada y Simulación ML")
             df_comp = resumen_sim['df_estaciones_comp']
             
-            chart_data = df_comp.set_index('Estación')[['% Inactiva (Sin Sistema)', '% Inactiva (Con ML)']]
+            chart_data = df_comp.set_index('Estación')[[
+                '% Inactiva (Sin Sistema)',
+                '% Inactiva (Real Observada)',
+                '% Inactiva (Con ML)'
+            ]]
             st.bar_chart(chart_data)
             
             st.markdown("#### 📋 Detalle Comparativo por Estación")

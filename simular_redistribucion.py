@@ -8,6 +8,7 @@ import joblib
 from config import FEATURE_COLS
 from demanda import cargar_demanda_estaciones, tabla_franja, valor_franja
 from inferencia import aplicar_catalogo_estaciones
+from intervenciones import resumen_intervenciones, serie_sin_intervenciones
 from priorizacion import meta_relleno, score_con_tiempo, score_destino
 
 if hasattr(sys.stdout, 'reconfigure'):
@@ -26,8 +27,23 @@ def cargar_recursos():
         df_features['id_estacion'].astype(str).str.startswith('st_')
     ].copy()
     df_features['timestamp'] = pd.to_datetime(df_features['timestamp'], format='ISO8601')
+
+    # Añadimos la serie contrafactual sin furgoneta. La red ya tiene una furgoneta
+    # operando, así que si simulamos sobre la serie observada estaríamos apilando
+    # nuestra furgoneta sobre el trabajo del operario real.
+    limpia = serie_sin_intervenciones(df_features)
+    df_features = df_features.merge(
+        limpia[['id_estacion', 'timestamp', 'bicis_sin_van', 'delta_cliente']],
+        on=['id_estacion', 'timestamp'], how='left'
+    )
+    df_features['bicis_sin_van'] = df_features['bicis_sin_van'].fillna(
+        df_features['bicis_disponibles']
+    )
+    df_features['delta_cliente'] = df_features['delta_cliente'].fillna(0.0)
+    diagnostico = resumen_intervenciones(limpia)
+
     df_demanda = cargar_demanda_estaciones()
-    return modelo, df_distancias, df_features, df_demanda
+    return modelo, df_distancias, df_features, df_demanda, diagnostico
 
 
 def obtener_tiempo_conduccion(df_distancias, orig, dest):
@@ -60,7 +76,7 @@ def _tabla_franja_actual(franjas, df_demanda, hora, es_finde):
 
 
 def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_furgoneta=10,
-                        evaluar_24h=False, modo_priorizacion='demanda'):
+                        evaluar_24h=False, modo_priorizacion='demanda', base='sin_van'):
     """
     Ejecuta la simulación de redistribución de bicicletas.
 
@@ -68,9 +84,12 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     - evaluar_24h = True: Contabiliza indisponibilidad las 24h del día, pero la furgoneta solo opera de 06:00 a 23:00.
     - modo_priorizacion = 'demanda': puntuación continua con uso histórico de la estación.
     - modo_priorizacion = 'clasico': lógica anterior (urgencia binaria y desempate por distancia).
+    - base = 'sin_van': simulamos sobre el contrafactual sin furgoneta real (comparación limpia).
+    - base = 'observado': simulamos sobre la serie observada, que ya incluye la furgoneta real
+      (se conserva para reproducir las cifras antiguas, no para publicar).
     """
     t_inicio = time.time()
-    modelo, df_distancias, df_features, df_demanda = cargar_recursos()
+    modelo, df_distancias, df_features, df_demanda, diagnostico_van = cargar_recursos()
     franjas = _preparar_franjas(df_demanda)
 
     # Pre-calculamos las predicciones del modelo para todo el dataset usando FEATURE_COLS.
@@ -81,6 +100,9 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     # Ordenamos por timestamp e id_estacion.
     df_features = df_features.sort_values(by=['timestamp', 'id_estacion']).reset_index(drop=True)
 
+    # La serie que alimenta la simulación depende de la base elegida.
+    col_base = 'bicis_sin_van' if base == 'sin_van' else 'bicis_disponibles'
+
     timestamps_unicos = df_features['timestamp'].unique()
     estaciones = df_features['nombre_estacion'].unique()
     capacidades = df_features.groupby('nombre_estacion')['capacidad'].first().to_dict()
@@ -90,13 +112,14 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     grupos_por_timestamp = []
     for ts, sub_df in df_features.groupby('timestamp', sort=False):
         dt = pd.to_datetime(ts)
-        filas = sub_df[['nombre_estacion', 'bicis_disponibles', 'capacidad', 'prediccion_30m']].to_dict('records')
+        filas = sub_df[['nombre_estacion', 'bicis_disponibles', 'bicis_sin_van',
+                        'delta_cliente', 'capacidad', 'prediccion_30m']].to_dict('records')
         grupos_por_timestamp.append((dt, dt.hour, filas))
 
     # Estado inicial simulado de bicicletas por estación.
     df_primer_ts = df_features[df_features['timestamp'] == timestamps_unicos[0]]
-    bicis_simuladas = df_primer_ts.set_index('nombre_estacion')['bicis_disponibles'].to_dict()
-    bicis_reales_prev = bicis_simuladas.copy()
+    bicis_simuladas = df_primer_ts.set_index('nombre_estacion')[col_base].to_dict()
+    bicis_base_prev = bicis_simuladas.copy()
 
     # Estado de la furgoneta y del operario.
     bicis_en_furgoneta = 0
@@ -107,6 +130,7 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     # Acumuladores globales.
     minutos_operativos_totales = 0
     minutos_jornada_furgoneta = 0
+    min_indisponible_sin_van = 0
     min_indisponible_real = 0
     min_indisponible_simulado = 0
 
@@ -118,6 +142,7 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     bicis_redistribuidas_total = 0
 
     # Acumuladores por estación.
+    indisponible_sin_van_est = {est: 0.0 for est in estaciones}
     indisponible_real_est = {est: 0.0 for est in estaciones}
     indisponible_sim_est = {est: 0.0 for est in estaciones}
     minutos_totales_est = {est: 0.0 for est in estaciones}
@@ -139,11 +164,14 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
         # 1. Actualizamos la demanda real del público (ocurre las 24h).
         for r in filas:
             est = r['nombre_estacion']
-            b_real = r['bicis_disponibles']
-            b_prev = bicis_reales_prev.get(est, b_real)
 
-            delta_cliente = b_real - b_prev
-            bicis_reales_prev[est] = b_real
+            if base == 'sin_van':
+                # El delta ya viene limpio: anula los saltos atribuibles al operario.
+                delta_cliente = r['delta_cliente']
+            else:
+                b_real = r['bicis_disponibles']
+                delta_cliente = b_real - bicis_base_prev.get(est, b_real)
+                bicis_base_prev[est] = b_real
 
             cap = capacidades[est]
             bicis_simuladas[est] = int(np.clip(bicis_simuladas[est] + delta_cliente, 0, cap))
@@ -157,11 +185,15 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
             for r in filas:
                 est = r['nombre_estacion']
                 b_real = r['bicis_disponibles']
+                b_sin_van = r['bicis_sin_van']
                 cap = r['capacidad']
                 minutos_totales_est[est] += duracion_min
                 if b_real == 0 or b_real == cap:
                     min_indisponible_real += duracion_min
                     indisponible_real_est[est] += duracion_min
+                if b_sin_van == 0 or b_sin_van == cap:
+                    min_indisponible_sin_van += duracion_min
+                    indisponible_sin_van_est[est] += duracion_min
 
             for est, b_sim in bicis_simuladas.items():
                 cap = capacidades[est]
@@ -301,12 +333,21 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     promedio_bicis_furgoneta = suma_bicis_en_furgoneta / max(pasos_simulacion, 1)
     horas_totales_servicio_red = (minutos_operativos_totales / 60.0) / len(estaciones)
 
+    horas_indisponible_sin_van = min_indisponible_sin_van / 60.0
     horas_indisponible_real = min_indisponible_real / 60.0
     horas_indisponible_sim = min_indisponible_simulado / 60.0
 
+    pct_sin_van = (min_indisponible_sin_van / minutos_operativos_totales) * 100
     pct_real = (min_indisponible_real / minutos_operativos_totales) * 100
     pct_sim = (min_indisponible_simulado / minutos_operativos_totales) * 100
-    mejora_pct = ((min_indisponible_real - min_indisponible_simulado) / max(min_indisponible_real, 1)) * 100
+
+    # Mejora frente a no tener ninguna furgoneta: es el valor total del sistema.
+    mejora_pct = ((min_indisponible_sin_van - min_indisponible_simulado)
+                  / max(min_indisponible_sin_van, 1)) * 100
+    # Mejora frente a la operación observada: es el valor incremental de sustituir
+    # la furgoneta actual por la planificación del sistema.
+    mejora_pct_vs_real = ((min_indisponible_real - min_indisponible_simulado)
+                          / max(min_indisponible_real, 1)) * 100
 
     # Porcentaje de ocupación respecto a la jornada laboral de la furgoneta (06:00 a 23:00).
     pct_furgoneta_ocupada = (minutos_furgoneta_activa / max(minutos_jornada_furgoneta, 1.0)) * 100
@@ -314,39 +355,52 @@ def ejecutar_simulacion(tiempo_base_parada=2.0, tiempo_por_bici=1.5, capacidad_f
     filas_est = []
     for est in estaciones:
         t_total_e = max(minutos_totales_est[est], 1.0)
+        h_sin_van = indisponible_sin_van_est[est] / 60.0
         h_real = indisponible_real_est[est] / 60.0
         h_sim = indisponible_sim_est[est] / 60.0
+        p_sin_van = (indisponible_sin_van_est[est] / t_total_e) * 100
         p_real = (indisponible_real_est[est] / t_total_e) * 100
         p_sim = (indisponible_sim_est[est] / t_total_e) * 100
-        mejora_e = ((indisponible_real_est[est] - indisponible_sim_est[est]) / max(indisponible_real_est[est], 1.0)) * 100
+        mejora_e = ((indisponible_sin_van_est[est] - indisponible_sim_est[est])
+                    / max(indisponible_sin_van_est[est], 1.0)) * 100
+        mejora_e_real = ((indisponible_real_est[est] - indisponible_sim_est[est])
+                         / max(indisponible_real_est[est], 1.0)) * 100
 
         filas_est.append({
             'Estación': est,
-            'Horas Inútil (Sin Sistema)': round(h_real, 1),
+            'Horas Inútil (Sin Furgoneta)': round(h_sin_van, 1),
+            'Horas Inútil (Real Observada)': round(h_real, 1),
             'Horas Inútil (Con ML)': round(h_sim, 1),
-            '% Inactiva (Sin Sistema)': round(p_real, 2),
+            '% Inactiva (Sin Sistema)': round(p_sin_van, 2),
+            '% Inactiva (Real Observada)': round(p_real, 2),
             '% Inactiva (Con ML)': round(p_sim, 2),
-            '% Mejora': round(mejora_e, 1)
+            '% Mejora (vs sin furgoneta)': round(mejora_e, 1),
+            '% Mejora (vs real)': round(mejora_e_real, 1)
         })
 
-    df_estaciones_comp = pd.DataFrame(filas_est).sort_values(by='Horas Inútil (Sin Sistema)', ascending=False).reset_index(drop=True)
+    df_estaciones_comp = pd.DataFrame(filas_est).sort_values(by='Horas Inútil (Sin Furgoneta)', ascending=False).reset_index(drop=True)
     tiempo_ejecucion_seg = round(time.time() - t_inicio, 2)
 
     resumen = {
         'modo_priorizacion': modo_priorizacion,
+        'base': base,
         'evaluar_24h': evaluar_24h,
         'horas_totales_servicio_red': round(horas_totales_servicio_red, 1),
+        'horas_indisponible_sin_van': round(horas_indisponible_sin_van, 1),
         'horas_indisponible_real': round(horas_indisponible_real, 1),
         'horas_indisponible_sim': round(horas_indisponible_sim, 1),
+        'pct_sin_van': round(pct_sin_van, 2),
         'pct_real': round(pct_real, 2),
         'pct_sim': round(pct_sim, 2),
         'mejora_pct': round(mejora_pct, 1),
+        'mejora_pct_vs_real': round(mejora_pct_vs_real, 1),
         'bicis_redistribuidas_total': bicis_redistribuidas_total,
         'horas_conduccion': round(minutos_conduccion_totales / 60.0, 1),
         'horas_manipulacion': round(minutos_manipulacion_totales / 60.0, 1),
         'horas_operario_total': round(minutos_furgoneta_activa / 60.0, 1),
         'pct_furgoneta_ocupada': round(pct_furgoneta_ocupada, 1),
         'promedio_bicis_furgoneta': round(promedio_bicis_furgoneta, 2),
+        'intervenciones_operario': diagnostico_van,
         'df_estaciones_comp': df_estaciones_comp,
         'tiempo_ejecucion_seg': tiempo_ejecucion_seg
     }
@@ -363,21 +417,25 @@ def _guardar_resumen(resumen, sufijo=''):
 
 def guardar_resumen_precalculado():
     print("Ejecutando simulación con priorización por demanda (horario operativo 06:00 - 23:00)...")
-    resumen_demanda = ejecutar_simulacion(evaluar_24h=False, modo_priorizacion='demanda')
+    resumen_demanda = ejecutar_simulacion(evaluar_24h=False, modo_priorizacion='demanda', base='sin_van')
     _guardar_resumen(resumen_demanda)
 
     print("Ejecutando simulación clásica para comparar el impacto (A/B)...")
-    resumen_clasico = ejecutar_simulacion(evaluar_24h=False, modo_priorizacion='clasico')
+    resumen_clasico = ejecutar_simulacion(evaluar_24h=False, modo_priorizacion='clasico', base='sin_van')
     _guardar_resumen(resumen_clasico, sufijo='_clasico')
 
     print("Ejecutando simulación extra (24 horas globales con furgoneta operando de 06:00 a 23:00)...")
-    resumen_24h = ejecutar_simulacion(evaluar_24h=True, modo_priorizacion='demanda')
+    resumen_24h = ejecutar_simulacion(evaluar_24h=True, modo_priorizacion='demanda', base='sin_van')
     _guardar_resumen(resumen_24h, sufijo='_24h')
 
     print("\n✓ Simulaciones completadas y guardadas correctamente.")
-    print(f"  Demanda: pct_sim={resumen_demanda['pct_sim']}% | mejora={resumen_demanda['mejora_pct']}% "
+    print(f"  Base de comparación (sin ninguna furgoneta): {resumen_demanda['pct_sin_van']}% de indisponibilidad")
+    print(f"  Operación real observada: {resumen_demanda['pct_real']}%")
+    print(f"  Demanda: pct_sim={resumen_demanda['pct_sim']}% | mejora vs sin furgoneta={resumen_demanda['mejora_pct']}% "
+          f"| mejora vs real={resumen_demanda['mejora_pct_vs_real']}% "
           f"| bicis={resumen_demanda['bicis_redistribuidas_total']}")
-    print(f"  Clásico: pct_sim={resumen_clasico['pct_sim']}% | mejora={resumen_clasico['mejora_pct']}% "
+    print(f"  Clásico: pct_sim={resumen_clasico['pct_sim']}% | mejora vs sin furgoneta={resumen_clasico['mejora_pct']}% "
+          f"| mejora vs real={resumen_clasico['mejora_pct_vs_real']}% "
           f"| bicis={resumen_clasico['bicis_redistribuidas_total']}")
 
 

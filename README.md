@@ -107,20 +107,30 @@ El desglose de MAE por estación está disponible en `metricas_modelo.json` (`me
 - **Relleno dinámico**: la meta de bicis al llegar escala con la salida neta esperada de la hora (`meta = clamp(salida_neta · 1.5, 5, capacidad − 2)`), en lugar de fijarse siempre en 5.
 - **Doble Restricción de Seguridad**: la estación origen mantiene una reserva de 5 bicicletas predichas y el destino nunca supera su capacidad. La última descarga se realiza en la estación más cercana con hueco real.
 - **Matriz OSRM**: Basada en la red viaria real de OpenStreetMap calibrada a la velocidad media urbana efectiva de Vitoria-Gasteiz ([matriz_distancias_estaciones.csv](matriz_distancias_estaciones.csv)).
-- **Comparativa A/B medida**: `simular_redistribucion.py` reproduce el histórico completo con los dos enfoques y guarda los resultados en `resumen_simulacion_impacto.json` (demanda) y `resumen_simulacion_impacto_clasico.json` (clásico).
+- **Comparativa A/B medida**: `simular_redistribucion.py` reproduce el histórico completo con los dos enfoques y guarda los resultados en `resumen_simulacion_impacto.json` (demanda) y `resumen_simulacion_clasico_impacto.json` (clásico).
+
+#### La furgoneta que ya opera en la red
+
+Mugibike ya tiene una furgoneta redistribuyendo bicis, así que el histórico no es "demanda natural": mezcla movimientos de clientes e intervenciones del operario. `intervenciones.py` separa las que se pueden atribuir a una intervención con alta confianza (saltos de ≥3 bicis en 23:00–07:00 o de ≥5 a cualquier hora, con menos de 10 minutos entre lecturas): **1.230 eventos y 5.377 bicis, el 6,4% de la actividad observada** (35,4 bicis al día, presentes en 135 de 152 noches).
+
+- La **demanda** se calcula solo con los movimientos de clientes.
+- La **simulación** parte de un contrafactual sin furgoneta (`bicis_sin_van`), anclado a cada hora natural para que el recorte en 0 no se acumule durante meses.
+- El contrafactual es una **cota inferior**: no puede recuperar la demanda que se perdió por no haber bicicletas disponibles.
 
 Resultados sobre el histórico completo, contabilizando solo el horario operativo (06:00–23:00):
 
-| Enfoque | Indisponibilidad simulada | Mejora frente a la red real | Bicis redistribuidas |
-|---|---|---|---|
-| Red real (sin sistema) | 15.69% | — | — |
-| Priorización clásica | 14.37% | 8.4% | 3.748 |
-| Priorización por demanda | **12.77%** | **18.6%** | 4.290 |
+| Escenario | Indisponibilidad | Mejora vs sin furgoneta | Mejora vs operación real | Bicis redistribuidas |
+|---|---|---|---|---|
+| Sin furgoneta (contrafactual) | 16.55% | — | — | — |
+| Operación real observada | 15.69% | 5.2% | — | — |
+| Priorización clásica | 13.82% | 16.5% | 11.9% | 3.243 |
+| **Priorización por demanda** | **12.95%** | **21.8%** | **17.4%** | 3.624 |
 
-La priorización por uso más que duplica la mejora del enfoque clásico (18.6% frente a 8.4%) con una jornada de furgoneta similar (60.5% frente a 59.8%). El desglose por estación (`resumen_simulacion_estaciones.csv`) muestra 9 de 12 estaciones mejoradas; las tres excepciones (Ballester −40.7%, Ibaiondo −9.5% y Universidad −2.5%) son estaciones de las que el motor retira bicis como origen, y quedan como línea de trabajo abierta.
+La priorización por uso supera al enfoque clásico (21.8% frente a 16.5%) con una jornada de furgoneta similar (55.8% frente a 54.3%). El desglose por estación (`resumen_simulacion_estaciones.csv`) muestra 11 de 12 estaciones mejoradas frente al contrafactual y 10 de 12 frente a la operación real; la excepción clara es Ballester (−39.1% frente al contrafactual), una estación de la que el motor retira bicis como origen, y queda como línea de trabajo abierta.
 
 ### 4. 📈 Demanda Histórica por Estación ([calcular_demanda_estaciones.py](calcular_demanda_estaciones.py))
 - Precalcula `demanda_estaciones.csv` con la actividad media y la **salida neta esperada por estación, hora y tipo de día**.
+- Solo cuenta movimientos de clientes: `intervenciones.py` descarta los saltos atribuibles a la furgoneta que ya opera en la red.
 - Es la señal que alimenta la priorización de rutas y el dimensionado del relleno.
 
 ### 5. 🖥️ Dashboard Interactivo ([dashboard.py](dashboard.py))

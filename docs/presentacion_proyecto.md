@@ -12,7 +12,7 @@ Este proyecto convierte el histórico de uso en tres capacidades:
 
 1. **Predecir** la ocupación de cada estación a 30 minutos vista con un error medio de ~1 bicicleta.
 2. **Priorizar** qué estaciones atender primero según su uso real, no solo según su urgencia del momento.
-3. **Planificar** la ruta de la furgoneta de redistribución y **medir** su impacto frente a la operación sin sistema.
+3. **Planificar** la ruta de la furgoneta de redistribución y **medir** su impacto frente a dos referencias: la operación actual y un escenario sin ninguna furgoneta.
 
 Cifras clave, todas medidas sobre datos reales:
 
@@ -21,11 +21,14 @@ Cifras clave, todas medidas sobre datos reales:
 | Error medio de predicción a 30 min (MAE) | **0,85 bicicletas** |
 | Varianza del comportamiento de la red explicada (R²) | **0,87** |
 | Vaciados críticos detectados con antelación | **8 de cada 10** |
-| Indisponibilidad de la red con el sistema | **12,77%** del tiempo operativo |
-| Indisponibilidad sin sistema (histórico real) | **15,69%** |
-| Mejora frente a la lógica clásica de reparto | **18,6% vs 8,4%** |
+| Indisponibilidad de la red con el sistema | **12,95%** del tiempo operativo |
+| Indisponibilidad de la red sin ninguna furgoneta | **16,55%** |
+| Indisponibilidad de la operación real observada | **15,69%** |
+| Mejora frente a la lógica clásica de reparto | **21,8% vs 16,5%** |
 
-En términos operativos: el sistema recupera unas **895 horas-estación de servicio** en los cinco meses analizados, es decir, unos **6 horas-estación al día** que hoy se pierden por estaciones vacías o saturadas.
+En términos operativos: el sistema recupera unas **1.104 horas-estación de servicio** en los cinco meses analizados, es decir, unos **7 horas-estación al día** que hoy se pierden por estaciones vacías o saturadas.
+
+Un detalle importante de método: la red ya tiene una furgoneta operando, así que el histórico mezcla movimientos de clientes con intervenciones del operario. El proyecto detecta esas intervenciones y las descuenta (ver sección 7), de modo que las cifras anteriores comparan el sistema con una red que no recibe ninguna ayuda externa.
 
 ---
 
@@ -33,7 +36,7 @@ En términos operativos: el sistema recupera unas **895 horas-estación de servi
 
 ### 2.1 La indisponibilidad no es un caso aislado
 
-Durante el periodo analizado (19 de junio a 18 de noviembre de 2026), una estación media estuvo inutilizable **el 15,69% del horario operativo** (06:00 a 23:00), ya sea por falta de bicicletas o por falta de anclajes.
+Durante el periodo analizado (19 de junio a 18 de noviembre de 2026), una estación media estuvo inutilizable **el 15,69% del horario operativo** (06:00 a 23:00), ya sea por falta de bicicletas o por falta de anclajes. Y eso es **con la furgoneta actual ya trabajando**: sin ella, la reconstrucción del mismo periodo da un 16,55%.
 
 El reparto no es homogéneo. Sobre el total de horas registradas (incluyendo la madrugada):
 
@@ -90,20 +93,23 @@ Una estación que pierde 8 bicicletas por hora se rellena más que una que pierd
 
 ### Capa 3. Ruta de la furgoneta y medición
 
-El planificador construye un circuito multiparada que carga en estaciones con excedente y descarga en estaciones con déficit, respetando la capacidad de la furgoneta y la capacidad física de cada estación, y cerrando la ruta en una estación con hueco real. La simulación reproduce después el histórico completo con y sin sistema para medir el impacto.
+El planificador construye un circuito multiparada que carga en estaciones con excedente y descarga en estaciones con déficit, respetando la capacidad de la furgoneta y la capacidad física de cada estación, y cerrando la ruta en una estación con hueco real. La simulación reproduce después el histórico completo en tres escenarios: sin furgoneta, operación real observada y sistema propuesto.
 
 ---
 
 ## 4. Cómo funciona el sistema de punta a punta
 
 ```
-Scraper de Mugibike (cada ~5 min)
+Datos de Mugibike (cada ~5 min)
         │
         ▼
 Histórico mensual + Parquet comprimido (97,8% menos peso)
         │
         ├──► Open-Meteo (clima horario histórico y en vivo)
         ├──► Calendario de Vitoria-Gasteiz (festivos y eventos)
+        │
+        ▼
+Detección de intervenciones del operario (intervenciones.py)
         │
         ▼
 Features: estado, tendencias reales a 15/30 min, clima y calendario
@@ -118,6 +124,7 @@ Motor de rutas con priorización por demanda
         │
         ├──► Alertas (crítica / precaución / normal)
         ├──► Ruta multiparada para la furgoneta
+        ├──► Simulación A/B contra la operación real y sin furgoneta
         └──► Dashboard (Streamlit) y API (Vercel)
 ```
 
@@ -138,6 +145,7 @@ Todo el pipeline se reentrena automáticamente cada noche a las 03:00 UTC en Git
 | Cobertura del clima | 19-jun a 24-jul (el resto, valores de relleno) | 3.648 horas completas, sin huecos |
 | Alertas | Solo avisaban de estaciones vacías | Simétricas: también recomiendan descargar en saturadas |
 | Calidad del modelo | Sin control automático | El pipeline se bloquea si empeoran recall, MAE o RMSE |
+| Furgoneta que ya opera | Sus movimientos se contaban como demanda de clientes | Se detectan y descuentan; el impacto se mide contra un contrafactual sin furgoneta |
 | Impacto | Cifras sin simulación reproducible | Comparativa A/B medida y versionada |
 
 ---
@@ -158,30 +166,55 @@ Evaluación sobre el 20% de datos más reciente, con división temporal estricta
 
 ### 6.2 Impacto de la redistribución
 
-Simulación sobre el histórico completo, contabilizando solo el horario operativo:
+Simulación sobre el histórico completo, contabilizando solo el horario operativo. Las dos referencias son la red sin ninguna furgoneta (contrafactual reconstruido) y la operación que realmente ocurrió:
 
-| Enfoque | Indisponibilidad | Mejora | Bicis redistribuidas |
-|---|---|---|---|
-| Red real (sin sistema) | 15,69% | — | — |
-| Lógica clásica | 14,37% | 8,4% | 3.748 |
-| **Priorización por demanda** | **12,77%** | **18,6%** | 4.290 |
+| Escenario | Indisponibilidad | Mejora vs sin furgoneta | Mejora vs operación real | Bicis redistribuidas |
+|---|---|---|---|---|
+| Sin furgoneta (contrafactual) | 16,55% | — | — | — |
+| Operación real observada | 15,69% | 5,2% | — | — |
+| Lógica clásica | 13,82% | 16,5% | 11,9% | 3.243 |
+| **Priorización por demanda** | **12,95%** | **21,8%** | **17,4%** | 3.624 |
 
-La mejora del enfoque nuevo **más que duplica** la del clásico, con una ocupación de la furgoneta prácticamente idéntica (60,5% frente a 59,8%). Es decir: no se gana trabajando más horas, se gana eligiendo mejor dónde ir.
+La mejora del enfoque nuevo **supera en un tercio** la del clásico, con una ocupación de la furgoneta prácticamente idéntica (55,8% frente a 54,3%). Es decir: no se gana trabajando más horas, se gana eligiendo mejor dónde ir.
 
-Con contabilidad de 24 horas el patrón se mantiene: 16,8% → 13,93% (mejora del 17,0%).
+Las dos referencias responden a preguntas distintas. Frente a la operación real, el 17,4% es el valor incremental de sustituir la planificación actual. Frente al escenario sin furgoneta, el 21,8% es el valor total de tener una furgoneta bien dirigida; la diferencia entre ambos (5,2%) es lo que ya aporta hoy la operación manual.
+
+Con contabilidad de 24 horas el patrón se mantiene: 17,56% sin furgoneta → 14,09% con el sistema (mejora del 19,7%, y del 16,0% frente a la operación real).
+
+### 6.3 La furgoneta que ya opera en la red
+
+Este es el punto que más cuidado exige, porque afecta a la validez de todas las cifras anteriores. Mugibike ya redistribuye bicicletas con una furgoneta, pero no hay registro público de su horario ni de su rutina. Si se ignora, el histórico parece demanda natural cuando en realidad es demanda **después de la intervención**: la estación que el operario rellena "se llena sola", su salida neta parece pequeña y el modelo aprende a no esperar problemas donde sí los hay.
+
+La detección es heurística y conservadora. Solo se marca una intervención cuando el salto es casi imposible que venga de clientes:
+
+- **3 o más bicicletas** entre lecturas separadas por 10 minutos o menos, en horario de bajo uso (23:00 a 07:00).
+- **5 o más bicicletas** a cualquier hora.
+
+| Medida | Valor |
+|---|---|
+| Actividad total observada | 83.528 bicis movidas |
+| Intervenciones de alta confianza | 1.230 eventos, **5.377 bicis (6,4% del total)** |
+| Ritmo detectado | 35,4 bicis al día |
+| Noches con intervención | 135 de 152 |
+| Techo si contamos todos los saltos de ≥3 | **12,8% de la actividad** |
+
+Las cifras honestas son un rango, no un número: entre el 6,4% confirmado y el 12,8% como techo. Para corregir los datos usamos solo el 6,4%, porque borrar demanda real es peor que dejar pasar alguna intervención.
+
+Sobre esa base se construye un contrafactual anclado a cada hora natural: dentro de cada hora se aplican solo los movimientos de clientes. El anclaje es imprescindible, porque reconstruir la serie completa desde el inicio del histórico acumula el recorte en cero y acaba con una red irrealmente vacía (84% de indisponibilidad, un artefacto aritmético, no un escenario). El resultado es una **cota inferior** del daño real: no puede recuperar la demanda que se perdió por no haber bicicletas.
 
 ---
 
 ## 7. Por qué este proyecto es defendible
 
-Un modelo de bici pública es fácil de vender con números bonitos y difícil de sostener con datos reales. Aquí hay cuatro decisiones que marcan la diferencia:
+Un modelo de bici pública es fácil de vender con números bonitos y difícil de sostener con datos reales. Aquí hay cinco decisiones que marcan la diferencia:
 
 1. **División temporal honesta.** El test es siempre el futuro del entrenamiento, nunca una mezcla aleatoria. Sin esto, el modelo "aprende" del futuro y las métricas se inflan.
 2. **Tendencias medidas en tiempo real.** El scraper no llega con cadencia exacta; desplazar por filas etiquetaba huecos de horas como si fueran 15 minutos. Ahora se busca la lectura más cercana en el tiempo (98,79% de los casos dentro de la ventana de 25 a 35 minutos).
 3. **Puerta de calidad en el pipeline.** Si un reentrenamiento baja el recall por debajo del 65%, sube el MAE por encima de 1,5 o el RMSE por encima de 2,5, el modelo no se publica. La calidad deja de depender de que alguien mire una tabla.
-4. **Comparativa A/B reproducible.** El impacto no es una estimación de folleto: hay dos ejecuciones sobre el mismo histórico, con los mismos datos y solo distinta lógica de decisión.
+4. **Contabilidad de la furgoneta que ya opera.** El histórico no es demanda pura: se detectan y descuentan las intervenciones del operario, y el impacto se mide contra un contrafactual sin furgoneta además de contra la operación real. Sin este paso, el sistema se atribuiría el trabajo que ya hace el vehículo actual.
+5. **Comparativa A/B reproducible.** El impacto no es una estimación de folleto: hay dos ejecuciones sobre el mismo histórico, con los mismos datos y solo distinta lógica de decisión.
 
-También decimos lo que aún no funciona: en el desglose por estación, 9 de 12 mejoran, pero Ballester (−40,7%), Ibaiondo (−9,5%) y Universidad (−2,5%) empeoran porque el motor les retira bicicletas como origen. Documentarlo es parte del método; resolverlo es la siguiente línea de trabajo.
+También decimos lo que aún no funciona: en el desglose por estación, 11 de 12 mejoran frente al contrafactual y 10 de 12 frente a la operación real, pero Ballester empeora un 39,1% porque el motor le retira bicicletas como origen siendo una estación muy usada. Documentarlo es parte del método; resolverlo es la siguiente línea de trabajo.
 
 ---
 
@@ -213,7 +246,7 @@ El diseño está separado en capas y no depende de Vitoria-Gasteiz salvo en dos 
 
 | Prioridad | Trabajo | Por qué |
 |---|---|---|
-| Alta | Evitar que el motor vacíe estaciones de alta demanda como origen | Corrige las tres regresiones por estación |
+| Alta | Evitar que el motor vacíe estaciones de alta demanda como origen | Corrige la regresión de Ballester |
 | Alta | Completar un año de histórico (hoy hay cinco meses) | Más fiabilidad en festivos y estacionalidad |
 | Media | Optimización de ruta con ventanas de tiempo | Rutas más realistas en hora punta |
 | Media | Predicción de demanda de devoluciones, no solo de ocupación | Anticipar saturación con la misma precisión |
@@ -227,7 +260,8 @@ El diseño está separado en capas y no depende de Vitoria-Gasteiz salvo en dos 
 |---|---|
 | Datos de entrada | 517.188 registros de 12 estaciones (19-jun a 18-nov-2026), cadencia ~5 min |
 | Clima | 3.648 horas horarias de Open-Meteo, sin huecos |
-| Demanda | 576 combinaciones estación × hora × tipo de día |
+| Demanda | 576 combinaciones estación × hora × tipo de día, solo con movimientos de clientes |
+| Intervenciones del operario | 1.230 eventos de alta confianza (6,4% de la actividad) |
 | Modelo | LightGBM, 16 variables, horizonte de 30 minutos |
 | Almacenamiento | CSV mensual + Parquet comprimido (97,8% de ahorro) |
 | Automatización | GitHub Actions, reentrenamiento diario 03:00 UTC con puerta de calidad |
@@ -248,10 +282,13 @@ Predecirá peor al principio, porque el código de estación no tiene patrones a
 El sistema cae a las últimas lecturas del scraper y, si tampoco hay, a la última instantánea histórica. La predicción se sigue generando, marcada como modo histórico en el dashboard.
 
 **¿Por qué no usar aprendizaje por refuerzo para la ruta?**
-Porque con cinco meses de datos y 12 estaciones no hay volumen para entrenar una política fiable. La puntuación ponderada es interpretable, auditable y ya mejora un 18,6%. El refuerzo tendría sentido con años de operación y muchas más estaciones.
+Porque con cinco meses de datos y 12 estaciones no hay volumen para entrenar una política fiable. La puntuación ponderada es interpretable, auditable y ya mejora un 21,8%. El refuerzo tendría sentido con años de operación y muchas más estaciones.
 
-**¿Cómo sé que la mejora del 18,6% no es casualidad?**
+**¿Cómo sé que la mejora del 21,8% no es casualidad?**
 Porque las dos lógicas se ejecutan sobre exactamente el mismo histórico, con el mismo modelo, la misma furgoneta y los mismos tiempos. La única diferencia es el criterio de decisión.
+
+**¿Y si la furgoneta actual hiciera más de lo que detectáis?**
+Entonces el contrafactual sería todavía peor y la mejora del sistema mayor. Nuestro sesgo va en la dirección conservadora: preferimos subestimar el impacto antes que atribuirnos el trabajo del operario.
 
 ---
 

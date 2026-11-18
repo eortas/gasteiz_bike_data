@@ -206,21 +206,23 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderTablaSimulacion(sim) {
         const tbody = document.getElementById('tbody-simulacion');
         if (!sim || !sim.df_estaciones_comp) {
-            tbody.innerHTML = '<tr><td colspan="4" class="text-center">No hay datos de simulación disponibles.</td></tr>';
+            tbody.innerHTML = '<tr><td colspan="5" class="text-center">No hay datos de simulación disponibles.</td></tr>';
             return;
         }
 
+        document.getElementById('sim-sin-van').textContent = `${sim.horas_indisponible_sin_van} h (${sim.pct_sin_van}%)`;
         document.getElementById('sim-real').textContent = `${sim.horas_indisponible_real} h (${sim.pct_real}%)`;
         document.getElementById('sim-ml').textContent = `${sim.horas_indisponible_sim} h (${sim.pct_sim}%)`;
         document.getElementById('sim-mejora').textContent = `-${sim.mejora_pct}%`;
-        document.getElementById('sim-bicis').textContent = `${sim.bicis_redistribuidas_total} bicis/mes`;
+        document.getElementById('sim-bicis').textContent = `${sim.bicis_redistribuidas_total} bicis`;
 
         tbody.innerHTML = sim.df_estaciones_comp.map(e => `
             <tr>
                 <td><strong>${e['Estación']}</strong></td>
                 <td>${e['% Inactiva (Sin Sistema)']}%</td>
+                <td>${e['% Inactiva (Real Observada)']}%</td>
                 <td class="text-success"><strong>${e['% Inactiva (Con ML)']}%</strong></td>
-                <td>${e['Horas Ahorradas'] || '--'} h</td>
+                <td>${e['% Mejora (vs real)']}%</td>
             </tr>
         `).join('');
     }

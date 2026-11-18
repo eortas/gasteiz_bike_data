@@ -4,11 +4,17 @@ El motor de redistribución necesitaba una señal de uso real de cada estación.
 Aquí la precalculamos a partir del histórico: actividad media (retiradas más
 devoluciones) y salida neta esperada por hora, que después usamos para
 priorizar destinos y dimensionar el relleno de cada estación.
+
+El cálculo se hace sobre la serie sin intervenciones del operario: si la
+furgoneta ya rellena una estación, ese movimiento no es demanda de clientes y
+no debe inflar la actividad ni disimular la salida neta.
 """
 
 import os
 
 import pandas as pd
+
+from intervenciones import serie_sin_intervenciones
 
 RUTA_DEMANDA = 'demanda_estaciones.csv'
 
@@ -20,33 +26,36 @@ COLUMNAS_DEMANDA = [
 
 def calcular_demanda_historica(df_features):
     """Calculamos la demanda por estación, hora y tipo de día desde features_historico."""
-    df = df_features.copy()
-    if df.empty:
+    if df_features is None or df_features.empty:
         return pd.DataFrame(columns=COLUMNAS_DEMANDA)
 
+    df = df_features[['id_estacion', 'nombre_estacion', 'timestamp',
+                      'bicis_disponibles', 'capacidad']].copy()
     df['timestamp'] = pd.to_datetime(df['timestamp'], format='ISO8601')
-    df = df.sort_values(['id_estacion', 'timestamp']).reset_index(drop=True)
-    df['hora'] = df['timestamp'].dt.hour
-    df['fecha'] = df['timestamp'].dt.date
-    if 'es_finde' not in df.columns:
-        df['es_finde'] = (df['timestamp'].dt.dayofweek >= 5).astype(int)
-    df['es_finde'] = df['es_finde'].astype(int)
 
-    # Actividad = valor absoluto del cambio entre lecturas consecutivas.
-    df['delta'] = df.groupby('id_estacion')['bicis_disponibles'].diff()
-    df['actividad'] = df['delta'].abs()
-    actividad = (df.dropna(subset=['actividad'])
+    # Reconstruimos la ocupación sin los movimientos atribuibles al operario.
+    limpia = serie_sin_intervenciones(df)
+    limpia = limpia.merge(df[['id_estacion', 'timestamp', 'nombre_estacion']],
+                          on=['id_estacion', 'timestamp'], how='left')
+
+    limpia['hora'] = limpia['timestamp'].dt.hour
+    limpia['fecha'] = limpia['timestamp'].dt.date
+    limpia['es_finde'] = (limpia['timestamp'].dt.dayofweek >= 5).astype(int)
+
+    # Actividad = valor absoluto del cambio de clientes entre lecturas.
+    limpia['actividad'] = limpia['delta_cliente'].abs()
+    actividad = (limpia.dropna(subset=['actividad'])
                  .groupby(['id_estacion', 'nombre_estacion', 'hora', 'es_finde'])['actividad']
                  .mean()
                  .reset_index()
                  .rename(columns={'actividad': 'actividad_media'}))
 
     # Salida neta por hora y día: cuántas bicis pierde de media la estación en esa franja.
-    agrupado = df.sort_values('timestamp').groupby(
+    agrupado = limpia.sort_values('timestamp').groupby(
         ['id_estacion', 'nombre_estacion', 'fecha', 'hora', 'es_finde'])
-    inicio = agrupado['bicis_disponibles'].first()
-    fin = agrupado['bicis_disponibles'].last()
-    neto = (inicio - fin).reset_index().rename(columns={'bicis_disponibles': 'neto'})
+    inicio = agrupado['bicis_sin_van'].first()
+    fin = agrupado['bicis_sin_van'].last()
+    neto = (inicio - fin).reset_index().rename(columns={'bicis_sin_van': 'neto'})
     salida = (neto.groupby(['id_estacion', 'nombre_estacion', 'hora', 'es_finde'])['neto']
               .mean()
               .reset_index()
