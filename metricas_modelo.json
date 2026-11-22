@@ -2,10 +2,10 @@
     "mae": 0.84,
     "rmse": 1.26,
     "r2": 0.867,
-    "recall": 80.9,
-    "mae_cv_promedio": 0.82,
-    "rmse_cv_promedio": 1.27,
-    "fecha_corte_test": "2026-10-21T15:20:33.000000",
+    "recall": 80.6,
+    "mae_cv_promedio": 0.83,
+    "rmse_cv_promedio": 1.28,
+    "fecha_corte_test": "2026-10-22T10:30:51.000000",
     "catalogo_estaciones": [
         "st_d4sl1494gpvs73agno80",
         "st_d4sl14d0ol7c73bfvs4g",
@@ -23,125 +23,125 @@
     "metricas_por_estacion": [
         {
             "estacion": "4 Antso Jakituna - Sancho el Sabio",
-            "mae": 1.54,
-            "n": 8829
+            "mae": 1.53,
+            "n": 8887
         },
         {
             "estacion": "2 Leizaola plaza - Plaza de Leizaola",
-            "mae": 1.22,
-            "n": 8829
+            "mae": 1.23,
+            "n": 8887
         },
         {
             "estacion": "3 Ballester apezpikua - Obispo Ballester",
             "mae": 1.09,
-            "n": 8829
+            "n": 8887
         },
         {
             "estacion": "1 Autobus geltokia - Estación de autobuses",
             "mae": 1.06,
-            "n": 8829
+            "n": 8887
         },
         {
             "estacion": "9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo",
             "mae": 0.85,
-            "n": 8829
+            "n": 8887
         },
         {
             "estacion": "7 Salburuko gizarte-etxea - C.C. Salburua",
-            "mae": 0.68,
-            "n": 8829
+            "mae": 0.69,
+            "n": 8887
         },
         {
             "estacion": "6 Unibertsitatea - Universidad",
-            "mae": 0.66,
-            "n": 8829
+            "mae": 0.67,
+            "n": 8887
         },
         {
             "estacion": "10 AUO - HUA",
             "mae": 0.64,
-            "n": 8829
+            "n": 8887
         },
         {
             "estacion": "11 San Martin (Udala) - Ayuntamiento San Martín",
             "mae": 0.64,
-            "n": 8829
+            "n": 8887
         },
         {
             "estacion": "8 Tren geltokia - Estación de Tren",
-            "mae": 0.59,
-            "n": 8829
+            "mae": 0.6,
+            "n": 8887
         },
         {
             "estacion": "12 Zabalganeko gizarte-etxea - CC Zabalgana",
-            "mae": 0.55,
-            "n": 8829
+            "mae": 0.54,
+            "n": 8887
         },
         {
             "estacion": "5 Mendizorrotza - Mendizorroza",
             "mae": 0.51,
-            "n": 8829
+            "n": 8887
         }
     ],
     "importancias": [
         {
             "Variable": "bicis_disponibles",
-            "Importancia": 1392
+            "Importancia": 1388
         },
         {
             "Variable": "hora",
-            "Importancia": 1262
+            "Importancia": 1283
         },
         {
             "Variable": "temperatura",
-            "Importancia": 1249
+            "Importancia": 1274
         },
         {
             "Variable": "id_estacion",
-            "Importancia": 1043
+            "Importancia": 1035
         },
         {
             "Variable": "tendencia_30m",
-            "Importancia": 1018
+            "Importancia": 1021
         },
         {
             "Variable": "viento_kmh",
-            "Importancia": 859
+            "Importancia": 872
         },
         {
             "Variable": "dia_semana",
-            "Importancia": 489
+            "Importancia": 476
         },
         {
             "Variable": "anclajes_disponibles",
-            "Importancia": 426
+            "Importancia": 405
         },
         {
             "Variable": "pct_ocupacion",
-            "Importancia": 334
+            "Importancia": 315
+        },
+        {
+            "Variable": "capacidad",
+            "Importancia": 282
         },
         {
             "Variable": "tendencia_15m",
             "Importancia": 266
         },
         {
-            "Variable": "capacidad",
-            "Importancia": 262
-        },
-        {
             "Variable": "es_vacaciones_upv",
-            "Importancia": 211
-        },
-        {
-            "Variable": "es_festivo",
-            "Importancia": 86
+            "Importancia": 197
         },
         {
             "Variable": "es_la_blanca",
-            "Importancia": 73
+            "Importancia": 79
+        },
+        {
+            "Variable": "es_festivo",
+            "Importancia": 78
         },
         {
             "Variable": "llueve",
-            "Importancia": 30
+            "Importancia": 29
         },
         {
             "Variable": "es_finde",

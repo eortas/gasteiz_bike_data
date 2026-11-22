@@ -1,13 +1,13 @@
 Estación,Horas Inútil (Sin Furgoneta),Horas Inútil (Real Observada),Horas Inútil (Con ML),% Inactiva (Sin Sistema),% Inactiva (Real Observada),% Inactiva (Con ML),% Mejora (vs sin furgoneta),% Mejora (vs real)
-5 Mendizorrotza - Mendizorroza,778.2,750.2,554.9,29.69,28.62,21.17,28.7,26.0
-6 Unibertsitatea - Universidad,569.3,542.7,414.8,21.72,20.71,15.83,27.1,23.6
-7 Salburuko gizarte-etxea - C.C. Salburua,475.6,442.1,418.8,18.15,16.87,15.98,11.9,5.3
-10 AUO - HUA,469.5,446.3,273.7,17.91,17.03,10.44,41.7,38.7
-12 Zabalganeko gizarte-etxea - CC Zabalgana,465.7,439.5,284.1,17.77,16.77,10.84,39.0,35.4
-8 Tren geltokia - Estación de Tren,453.0,438.6,551.2,17.28,16.74,21.03,-21.7,-25.7
-4 Antso Jakituna - Sancho el Sabio,445.3,418.5,358.3,16.99,15.97,13.67,19.5,14.4
-9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,401.8,377.3,251.6,15.33,14.39,9.6,37.4,33.3
-11 San Martin (Udala) - Ayuntamiento San Martín,367.4,344.0,246.0,14.02,13.13,9.39,33.0,28.5
-2 Leizaola plaza - Plaza de Leizaola,328.8,300.0,406.5,12.55,11.45,15.51,-23.6,-35.5
-1 Autobus geltokia - Estación de autobuses,213.7,201.5,360.4,8.15,7.69,13.75,-68.6,-78.8
-3 Ballester apezpikua - Obispo Ballester,186.2,179.8,284.1,7.1,6.86,10.84,-52.6,-58.0
+5 Mendizorrotza - Mendizorroza,783.1,755.1,598.1,29.69,28.63,22.67,23.6,20.8
+6 Unibertsitatea - Universidad,569.3,542.7,423.5,21.58,20.57,16.05,25.6,22.0
+7 Salburuko gizarte-etxea - C.C. Salburua,479.4,443.9,422.8,18.17,16.83,16.03,11.8,4.7
+12 Zabalganeko gizarte-etxea - CC Zabalgana,477.2,451.0,261.5,18.09,17.1,9.91,45.2,42.0
+10 AUO - HUA,469.5,446.3,269.1,17.8,16.92,10.2,42.7,39.7
+8 Tren geltokia - Estación de Tren,456.8,441.8,555.5,17.32,16.75,21.06,-21.6,-25.7
+4 Antso Jakituna - Sancho el Sabio,448.4,421.4,361.7,17.0,15.97,13.71,19.3,14.2
+9 Ibaiondoko gizarte-etxea - C.C. Ibaiondo,403.1,378.5,268.8,15.28,14.35,10.19,33.3,29.0
+11 San Martin (Udala) - Ayuntamiento San Martín,368.4,344.5,227.9,13.97,13.06,8.64,38.1,33.9
+2 Leizaola plaza - Plaza de Leizaola,330.5,301.6,401.0,12.53,11.43,15.2,-21.3,-33.0
+1 Autobus geltokia - Estación de autobuses,213.7,201.5,358.1,8.1,7.64,13.58,-67.6,-77.7
+3 Ballester apezpikua - Obispo Ballester,189.1,182.8,303.3,7.17,6.93,11.5,-60.4,-65.9
